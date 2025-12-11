@@ -1,6 +1,5 @@
 # LogBook
-Personal logger and tracker
-
+Zapisaovalnik in sledilnik obveznosti katerih je potrebno opraviti tekom študija.
 
 # Entity Realtionship diagram
 
