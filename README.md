@@ -1,5 +1,5 @@
 # LogBook
-Zapisaovalnik in sledilnik obveznosti katerih je potrebno opraviti tekom študija.
+Zapisovalnik in sledilnik obveznosti katerih je potrebno opraviti tekom študija.
 
 # Entity Realtionship diagram
 
