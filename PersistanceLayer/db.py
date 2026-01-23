@@ -97,6 +97,9 @@ class Subject(Table):
         );
         """)
 
+    def add_row(self, **data):
+        return super().add_row(**data)
+
 def create_tables(tables):
     """
     Creates tables.
