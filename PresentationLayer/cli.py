@@ -1,6 +1,6 @@
 from enum import Enum
 
-from PersistanceLayer.model import Subject
+from ServiceLayer.model import Subject
 
 def input_choice(options):
     """
