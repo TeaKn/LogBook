@@ -1,19 +1,16 @@
 """
 predstavil podatke iz baze v obliki Pythonovih objektov.
 """
-import dataclasses
 import sqlite3
 
 from PersistanceLayer import db
 
-conn = sqlite3.connect('data/subject.db')
+conn = sqlite3.connect('fmf.db')
 db.initial_create_db(conn)
-conn.execute('PRAGMA foreign_keys = ON')
 
-subject = db.prepare_tables(conn)
+subject, assigment = db.prepare_tables(conn)
 
-
-class Subject():
+class Subject:
     """
     Subject data class.
     """
@@ -34,6 +31,16 @@ class Subject():
         """
         Persist subject to db
         """
-        assert self.id is not None
+        assert self.id is None
         with conn:
             self.id = subject.add_row(name = self.name)
+
+    def list_subjects(self):
+        """
+        List all subjects.
+        """
+        sql = """
+        SELECT * FROM subject;
+        """
+        for id, name in conn.execute(sql):
+            yield (id, name)

@@ -82,7 +82,7 @@ class Subject(Table):
     Table for FMF subject.
     """
     name = "subject"
-    data = "data/subject.csv"
+    data = "PersistanceLayer/Data/subject.csv"
 
     def create(self):
         """
@@ -99,6 +99,27 @@ class Subject(Table):
 
     def add_row(self, **data):
         return super().add_row(**data)
+
+class Assigment(Table):
+    name = "assigment"
+    data = "PersistanceLayer/Data/assigment.csv"
+
+    def create(self):
+        """
+        Create table assigment.
+        :return:
+        """
+        self.conn.execute("""
+                          CREATE TABLE assigment
+                          (
+                              id   INTEGER PRIMARY KEY AUTOINCREMENT,
+                              name TEXT NOT NULL
+                          );
+                          """)
+
+    def add_row(self, **data):
+        return super().add_row(**data)
+
 
 def create_tables(tables):
     """
@@ -133,7 +154,8 @@ def prepare_tables(conn):
     Prepares objects for tables.
     """
     subject = Subject(conn)
-    return [subject]
+    assigment = Assigment(conn)
+    return [subject, assigment]
 
 def create_db(conn):
     """
@@ -148,7 +170,4 @@ def initial_create_db(conn):
     """
     Creates database, if it does not exist.
     """
-    with conn:
-        cur = conn.execute("SELECT COUNT(*) FROM sqlite_master")
-        if cur.fetchone() == (0, ):
-            create_db(conn)
+    create_db(conn)
