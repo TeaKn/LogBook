@@ -1,5 +1,6 @@
 """
-predstavil podatke iz baze v obliki Pythonovih objektov.
+Represent data from db with Python objects.
+# TODO: refactor so that not all busniess logic lives in this one file
 """
 import sqlite3
 
