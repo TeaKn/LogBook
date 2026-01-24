@@ -3,6 +3,8 @@
 # Press Shift+F10 to execute it or replace it with your code.
 # Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
 
+# TODO: remove main, or change it, for now it is just confusing to have multiple main methods
+
 
 def print_hi(name):
     # Use a breakpoint in the code line below to debug your script.
