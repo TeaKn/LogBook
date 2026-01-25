@@ -23,14 +23,6 @@ Zapisovalnik in sledilnik obveznosti katerih je potrebno opraviti tekom študija
 - Bottle
 
 ## How to run
-Bottle in virtual environment for project:
-``` sh
-python3 -m venv .venv
-source .venv/bin/activate
-cd .venv
-pip install -U bottle
-```
-
 1. CLI
    2. Run cli.py file
 3. Web interface
