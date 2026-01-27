@@ -44,6 +44,7 @@ Spletni vmesnik:
 - [ ] Seznam trenutnih obveznosti na katerih moram delat ta teden
 - [ ] tortni diagram - število opravljenih obveznosti od vseh obveznosti
 - [ ] tortni diagram - število opravljenih opravil od vseh potrebnih opravil za neko obveznost
+- [ ] prikazan delež predavanj in vaj za predmet - progress bar
 
 Mobilni vmesnik:
 - cli na telefonu?
