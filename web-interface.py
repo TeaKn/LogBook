@@ -1,4 +1,7 @@
 import bottle
+from model.dataClass.subjectDataClass import SubjectDataClass
+from dataAccess.db import initialize_db
+
 
 @bottle.get('/static/<datoteka:path>')
 def static(datoteka):
@@ -7,7 +10,16 @@ def static(datoteka):
 @bottle.get('/')
 @bottle.view('index.html')
 def index():
-    pass
+    initialize_db()
+    subject = SubjectDataClass.get_all_subjects()[0]
+    return dict(subject=subject)
+
+@bottle.get('/subject')
+@bottle.view('analytics.html')
+def analytics():
+    subject = SubjectDataClass.create_subject('New Subject')
+    print(subject)
+    return dict()
 
 if __name__ == '__main__':
     bottle.run(host='localhost', port=8080, debug=True, reloader=True)

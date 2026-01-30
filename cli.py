@@ -1,6 +1,6 @@
 from enum import Enum
 
-from ServiceLayer.model import Subject
+from model.dataClass.subjectDataClass import SubjectDataClass
 
 def input_choice(options):
     """
@@ -39,11 +39,11 @@ def add_subject():
     Adds subject.
     """
     name = input('Name of subject: ')
-    subject = Subject(name)
-    subject.persist_to_db()
-    print(f'Added subject {name} with ID {subject.id}.\n')
+    subject = SubjectDataClass(name=name)
+    subject_id: int = subject.create_subject(name=name)
+    print(f'Added subject {name} with ID {subject_id}.\n')
 
-def exit():
+def exit_cli():
     """
     Prints exit message.
     """
@@ -53,10 +53,9 @@ def list_subjects():
     """
     List all subjects.
     """
-    # TODO: remove not a subject and actually list all subjcets properly
-    subject = Subject('not a name')
-    for id, name in subject.list_subjects():
-        print(f'{id} {name} \n')
+    subjects = SubjectDataClass.get_all_subjects()
+    for subject in subjects:
+        print(f'ID: {subject.id}, Name: {subject.name}')
 
 class MainMenu(Menu):
     """
@@ -64,7 +63,7 @@ class MainMenu(Menu):
     """
     ADD_SUBJECT = ('Add subject', add_subject)
     LIST_SUBJECTS = ('List subjects', list_subjects)
-    EXIT = ('Exit', exit)
+    EXIT = ('Exit', exit_cli)
 
 def main_menu():
     """
