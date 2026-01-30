@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+from typing import Any
 
 from dataAccess.db import Cursor
 from dataAccess.utilities import Table
@@ -64,7 +65,7 @@ class Subject(Table):
         #return super(Subject, cls).add_row(**data)
 
     @classmethod
-    def list_all(cls, cur=None):
+    def list_all(cls, cur=None) -> list[dict[Any, Any]]:
         """
         List all subjects.
         :param cur: Database cursor.
@@ -73,5 +74,14 @@ class Subject(Table):
         print("Exectural sem list all query")
         with Cursor() as cur:
             cur.execute("SELECT id, name FROM subject;")
-            return cur.fetchall()
+            rows = cur.fetchall()
+            col_names = tuple(d[0] for d in cur.description)
+            return [cls.from_row(row, col_names) for row in rows]
 
+    @classmethod
+    def from_row(cls, row: tuple, col_names: tuple) -> dict[Any, Any]:
+        """
+        Map a DB row (sequence) + column names to dictionary.
+        """
+        data = {name: row[idx] for idx, name in enumerate(col_names)}
+        return data
