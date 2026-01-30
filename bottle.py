@@ -313,7 +313,7 @@ class Router(object):
     def __init__(self, strict=False):
         self.rules = []  # All rules in order
         self._groups = {}  # index of regexes to find them in dyna_routes
-        self.builder = {}  # Data structure for the url builder
+        self.builder = {}  # data structure for the url builder
         self.static = {}  # Search structure for static routes
         self.dyna_routes = {}
         self.dyna_regexes = {}  # Search structure for dynamic routes
@@ -365,7 +365,7 @@ class Router(object):
         keys = []  # Names of keys
         pattern = ''  # Regular expression pattern with named groups
         filters = []  # Lists of wildcard input filters
-        builder = []  # Data structure for the URL builder
+        builder = []  # data structure for the URL builder
         is_static = True
 
         for key, mode, conf in self._itertokens(rule):
@@ -3419,13 +3419,13 @@ class _MultipartPart(object):
 
     @property
     def value(self):
-        """ Data decoded with the specified charset """
+        """ data decoded with the specified charset """
 
         return self.raw.decode(self.charset)
 
     @property
     def raw(self):
-        """ Data without decoding """
+        """ data without decoding """
         pos = self.file.tell()
         self.file.seek(0)
 
