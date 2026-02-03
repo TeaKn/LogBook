@@ -15,8 +15,8 @@ def index():
     return dict(subject=subject)
 
 @bottle.get('/subject')
-@bottle.view('analytics.html')
-def analytics():
+@bottle.view('logs.html')
+def logs():
     subject = SubjectDataClass.create_subject('New Subject')
     print(subject)
     return dict()

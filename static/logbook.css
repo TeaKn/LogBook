@@ -144,7 +144,7 @@ input, select, textarea {
 .logo-icon {
     width: 32px;
     height: 32px;
-    background: var(--accent);
+    %background: var(--accent);
     border-radius: 8px;
     display: flex;
     align-items: center;
@@ -152,9 +152,9 @@ input, select, textarea {
 }
 
 .logo-icon svg {
-    width: 18px;
-    height: 18px;
-    fill: white;
+    width: 50px;
+    height: 50px;
+    %fill: white;
 }
 
 /* ===== Navigation Menu ===== */
