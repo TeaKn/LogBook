@@ -33,6 +33,7 @@ https://templatemo.com/tm-608-daynight-admin
     --success: #22C55E;
     --warning: #F59E0B;
     --danger: #EF4444;
+    --countdown: #EB8395;
     --shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
     --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.05);
     --transition: all 0.2s ease;
@@ -692,6 +693,23 @@ input, select, textarea {
 
 .progress-fill.danger {
     background: var(--danger);
+}
+
+/* Countdown bar */
+.countdown-bar {
+    height: 8px;
+    width: 100%;
+    background: var(--countdown);
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.countdown-fill {
+    height: 100%;
+    width: 0;
+    transition: width 0.5s ease;
+    background: var(--bg-surface);
+    /*animation: countdown 10s linear forwards;*/
 }
 
 /* Donut Chart */

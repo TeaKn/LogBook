@@ -289,11 +289,11 @@
                             <div style="padding: 0.5rem 0;">
                                 <div style="margin-bottom: 1.5rem;">
                                     <div style="display: flex; justify-content: space-between; margin-bottom: 0.5rem;">
-                                        <span style="font-size: 0.875rem; color: var(--text-primary);">Pisni izpit Podatkovne baze 1</span>
-                                        <span style="font-size: 0.875rem; font-weight: 600; color: var(--success);">13 dni</span>
+                                        <span style="font-size: 0.875rem; color: var(--text-primary);">{{assessment}</span>
+                                        <span style="font-size: 0.875rem; font-weight: 600; color: var(--countdown);">{{days_until}} dni</span>
                                     </div>
-                                    <div class="progress-bar">
-                                        <div class="progress-fill success" style="width: 65%;"></div>
+                                    <div class="countdown-bar">
+                                        <div class="countdown-fill" data-progress="{{progress}}"></div>
                                     </div>
                                 </div>
                                 <div style="margin-bottom: 1.5rem;">
@@ -611,6 +611,7 @@
 
             </div>
 
+            <!-- Two Column Layout -->
             <div class="two-col" style="margin-top: 1.5rem;">
                 <!-- Today's progress bar charts -->
                 <div class="card">

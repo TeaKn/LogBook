@@ -54,6 +54,16 @@ function setGreeting() {
     }
 }
 
+//==== Progress Bars Animation =====
+function animateCountDownBar() {
+    const progressBars = document.querySelectorAll('.countdown-fill');
+    progressBars.forEach(bar => {
+        let width = bar.dataset.progress;
+        console.log("Width: " + width)
+        bar.style.width = width + '%';
+    });
+}
+
 // ===== Date Range Picker =====
 function setDateRange(range, btn) {
     const btns = document.querySelectorAll('.date-btn');
@@ -145,6 +155,7 @@ function closeMobileMenu() {
 document.addEventListener('DOMContentLoaded', function() {
     initTheme();
     setGreeting();
+    animateCountDownBar();
     
     if (document.querySelector('.kanban-board')) {
         initKanban();
