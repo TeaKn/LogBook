@@ -32,10 +32,10 @@ CRUD obveznost:
 - [ ] Izbrišeš obveznost
 - [ ] Pridobiš podatke o obveznosti
 
-Tekstovni vmesnik in spletni vmesnik:
-- [ ] Pridobi seznam vseh predmetov
-- [ ] Pridobi seznam vseh obveznosti za predemet
-- [ ] Pridobi seznam vseh obveznosti 
+Tekstovni vmesnik:
+- [ ] Pridobi seznam vseh obveznosti za predmet, ki so trenutno odprte
+- [ ] Pridobi status predmeta
+- [ ] Pridobi seznam vseh obveznosti za predmet, ki jih moraš opraviti ter še niso odprte
 
 Spletni vmesnik:
 - [ ] Odštevalnik dnevov do obveznosti
