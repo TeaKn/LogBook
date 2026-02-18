@@ -300,3 +300,4 @@ __marimo__/
 
 # Database
 *.db
+dataAccess/data
