@@ -32,7 +32,7 @@ class Table:
         Yields dictionaries mapping column names to values.
         """
         import csv
-        with open(f"DataAccess/Data/{cls.CSV_NAME}") as f:
+        with open(f"dataAccess/data/{cls.CSV_NAME}") as f:
             rd = csv.reader(f)
             columns = next(rd)
             for row in rd:
@@ -50,7 +50,7 @@ class Entity:
 
     def __str__(self):
         print(getattr(self, self.NAME))
-        return getattr(self, self.NAME) if self else f"<entiteta tipa {self.__class__}>"
+        return getattr(self, self.NAME) if self else f"<entity of type {self.__class__}>"
 
     def __init_subclass__(cls, /, **kwargs):
         super().__init_subclass__(**kwargs)
