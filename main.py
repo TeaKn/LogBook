@@ -1,18 +1,19 @@
-# This is a sample Python script.
+import runpy
 
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
-
-# TODO: remove main, or change it, for now it is just confusing to have multiple main methods
+from dataAccess.db import initialize_db
 
 
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
+def main() -> None:
+    # Run once at startup
+    # TODO: Flags for wipeout and data_import should be set to True only when needed, not every time the app starts.
+    # therefore have to move them into some sort of variables that live outside of main()
+    initialize_db(wipeout=False, data_import=False)
+    # change the order of which the data gets imported because of the foreign key constraints.
+    # AssessmentType must be imported before Assessment.
+
+    # Start the Bottle app defined in web-interface.py
+    runpy.run_path("web-interface.py", run_name="__main__")
 
 
-# Press the green button in the gutter to run the script.
 if __name__ == '__main__':
-    print_hi('PyCharm')
-
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+    main()
