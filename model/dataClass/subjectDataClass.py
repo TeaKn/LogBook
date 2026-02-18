@@ -31,16 +31,16 @@ class SubjectDataClass(Entity):
         into a SubjectDataClass instance.
         """
         rows = Subject.list_all()  # use class method, not Subject()
-        print('Iščem vse predmete:', rows)
+        print("Rows retrieved from Subject.list_all():", rows)
         result = []
         for r in rows:
             if isinstance(r, dict):
-                print('r je dict:', r)
+                print('Subject is dict:', r)
                 result.append(cls(id=r.get('id'), name=r.get('name')))
             else:
-                print('r je objekt:', r)
+                print('Subject is object:', r)
                 result.append(cls(id=getattr(r, 'id', None), name=getattr(r, 'name', None)))
-        print(result)
+        print("Result ", result)
         return result
 
     @classmethod
