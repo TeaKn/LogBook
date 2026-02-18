@@ -4,4 +4,15 @@
     <option name="format" value="PLAIN" />
     <option name="myDocStringFormat" value="Plain" />
   </component>
+  <component name="TemplatesService">
+    <option name="templateFileTypes">
+      <list>
+        <option value="AUTO_DETECTED" />
+        <option value="HTML" />
+        <option value="PHP" />
+        <option value="XHTML" />
+        <option value="XML" />
+      </list>
+    </option>
+  </component>
 </module>
