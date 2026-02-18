@@ -17,7 +17,7 @@ class Subject(Table):
         Create subject table.
         :param cur: Database cursor.
         """
-        print('probal sem kreirat tabelo subject')
+        print("Creating subject table...")
         with Cursor(cur) as cur:
             cur.execute("""
         CREATE TABLE IF NOT EXISTS subject
@@ -42,7 +42,7 @@ class Subject(Table):
         Import subject data from CSV.
         :param cur: Database cursor.
         """
-        print("insteral sem value v subject")
+        print("Importing subject data from CSV...")
         with Cursor(cur) as cur:
             for row in cls.read_csv_source():
                 print(f"Inserting row into subject: {row}")
@@ -53,7 +53,7 @@ class Subject(Table):
 
     @classmethod
     def add_row(cls, cur=None, **data) -> int:
-        print("Insertal sem value v subject preko add_row")
+        print("Adding row to subject: ", data)
         sql = """
               INSERT INTO subject (name)
               VALUES (:name);
@@ -71,7 +71,7 @@ class Subject(Table):
         :param cur: Database cursor.
         :return: List of subjects.
         """
-        print("Exectural sem list all query")
+        print("Listing all subjects...")
         with Cursor() as cur:
             cur.execute("SELECT id, name FROM subject;")
             rows = cur.fetchall()
