@@ -1,0 +1,87 @@
+from dataclasses import dataclass
+from typing import Any
+
+from dataAccess.db import Cursor
+from dataAccess.utilities import Table
+
+
+@dataclass
+class Assessment(Table):
+    """
+    Assessment data class.
+    """
+    CSV_NAME = "assessment.csv"
+
+    @classmethod
+    def create_table(cls, cur=None):
+        """
+        Create assessment table.
+        :param cur: Database cursor
+        """
+        print("Creating assessment table...")
+        with Cursor(cur) as cur:
+            cur.execute("""
+        CREATE TABLE IF NOT EXISTS assessment
+        (
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            subjectId INTEGER NOT NULL REFERENCES subject(id),
+            typeId INTEGER NOT NULL REFERENCES assessment_type(id),
+            title TEXT,
+            createdOn DATETIME,
+            dueDate DATETIME,
+            doneOn DATETIME,
+            grade INTEGER
+        );
+        """)
+
+    @classmethod
+    def delete_table(cls, cur=None):
+        """
+        Delete assessment table.
+        :param cur: Database cursor.
+        """
+        with Cursor(cur) as cur:
+            cur.execute("DROP TABLE IF EXISTS assessment;")
+
+    @classmethod
+    def import_data(cls, cur=None):
+        """
+        Import assessment data from CSV.
+        :param cur: Database cursor.
+        """
+        print("Importing assessment data from CSV...")
+        with Cursor(cur) as cur:
+            for row in cls.read_csv_source():
+                print(f"Inserting row into assessment: {row}")
+                cur.execute("""
+                    INSERT INTO assessment (subjectId, typeId, title, createdOn, dueDate, doneOn, grade)
+                    VALUES (:subjectId, :typeId, :title, :createdOn, :dueDate, :doneOn, :grade);
+                """, row)
+
+    @classmethod
+    def add_row(cls, cur=None, **data) -> int:
+        print("Adding row to assessment: ", data)
+        sql = """
+              INSERT INTO assessment (subjectId, typeId, title, createdOn, dueDate, doneOn, grade)
+                    VALUES (:subjectId, :typeId, :title, :createdOn, :dueDate, :doneOn, :grade); \
+              """
+        with Cursor() as cur:  # todo: understand ali rabis Cursor(cur) al ne
+            with cur.connection:  # todo: understand why this is needed here
+                cur.execute(sql, data)
+                return cur.lastrowid
+        # return super(Subject, cls).add_row(**data)
+
+    @classmethod
+    def list_all(cls, cur=None) -> list[dict[Any, Any]]:
+        """
+        List all assessments.
+        :param cur: Database cursor.
+        :return: List of assessments.
+        """
+        print("Listing all assessments...")
+        with Cursor() as cur:
+            cur.execute("SELECT id, subjectId, typeId, title, createdOn, dueDate, doneOn, grade FROM assessment;")
+            rows = cur.fetchall()
+            col_names = tuple(d[0] for d in cur.description)
+            return [cls.from_row(row, col_names) for row in rows]
+
