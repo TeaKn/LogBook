@@ -1,6 +1,7 @@
 import sqlite3 as dbapi
 
 conn = dbapi.connect('fmf.sqlite')
+conn.execute("PRAGMA foreign_keys=ON")
 
 class Cursor:
     """
@@ -32,13 +33,35 @@ class Cursor:
 
 from dataAccess.utilities import Table
 
+# --- Auto-discover and import all model modules so Table subclasses register ---
+_models_loaded = False
+
+def _load_all_models() -> None:
+    """
+    Import all modules in dataAccess.models so any Table subclasses get registered
+    into Table.TABLES via Table.__init_subclass__.
+    """
+    global _models_loaded
+    if _models_loaded:
+        return
+
+    import importlib
+    import pkgutil
+    import dataAccess.models as models_pkg
+
+    for mod in pkgutil.iter_modules(models_pkg.__path__, models_pkg.__name__ + "."):
+        importlib.import_module(mod.name)
+
+    _models_loaded = True
+
+
 """
 For csv files
 """
 
 def create_tables(cur=None):
     with Cursor(cur) as cur:
-        print(Table.TABLES)
+        print("List of tables to create: ", Table.TABLES)
         for t in Table.TABLES:
             t.create_table(cur=cur)
 
@@ -55,11 +78,17 @@ def import_data(cur=None):
             t.import_data(cur=cur)
 
 
-def initialize_db(wipeout=False, cur=None):
+def initialize_db(wipeout=False, data_import=False, cur=None):
+    print("Initializing database...")
+
+    # Make sure all tables are registered before we create them
+    _load_all_models()
+
     with Cursor(cur) as cur:
         with conn:
             if wipeout:
                 delete_tables(cur=cur)
             create_tables(cur=cur)
-            #import_data(cur=cur) # todo: add later in some if statement
+            if data_import:
+                import_data(cur=cur)
 
