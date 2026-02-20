@@ -1,0 +1,59 @@
+from dataclasses import dataclass, field
+from datetime import datetime
+
+from dataclasses_json import dataclass_json
+
+from dataAccess.models.assessmentModel import Assessment
+from dataAccess.utilities import Entity
+from model.dataClass.assessmentTypeDataClass import AssessmentTypeDataClass
+from model.dataClass.subjectDataClass import SubjectDataClass
+
+
+@dataclass_json
+@dataclass
+class AssessmentDataClass(Entity):
+    """
+    Assessment entity class.
+    """
+    id: int = field(default=None)
+    subject: SubjectDataClass = field(default=None)
+    type: AssessmentTypeDataClass = field(default=None)
+    title: str = field(default=None)
+    createdOn: datetime = field(default=None)
+    dueDate: datetime = field(default=None)
+    doneOn: datetime = field(default=None)
+    grade: int = field(default=None)
+
+    NAME='title'
+
+    def __post_init__(self):
+        """
+        Ensure that id and value are set to None if not provided.
+        """
+        for k in ('id', 'subject', 'type', 'title', 'createdOn', 'dueDate', 'doneOn', 'grade'):
+            if not getattr(self, k):
+                setattr(self, k, None)
+
+    @classmethod
+    def get_current_assessments(cls) -> list['AssessmentDataClass']:
+        """
+        Call the model's class-level list method and convert each row/object
+        into an AssessmentDataClass instance.
+        Here the parameter for number of days is passed.
+        """
+        rows = Assessment.list_assessments_due_within(days=30)
+        print("Rows retrieved from Assessment.list_assessments_due_within():", rows)
+        result = []
+        for r in rows:
+            result.append(
+                cls(id=r.get('id'),
+                    subject=SubjectDataClass(name=r.get('subject_name')),
+                    type=AssessmentTypeDataClass(value=r.get('type')),
+                    title=r.get('title'),
+                    dueDate=r.get('dueDate')
+                    )
+            )
+        print("Result ", result)
+        return result
+
+

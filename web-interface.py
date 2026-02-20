@@ -1,32 +1,36 @@
-from datetime import date
+from datetime import datetime
 
 import bottle
+from model.dataClass.assessmentDataClass import AssessmentDataClass
 from model.dataClass.subjectDataClass import SubjectDataClass
-from dataAccess.db import initialize_db
-
 
 @bottle.get('/static/<datoteka:path>')
 def static(datoteka):
     return bottle.static_file(datoteka, root='static')
 
+"""
+Calls:
+- get all assessments that are coming up in the next month
+"""
 @bottle.get('/')
-@bottle.view('index.html')
-def index():
-    initialize_db()
+def dashboard():
+    # Database initialization is done once in main.py at startup now.
+
     subject = SubjectDataClass.get_all_subjects()[0]
 
-    # assessment countdown
-    # npr en mesec pred assessmentom želim objavit countdown
-    # lahko se doda v subjectDataClass in potem se izpiše tukaj
-    # tukaj samo pride data - st dni do assessmenta
-    month = 30
-    today = date.today()
-    pisni_izpit_pb1 = date(2026, 2, 13)
-    days_until: int = (pisni_izpit_pb1 - today).days
-    progress = (1 - (days_until / month)) * 100
-    print("Progress: ", progress)
-    assessment = "Pisni izpit Podatkovne baze 1"
-    return dict(subject=subject, assessment = assessment, days_until=days_until, progress=progress)
+    month_days = 30
+
+    assessments_serve = []
+    assessments = AssessmentDataClass.get_current_assessments()
+    for assessment in assessments:
+        value = dict()
+        days_until = (datetime.strptime(assessment.dueDate, '%Y-%m-%d') - datetime.today()).days
+        value['assessment'] = assessment.title + ' ' + assessment.subject.name
+        value['days_until'] = days_until
+        value['progress'] = (1 - days_until/month_days)*100
+        assessments_serve.append(value)
+    return bottle.template("dashboard", subject=subject, assessments=assessments_serve)
+
 
 @bottle.get('/subject')
 @bottle.view('logs.html')
@@ -34,6 +38,7 @@ def logs():
     subject = SubjectDataClass.create_subject('New Subject')
     print(subject)
     return dict()
+
 
 if __name__ == '__main__':
     bottle.run(host='localhost', port=8080, debug=True, reloader=True)

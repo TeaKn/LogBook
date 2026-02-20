@@ -85,3 +85,32 @@ class Assessment(Table):
             col_names = tuple(d[0] for d in cur.description)
             return [cls.from_row(row, col_names) for row in rows]
 
+
+    @classmethod
+    def list_assessments_due_within(cls, days: int, cur=None) -> list[dict[Any, Any]]:
+        """
+        List all assessments that are due within the specified number of days.
+        :param days: Number of days until due date.
+        :param cur: Database cursor.
+        :return: List of assessments.
+        """
+        print(f"Listing assessments due within {days} days...")
+        with Cursor() as cur:
+            cur.execute("""
+                SELECT subject.name AS 'subject_name', assessment_type.value AS 'type', title, dueDate 
+                FROM assessment 
+                JOIN assessment_type ON assessment.typeId = assessment_type.id
+                JOIN subject ON assessment.subjectId = subject.id
+                WHERE dueDate BETWEEN date('now') AND date('now', '+' || ? || ' days');
+            """, (days,))
+            rows = cur.fetchall()
+            col_names = tuple(d[0] for d in cur.description)
+            return [cls.from_row(row, col_names) for row in rows]
+
+    @classmethod
+    def from_row(cls, row: tuple, col_names: tuple) -> dict[Any, Any]:
+        """
+        Map a DB row (sequence) + column names to dictionary.
+        """
+        data = {name: row[idx] for idx, name in enumerate(col_names)}
+        return data
