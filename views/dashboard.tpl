@@ -12,6 +12,8 @@
             document.documentElement.classList.add('carbon');
         }
     </script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js">
+  	</script>
     <link rel="stylesheet" href="../static/logbook.css">
 </head>
 <body>
@@ -197,17 +199,6 @@
                             </svg>
                         </button>
                     </div>
-                    <button class="user-menu">
-                        <div class="user-avatar">T</div>
-                        <span class="user-name">Tea</span>
-                    </button>
-                    <a href="login.html" class="btn-logout" title="Logout">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/>
-                            <polyline points="16 17 21 12 16 7"/>
-                            <line x1="21" y1="12" x2="9" y2="12"/>
-                        </svg>
-                    </a>
                     <button class="mobile-menu-btn" onclick="toggleMobileMenu()">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                             <line x1="3" y1="12" x2="21" y2="12"/>
@@ -278,7 +269,6 @@
             <!-- Two Column Layout -->
             <div class="two-col">
                 <!-- Assessment Days countdown -->
-                <!-- todo: Kle sam obrnt barve zadi barva gor pa sivo  pa dat potem 1 - vrednost -->
                 <div class="card">
                     <div class="card-header">
                         <div>
@@ -288,61 +278,29 @@
                     </div>
                     <div class="card-scroll">
                         <div class="card-scroll-inner" style="min-width: 400px;">
-                            <div style="padding: 0.5rem 0;">
-                                <div style="margin-bottom: 1.5rem;">
-                                    <div style="display: flex; justify-content: space-between; margin-bottom: 0.5rem;">
-                                        <span style="font-size: 0.875rem; color: var(--text-primary);">{{assessment}</span>
-                                        <span style="font-size: 0.875rem; font-weight: 600; color: var(--countdown);">{{days_until}} dni</span>
-                                    </div>
-                                    <div class="countdown-bar">
-                                        <div class="countdown-fill" data-progress="{{progress}}"></div>
-                                    </div>
-                                </div>
-                                <div style="margin-bottom: 1.5rem;">
-                                    <div style="display: flex; justify-content: space-between; margin-bottom: 0.5rem;">
-                                        <span style="font-size: 0.875rem; color: var(--text-primary);">Pisni izpit Računalništvo 1</span>
-                                        <span style="font-size: 0.875rem; font-weight: 600; color: var(--accent);">135 dni</span>
-                                    </div>
-                                    <div class="progress-bar">
-                                        <div class="progress-fill accent" style="width: 78%;"></div>
-                                    </div>
-                                </div>
-                                <div style="margin-bottom: 1.5rem;">
-                                    <div style="display: flex; justify-content: space-between; margin-bottom: 0.5rem;">
-                                        <span style="font-size: 0.875rem; color: var(--text-primary);">Ustni izpit Mehanika</span>
-                                        <span style="font-size: 0.875rem; font-weight: 600; color: var(--success);">7 dni</span>
-                                    </div>
-                                    <div class="progress-bar">
-                                        <div class="progress-fill success" style="width: 85%;"></div>
-                                    </div>
-                                </div>
-                                <div style="margin-bottom: 1.5rem;">
-                                    <div style="display: flex; justify-content: space-between; margin-bottom: 0.5rem;">
-                                        <span style="font-size: 0.875rem; color: var(--text-primary);">Ustni izpit Parcialne Diferencialne enačbe</span>
-                                        <span style="font-size: 0.875rem; font-weight: 600; color: var(--success);">16 dni</span>
-                                    </div>
-                                    <div class="progress-bar">
-                                        <div class="progress-fill success" style="width: 99.9%;"></div>
-                                    </div>
-                                </div>
-                                <div style="margin-bottom: 1.5rem;">
-                                    <div style="display: flex; justify-content: space-between; margin-bottom: 0.5rem;">
-                                        <span style="font-size: 0.875rem; color: var(--text-primary);">Ustni izpit Računalništvo 1</span>
-                                        <span style="font-size: 0.875rem; font-weight: 600; color: var(--warning);">136 dni</span>
-                                    </div>
-                                    <div class="progress-bar">
-                                        <div class="progress-fill warning" style="width: 68%;"></div>
-                                    </div>
-                                </div>
-                                <div>
-                                    <div style="display: flex; justify-content: space-between; margin-bottom: 0.5rem;">
-                                        <span style="font-size: 0.875rem; color: var(--text-primary);">Ustni izpit Podatkovne Baze 1</span>
-                                        <span style="font-size: 0.875rem; font-weight: 600; color: var(--warning);">30 dni</span>
-                                    </div>
-                                    <div class="progress-bar">
-                                        <div class="progress-fill warning" style="width: 50%;"></div>
-                                    </div>
-                                </div>
+                            <div id="smth" style="padding: 0.5rem 0;">
+                                <!-- Script to insert countdown bars -->
+                                <script>
+                                    const assessments = {{!assessments}};
+                                    $(document).ready(function () {
+                                        console.log("assessments size: " + assessments.toString());
+                                        for (const a of assessments) {
+                                            console.log("item:", a);
+                                            console.log("assessment field:", a.assessment);
+                                            $("#smth").append(`
+                                            <div style="margin-bottom: 1.5rem;">
+                                            <div style="display: flex; justify-content: space-between; margin-bottom: 0.5rem;">
+                                            <span style="font-size: 0.875rem; color: var(--text-primary);">${a.assessment}</span>
+                                            <span style="font-size: 0.875rem; font-weight: 600; color: var(--countdown);">${a.days_until} dni</span>
+                                            </div>
+                                            <div class="countdown-bar">
+                                            <div class="countdown-fill" data-progress="${a.progress}"></div>
+                                            </div>
+                                            </div>`);
+                                        }
+                                    animateCountDownBar();
+                                    });
+                                </script>
                             </div>
                         </div>
                     </div>
@@ -370,7 +328,7 @@
                                 </svg>
                             </div>
                             <div class="activity-content">
-                                <p class="activity-text"><strong>Podatkovne baze 1</strong> uploaded new design files for Dashboard v2</p>
+                                <p class="activity-text"><strong>Podatkovne baze 1</strong> presentation at 13:30!</p>
                                 <span class="activity-time">2 minutes ago</span>
                             </div>
                         </div>
@@ -382,7 +340,7 @@
                                 </svg>
                             </div>
                             <div class="activity-content">
-                                <p class="activity-text"><strong>Računalništvo 1</strong> congragulations, you completed Vaje - Verižni seznam 12 more to go! :D</p>
+                                <p class="activity-text"><strong>Računalništvo 1</strong> congratulations, you completed Vaje - Verižni seznam 10 more to go! :D</p>
                                 <span class="activity-time">15 minutes ago</span>
                             </div>
                         </div>
@@ -393,7 +351,7 @@
                                 </svg>
                             </div>
                             <div class="activity-content">
-                                <p class="activity-text"><strong>Računalništvo 1</strong> commented on your project proposal</p>
+                                <p class="activity-text"><strong>Računalništvo 1</strong> study 0/1 Nahrbtnik</p>
                                 <span class="activity-time">1 hour ago</span>
                             </div>
                         </div>
@@ -518,16 +476,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="chart-legend">
-                            <div class="legend-item">
-                                <span class="legend-dot" style="background: var(--success);"></span>
-                                New Users
-                            </div>
-                            <div class="legend-item">
-                                <span class="legend-dot" style="background: #A855F7;"></span>
-                                Returning Users
-                            </div>
-                        </div>
+
                     </div>
                 </div>
 
@@ -611,115 +560,6 @@
                     </div>
                 </div>
 
-            </div>
-
-            <!-- Two Column Layout -->
-            <div class="two-col" style="margin-top: 1.5rem;">
-                <!-- Today's progress bar charts -->
-                <div class="card">
-                    <div class="card-header">
-                        <div>
-                            <h3 class="card-title">Today's progress</h3>
-                            <p class="card-subtitle">Compare this period with previous</p>
-                        </div>
-                        <div class="date-picker">
-                            <button class="date-btn" onclick="setDateRange('7d', this)">7D</button>
-                            <button class="date-btn active" onclick="setDateRange('30d', this)">30D</button>
-                            <button class="date-btn" onclick="setDateRange('90d', this)">90D</button>
-                            <button class="date-btn" onclick="setDateRange('12m', this)">12M</button>
-                        </div>
-                    </div>
-                    <div class="chart-container">
-                        <div class="chart-scroll">
-                            <div class="chart-scroll-inner">
-                                <div class="bar-chart">
-                                    <div class="y-axis">
-                                        <span class="y-axis-label">$50K</span>
-                                        <span class="y-axis-label">$40K</span>
-                                        <span class="y-axis-label">$30K</span>
-                                        <span class="y-axis-label">$20K</span>
-                                        <span class="y-axis-label">$10K</span>
-                                        <span class="y-axis-label">$0</span>
-                                    </div>
-                                    <div class="y-axis-lines">
-                                        <div class="y-axis-line"></div>
-                                        <div class="y-axis-line"></div>
-                                        <div class="y-axis-line"></div>
-                                        <div class="y-axis-line"></div>
-                                        <div class="y-axis-line"></div>
-                                        <div class="y-axis-line"></div>
-                                    </div>
-                                    <div class="bar-group">
-                                        <div class="bar-wrapper">
-                                            <div class="bar previous" style="height: 80px;"></div>
-                                            <div class="bar current" style="height: 100px;"></div>
-                                        </div>
-                                        <span class="bar-label">Jan</span>
-                                    </div>
-                                    <div class="bar-group">
-                                        <div class="bar-wrapper">
-                                            <div class="bar previous" style="height: 95px;"></div>
-                                            <div class="bar current" style="height: 120px;"></div>
-                                        </div>
-                                        <span class="bar-label">Feb</span>
-                                    </div>
-                                    <div class="bar-group">
-                                        <div class="bar-wrapper">
-                                            <div class="bar previous" style="height: 70px;"></div>
-                                            <div class="bar current" style="height: 85px;"></div>
-                                        </div>
-                                        <span class="bar-label">Mar</span>
-                                    </div>
-                                    <div class="bar-group">
-                                        <div class="bar-wrapper">
-                                            <div class="bar previous" style="height: 110px;"></div>
-                                            <div class="bar current" style="height: 140px;"></div>
-                                        </div>
-                                        <span class="bar-label">Apr</span>
-                                    </div>
-                                    <div class="bar-group">
-                                        <div class="bar-wrapper">
-                                            <div class="bar previous" style="height: 90px;"></div>
-                                            <div class="bar current" style="height: 105px;"></div>
-                                        </div>
-                                        <span class="bar-label">May</span>
-                                    </div>
-                                    <div class="bar-group">
-                                        <div class="bar-wrapper">
-                                            <div class="bar previous" style="height: 130px;"></div>
-                                            <div class="bar current" style="height: 155px;"></div>
-                                        </div>
-                                        <span class="bar-label">Jun</span>
-                                    </div>
-                                    <div class="bar-group">
-                                        <div class="bar-wrapper">
-                                            <div class="bar previous" style="height: 100px;"></div>
-                                            <div class="bar current" style="height: 125px;"></div>
-                                        </div>
-                                        <span class="bar-label">Jul</span>
-                                    </div>
-                                    <div class="bar-group">
-                                        <div class="bar-wrapper">
-                                            <div class="bar previous" style="height: 85px;"></div>
-                                            <div class="bar current" style="height: 110px;"></div>
-                                        </div>
-                                        <span class="bar-label">Aug</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="chart-legend">
-                            <div class="legend-item">
-                                <span class="legend-dot current"></span>
-                                This Period
-                            </div>
-                            <div class="legend-item">
-                                <span class="legend-dot previous"></span>
-                                Previous Period
-                            </div>
-                        </div>
-                    </div>
-                </div>
             </div>
         </main>
 

@@ -1,7 +1,3 @@
-/* ========================================
-   DayNight Admin - JavaScript
-   ======================================== */
-
 // ===== Theme Toggle =====
 function initTheme() {
     const savedTheme = localStorage.getItem('daynight-theme');
@@ -30,7 +26,7 @@ function setTheme(theme) {
 function updateThemeButtons(theme) {
     const snowBtns = document.querySelectorAll('.theme-btn-snow');
     const carbonBtns = document.querySelectorAll('.theme-btn-carbon');
-    
+
     snowBtns.forEach(btn => {
         btn.classList.toggle('active', theme === 'snow');
     });
@@ -56,75 +52,14 @@ function setGreeting() {
 
 //==== Progress Bars Animation =====
 function animateCountDownBar() {
+    //== This function is called from the HTML when the countdown section is loaded. It animates the width of the
+    // progress bars based on their data-progress attribute.
+    console.log("animateCountDownBar CALLED");
     const progressBars = document.querySelectorAll('.countdown-fill');
     progressBars.forEach(bar => {
         let width = bar.dataset.progress;
         console.log("Width: " + width)
         bar.style.width = width + '%';
-    });
-}
-
-// ===== Date Range Picker =====
-function setDateRange(range, btn) {
-    const btns = document.querySelectorAll('.date-btn');
-    btns.forEach(b => b.classList.remove('active'));
-    btn.classList.add('active');
-    
-    // Update charts based on range
-    updateCharts(range);
-}
-
-function updateCharts(range) {
-    // Animate chart bars based on selected range
-    const bars = document.querySelectorAll('.bar');
-    bars.forEach(bar => {
-        const currentHeight = parseInt(bar.style.height);
-        let multiplier = 1;
-        
-        if (range === '7d') multiplier = 0.7;
-        if (range === '30d') multiplier = 1;
-        if (range === '90d') multiplier = 1.2;
-        if (range === '12m') multiplier = 1.4;
-        
-        // Random variation
-        const variation = 0.8 + Math.random() * 0.4;
-        bar.style.height = (currentHeight * multiplier * variation) + 'px';
-    });
-}
-
-// ===== Kanban =====
-function initKanban() {
-    const cards = document.querySelectorAll('.kanban-card');
-    const columns = document.querySelectorAll('.kanban-cards');
-    
-    cards.forEach(card => {
-        card.setAttribute('draggable', true);
-        
-        card.addEventListener('dragstart', (e) => {
-            card.classList.add('dragging');
-        });
-        
-        card.addEventListener('dragend', (e) => {
-            card.classList.remove('dragging');
-        });
-    });
-    
-    columns.forEach(column => {
-        column.addEventListener('dragover', (e) => {
-            e.preventDefault();
-            const dragging = document.querySelector('.dragging');
-            column.appendChild(dragging);
-        });
-    });
-}
-
-// ===== Settings Toggles =====
-function initToggles() {
-    const toggles = document.querySelectorAll('.toggle input');
-    toggles.forEach(toggle => {
-        toggle.addEventListener('change', function() {
-            console.log(`${this.id} is now ${this.checked ? 'enabled' : 'disabled'}`);
-        });
     });
 }
 
@@ -155,16 +90,7 @@ function closeMobileMenu() {
 document.addEventListener('DOMContentLoaded', function() {
     initTheme();
     setGreeting();
-    animateCountDownBar();
-    
-    if (document.querySelector('.kanban-board')) {
-        initKanban();
-    }
-    
-    if (document.querySelector('.toggle')) {
-        initToggles();
-    }
-    
+
     // Close mobile menu on overlay click
     const overlay = document.querySelector('.mobile-menu-overlay');
     if (overlay) {
