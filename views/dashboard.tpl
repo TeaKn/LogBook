@@ -12,8 +12,7 @@
             document.documentElement.classList.add('carbon');
         }
     </script>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js">
-  	</script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <link rel="stylesheet" href="../static/logbook.css">
 </head>
 <body>
@@ -22,7 +21,7 @@
         <nav class="top-nav">
             <div class="nav-container">
                 <div class="nav-left">
-                    <a href="index.html" class="logo">
+                    <a href="" class="logo">
 
                         <div class="logo-icon">
                             <svg viewBox="0 0 120 110" xmlns="http://www.w3.org/2000/svg" >
@@ -54,7 +53,7 @@
                     </a>
                     <div class="nav-menu">
                         <div class="nav-item">
-                            <a href="index.html" class="nav-link active">
+                            <a href="" class="nav-link active">
                                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                     <rect x="3" y="3" width="7" height="7" rx="1"/>
                                     <rect x="14" y="3" width="7" height="7" rx="1"/>
@@ -73,7 +72,7 @@
                             </a>
                         </div>
                         <div class="nav-item">
-                            <a href="assessment.html" class="nav-link">
+                            <a href="assessments" class="nav-link">
                                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                     <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
                                     <polyline points="22,6 12,13 2,6"/>
@@ -114,13 +113,6 @@
                             </svg>
                         </button>
                     </div>
-                    <button class="mobile-menu-btn" onclick="toggleMobileMenu()">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <line x1="3" y1="12" x2="21" y2="12"/>
-                            <line x1="3" y1="6" x2="21" y2="6"/>
-                            <line x1="3" y1="18" x2="21" y2="18"/>
-                        </svg>
-                    </button>
                 </div>
             </div>
         </nav>
@@ -193,7 +185,7 @@
                     </div>
                     <div class="card-scroll">
                         <div class="card-scroll-inner" style="min-width: 400px;">
-                            <div id="smth" style="padding: 0.5rem 0;">
+                            <div id="countdown-bars" style="padding: 0.5rem 0;">
                                 <!-- Script to insert countdown bars -->
                                 <script>
                                     const assessments = {{!assessments}};
@@ -202,7 +194,7 @@
                                         for (const a of assessments) {
                                             console.log("item:", a);
                                             console.log("assessment field:", a.assessment);
-                                            $("#smth").append(`
+                                            $("#countdown-bars").append(`
                                             <div style="margin-bottom: 1.5rem;">
                                             <div style="display: flex; justify-content: space-between; margin-bottom: 0.5rem;">
                                             <span style="font-size: 0.875rem; color: var(--text-primary);">${a.assessment}</span>
