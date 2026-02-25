@@ -80,7 +80,13 @@ class Assessment(Table):
         """
         print("Listing all assessments...")
         with Cursor() as cur:
-            cur.execute("SELECT id, subjectId, typeId, title, createdOn, dueDate, doneOn, grade FROM assessment;")
+            cur.execute("""
+                        SELECT assessment.id, subject.name AS 'subject_name', assessment_type.value AS 'type', title, createdOn, dueDate, doneOn, grade 
+                        FROM assessment
+                        JOIN assessment_type ON assessment.typeId = assessment_type.id
+                        JOIN subject ON assessment.subjectId = subject.id
+                        ORDER BY dueDate DESC;
+            """)
             rows = cur.fetchall()
             col_names = tuple(d[0] for d in cur.description)
             return [cls.from_row(row, col_names) for row in rows]

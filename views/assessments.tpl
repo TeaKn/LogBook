@@ -180,8 +180,8 @@
                                         $("#table-body").append(`
                                         <tr>
                                             <td>${a.id}</td>
-                                            <td>${a.subjectId}</td>
-                                            <td>${a.typeId}</td>
+                                            <td>${a.subject_name}</td>
+                                            <td>${a.type}</td>
                                             <td>${a.title}</td>
                                             <td>${a.createdOn == "NULL" || a.createdOn == "None" ? "" : a.createdOn}</td>
                                             <td>${a.dueDate}</td>
