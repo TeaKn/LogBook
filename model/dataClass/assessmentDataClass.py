@@ -1,3 +1,4 @@
+import json
 from dataclasses import dataclass, field
 from datetime import datetime
 
@@ -55,5 +56,17 @@ class AssessmentDataClass(Entity):
             )
         print("Result ", result)
         return result
+
+    @classmethod
+    def get_all_assessments(cls) -> list[dict]:
+        rows = Assessment.list_all()
+        print("Rows retrieved from Assessment.list_all():", rows)
+        # have to convert the data to be able to use in javascript (None null problem)
+        result = [{key: str(val) for key, val in r.items()} for r in rows]
+        return result
+
+
+    def as_dict(self):
+        return self.__dict__
 
 

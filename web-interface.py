@@ -32,12 +32,10 @@ def dashboard():
     return bottle.template("dashboard", subject=subject, assessments=assessments_serve)
 
 
-@bottle.get('/subject')
-@bottle.view('logs.html')
-def logs():
-    subject = SubjectDataClass.create_subject('New Subject')
-    print(subject)
-    return dict()
+@bottle.get('/assessments')
+def assessments():
+    assessments_list = AssessmentDataClass.get_all_assessments()
+    return bottle.template("assessments", assessments=assessments_list)
 
 
 if __name__ == '__main__':
