@@ -183,10 +183,10 @@
                                             <td>${a.subjectId}</td>
                                             <td>${a.typeId}</td>
                                             <td>${a.title}</td>
-                                            <td>${a.createdOn || a.createdOn == "NULL" || a.createdOn == "None" ? "" : a.createdOn}</td>
+                                            <td>${a.createdOn == "NULL" || a.createdOn == "None" ? "" : a.createdOn}</td>
                                             <td>${a.dueDate}</td>
-                                            <td>${a.doneOn || a.doneOn == "NULL" || a.doneOn == "None" ? "Not done yet" : a.doneOn}</td>
-                                            <td>${a.grade || a.grade == "NULL" || a.grade == "None" ? "Not yet graded" : a.grade}</td>
+                                            <td>${a.doneOn == "NULL" || a.doneOn == "None" ? "Not done yet" : a.doneOn}</td>
+                                            <td>${a.grade == "NULL" || a.grade == "None" ? "Not yet graded" : a.grade}</td>
                                         </tr>
                                         `);
                                     }
