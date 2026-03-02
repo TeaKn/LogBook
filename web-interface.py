@@ -24,7 +24,7 @@ def dashboard():
     assessments = AssessmentDataClass.get_current_assessments()
     for assessment in assessments:
         value = dict()
-        days_until = (datetime.strptime(assessment.dueDate, '%Y-%m-%d') - datetime.today()).days
+        days_until = (datetime.strptime(assessment.dueDate, '%Y-%m-%d %H:%M:%S.%f') - datetime.today()).days
         value['assessment'] = assessment.title + ' ' + assessment.subject.name
         value['days_until'] = days_until
         value['progress'] = (1 - days_until/month_days)*100
