@@ -1,4 +1,3 @@
-import json
 from dataclasses import dataclass, field
 from datetime import datetime
 
@@ -65,6 +64,13 @@ class AssessmentDataClass(Entity):
         result = [{key: str(val) for key, val in r.items()} for r in rows]
         return result
 
+    @classmethod
+    def update_assessment(cls, data: dict):
+        """
+        Update an assessment with the provided data.
+        :param data: Dictionary containing the updated assessment data.
+        """
+        return Assessment.update_row(**data)
 
     def as_dict(self):
         return self.__dict__

@@ -72,6 +72,19 @@ class Assessment(Table):
         # return super(Subject, cls).add_row(**data)
 
     @classmethod
+    def update_row(cls, cur=None, **data) -> int:
+        print("Updating row in assessment: ", data)
+        sql = """
+        UPDATE assessment
+        SET title = :title, createdOn = :createdOn, dueDate = :dueDate, doneOn = :doneOn, grade = :grade
+        WHERE id = :id;
+        """
+        with Cursor(cur) as cur:
+            with cur.connection:
+                cur.execute(sql, data)
+                return cur.lastrowid
+
+    @classmethod
     def list_all(cls, cur=None) -> list[dict[Any, Any]]:
         """
         List all assessments.
