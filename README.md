@@ -12,6 +12,7 @@ Obstaja veliko orodij s katerimi si lahko pomagamo vodit projek. Obstajajo tudi 
 ## Tehnični cilji
 - [ ] avtomatizirati vnos podatkov / avtomatizacija evidentiranja
 - [ ] osnovna gameifikacija opravljanja opravil
+- [ ] JQuery dynamic assessments table add, update and delete
 
 ## Funkcionalnosti
 CRUD predmet:
