@@ -77,7 +77,7 @@ class Assessment(Table):
         sql = """
         UPDATE assessment
         SET title = :title, createdOn = :createdOn, dueDate = :dueDate, doneOn = :doneOn, grade = :grade
-        WHERE id = :id;
+        WHERE id = :assessment_id;
         """
         with Cursor(cur) as cur:
             with cur.connection:

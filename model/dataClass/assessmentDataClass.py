@@ -65,11 +65,13 @@ class AssessmentDataClass(Entity):
         return result
 
     @classmethod
-    def update_assessment(cls, data: dict):
+    def update_assessment(cls, assessment_id: int,  data: dict):
         """
         Update an assessment with the provided data.
+        :param assessment_id: ID of the assessment to update.
         :param data: Dictionary containing the updated assessment data.
         """
+        data['assessment_id'] = assessment_id
         return Assessment.update_row(**data)
 
     def as_dict(self):

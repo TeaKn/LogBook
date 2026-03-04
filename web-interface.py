@@ -37,11 +37,11 @@ def assessments():
     assessments_list = AssessmentDataClass.get_all_assessments()
     return bottle.template("assessments", assessments=assessments_list)
 
-@bottle.post('/assessments')
-def update_assessment_web():
-    print("Called update assessment from client")
+@bottle.post('/assessments/<assessment_id:int>')
+def update_assessment(assessment_id):
+    print("Called update assessment with id: ", assessment_id)
     data = bottle.request.json
-    AssessmentDataClass.update_assessment(data)
+    AssessmentDataClass.update_assessment(assessment_id, data)
 
 if __name__ == '__main__':
     bottle.run(host='localhost', port=8080, debug=True, reloader=True)

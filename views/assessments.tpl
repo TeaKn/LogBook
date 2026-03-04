@@ -246,7 +246,7 @@
                                     $.extend(arr, {row_id:row_id});
 
                                     $.ajax({
-                                    url:"/assessments",
+                                    url:"/assessments/" + row_id,
                                     method:"POST",
                                     data:JSON.stringify(arr),
                                     contentType:"application/json"
