@@ -126,6 +126,9 @@
                     <h1 class="greeting">Assessments</h1>
                     <p class="greeting-sub">What I have to do to successfully graduate this year.</p>
                 </div>
+                <div>
+                    <button id="create_btn" class="btn btn-primary">Create new assessment</button>
+                </div>
             </div>
 
             <!-- Currently important assessments or some statistics here regarding assessments -->
@@ -169,7 +172,7 @@
                             </tr>
                         </thead>
                         <tbody id = "table-body">
-                        <!-- Script to insert data -->
+                            <!-- Script to insert, edit and add data -->
                             <script>
                                 const assessments = {{!assessments}};
                                 $(document).ready(function () {
@@ -178,32 +181,32 @@
                                         console.log("item:", a);
                                         console.log("assessment field:", a.id);
                                         $("#table-body").append(`
-                                        <tr row_id="${a.id}">
-                                            <td>
-                                                <div class="row_data" col_name="id">${a.id}</div>
-                                            </td>
-                                            <td>
-                                                ${a.subject_name}
-                                            </td>
-                                            <td>
-                                                ${a.type}
-                                            </td>
-                                            <td>
-                                                <div class="row_data" edit_type="click" col_name="title">${a.title}</div>
-                                            </td>
-                                            <td>
-                                                <div class="row_data" col_name="createdOn">${a.createdOn == "NULL" || a.createdOn == "None" ? "" : a.createdOn}</div>
-                                            </td>
-                                            <td>
-                                                <div class="row_data" col_name="dueDate">${a.dueDate == "NULL" || a.dueDate == "None" ? "" : a.dueDate}</div>
-                                            </td>
-                                            <td>
-                                                <div class="row_data" col_name="doneOn">${a.doneOn == "NULL" || a.doneOn == "None" ? "Not done yet" : a.doneOn}</div>
-                                            </td>
-                                            <td>
-                                                <div class="row_data" col_name="grade">${a.grade == "NULL" || a.grade == "None" ? "Not yet graded" : a.grade}</div>
-                                            </td>
-                                        </tr>
+                                            <tr row_id="${a.id}">
+                                                <td>
+                                                    <div class="row_data" col_name="id">${a.id}</div>
+                                                </td>
+                                                <td>
+                                                    ${a.subject_name}
+                                                </td>
+                                                <td>
+                                                    ${a.type}
+                                                </td>
+                                                <td>
+                                                    <div class="row_data" edit_type="click" col_name="title">${a.title}</div>
+                                                </td>
+                                                <td>
+                                                    <div class="row_data" col_name="createdOn">${a.createdOn == "NULL" || a.createdOn == "None" ? "" : a.createdOn}</div>
+                                                </td>
+                                                <td>
+                                                    <div class="row_data" col_name="dueDate">${a.dueDate == "NULL" || a.dueDate == "None" ? "" : a.dueDate}</div>
+                                                </td>
+                                                <td>
+                                                    <div class="row_data" col_name="doneOn">${a.doneOn == "NULL" || a.doneOn == "None" ? "Not done yet" : a.doneOn}</div>
+                                                </td>
+                                                <td>
+                                                    <div class="row_data" col_name="grade">${a.grade == "NULL" || a.grade == "None" ? "Not yet graded" : a.grade}</div>
+                                                </td>
+                                            </tr>
                                         `);
                                     }
                                 });
@@ -259,11 +262,68 @@
                                 //--->save single field data > end
 
                             </script>
-
                         </tbody>
                     </table>
                 </div>
             </div>
+
+            <!-- Modal Popup - create assessment -->
+            <div id="modal" class="modal-overlay">
+                <div class="modal-box">
+                    <button id="closeBtn" class="modal-close">×</button>
+                    <h3 style="margin-bottom:1rem">Add assessment</h3>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th></th>
+                                <th>Data</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><b>Subject:</b></td>
+                                <td><input type="text" id="subject"></td>
+                            </tr>
+                            <tr>
+                                <td><b>Type:</b></td>
+                                <td><input type="text" id="type"></td>
+                            </tr>
+                            <tr>
+                                <td><b>Title:</b></td>
+                                <td><input type="text" id="type"></td>
+                            </tr>
+                            <tr>
+                                <td><b>Created on:</b></td>
+                                <td><input type="date" id="createdOn"></div></td>
+                            </tr>
+                            <tr>
+                                <td><b>Due date:</b></td>
+                                <td><input type="date" id="dueDate"></td>
+                            </tr>
+                            <tr>
+                                <td><b>Grade:</b></td>
+                                <td><input type="text" id="grade"></div></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div style="display: flex; justify-content: flex-end; gap: 1rem; margin-top: 1rem;">
+                        <button id="saveBtn" class="btn btn-primary">Save</button>
+                    </div>
+                </div>
+            </div>
+            <script>
+                $(document).on('click', '#create_btn', function(event) {
+                            console.log("clicked create new assessment");
+
+                            event.preventDefault();
+
+                            $('#modal').addClass('show');
+                });
+
+                $(document).on('click', '#closeBtn', function() {
+                    $('#modal').removeClass('show');
+                   });
+            </script>
         </main>
 
         <!-- Footer -->
