@@ -74,6 +74,15 @@ class AssessmentDataClass(Entity):
         data['assessment_id'] = assessment_id
         return Assessment.update_row(**data)
 
+
+    @classmethod
+    def create_assessment(cls, data: dict):
+        """
+        Create a new assessment with the provided data.
+        :param data: Dictionary containing the new assessment data.
+        """
+        return Assessment.add_row(**data)
+
     def as_dict(self):
         return self.__dict__
 

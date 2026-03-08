@@ -62,9 +62,9 @@ class Assessment(Table):
     def add_row(cls, cur=None, **data) -> int:
         print("Adding row to assessment: ", data)
         sql = """
-              INSERT INTO assessment (subjectId, typeId, title, createdOn, dueDate, doneOn, grade)
-                    VALUES (:subjectId, :typeId, :title, :createdOn, :dueDate, :doneOn, :grade); \
-              """
+        INSERT INTO assessment (subjectId, typeId, title, createdOn, dueDate, doneOn, grade)
+        VALUES ((SELECT id FROM subject WHERE name = :subject), (SELECT id FROM assessment_type WHERE  value = :type), :title, date('now'), :dueDate, null, null);
+        """
         with Cursor() as cur:  # todo: understand ali rabis Cursor(cur) al ne
             with cur.connection:  # todo: understand why this is needed here
                 cur.execute(sql, data)

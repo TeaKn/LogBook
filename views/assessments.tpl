@@ -272,40 +272,34 @@
                 <div class="modal-box">
                     <button id="closeBtn" class="modal-close">×</button>
                     <h3 style="margin-bottom:1rem">Add assessment</h3>
-                    <table>
-                        <thead>
-                            <tr>
-                                <th></th>
-                                <th>Data</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td><b>Subject:</b></td>
-                                <td><input type="text" id="subject"></td>
-                            </tr>
-                            <tr>
-                                <td><b>Type:</b></td>
-                                <td><input type="text" id="type"></td>
-                            </tr>
-                            <tr>
-                                <td><b>Title:</b></td>
-                                <td><input type="text" id="type"></td>
-                            </tr>
-                            <tr>
-                                <td><b>Created on:</b></td>
-                                <td><input type="date" id="createdOn"></div></td>
-                            </tr>
-                            <tr>
-                                <td><b>Due date:</b></td>
-                                <td><input type="date" id="dueDate"></td>
-                            </tr>
-                            <tr>
-                                <td><b>Grade:</b></td>
-                                <td><input type="text" id="grade"></div></td>
-                            </tr>
-                        </tbody>
-                    </table>
+                    <form>
+                        <label for="subject">Subject</label>
+                        <select id="subject" name="subject">
+                            <option value="Računalništvo 2">Računalništvo 2</option>
+                            <option value="Optimizacija">Optimizacija</option>
+                            <option value="Podatkovne baze 1">Podatkovne baze 1</option>
+                            <option value="Uvod v umetno inteligenco">Uvod v umetno inteligenco</option>
+                            <option value="Numerične metode 2">Numerične metode 2</option>
+                            <option value="Računalništvo 1">Računalništvo 1</option>
+                        </select>
+
+                        <label for="type">Type</label>
+                        <select id="type" name="type">
+                            <option value="final exam">Final exam</option>
+                            <option value="oral exam">Oral exam</option>
+                            <option value="midterm exam">Midterm exam</option>
+                            <option value="course paper">Course paper</option>
+                            <option value="homework">Homework</option>
+                            <option value="project">Project</option>
+                            <option value="quiz">Quiz</option>
+                        </select>
+
+                        <label for="title">Title</label>
+                        <input type="text" id="title" name="title" placeholder="Assessment title/description..">
+
+                        <label for="due_date">Due date</label>
+                        <input type="date" id="dueDate" name="dueDate" placeholder="Assessment due..">
+                    </form>
                     <div style="display: flex; justify-content: flex-end; gap: 1rem; margin-top: 1rem;">
                         <button id="saveBtn" class="btn btn-primary">Save</button>
                     </div>
@@ -313,16 +307,40 @@
             </div>
             <script>
                 $(document).on('click', '#create_btn', function(event) {
-                            console.log("clicked create new assessment");
+                    console.log("clicked create new assessment");
 
-                            event.preventDefault();
+                    event.preventDefault();
 
-                            $('#modal').addClass('show');
+                    $('#modal').addClass('show');
                 });
 
                 $(document).on('click', '#closeBtn', function() {
                     $('#modal').removeClass('show');
-                   });
+                });
+
+                $(document).on('click', '#saveBtn', function(event) {
+                    console.log("clicked save new assessment");
+
+                    event.preventDefault();
+
+                    const newAssessment = {
+                        subject: $('#subject').val(),
+                        type: $('#type').val(),
+                        title: $('#title').val(),
+                        dueDate: $('#dueDate').val()
+                    };
+
+                    $.ajax({
+                        url: "/assessments",
+                        method: "POST",
+                        data: JSON.stringify(newAssessment),
+                        contentType: "application/json"
+                    }).done(function(data) {
+                        console.log(data);
+                        $('#modal').removeClass('show');
+                        location.reload(); // Reload the page to show the new assessment
+                    });
+                });
             </script>
         </main>
 

@@ -43,5 +43,11 @@ def update_assessment(assessment_id):
     data = bottle.request.json
     AssessmentDataClass.update_assessment(assessment_id, data)
 
+@bottle.post('/assessments')
+def create_assessment():
+    print("Called create assessment")
+    data = bottle.request.json
+    AssessmentDataClass.create_assessment(data)
+
 if __name__ == '__main__':
     bottle.run(host='localhost', port=8080, debug=True, reloader=True)
