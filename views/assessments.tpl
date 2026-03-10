@@ -201,10 +201,10 @@
                                                     <div class="row_data" col_name="dueDate">${a.dueDate == "NULL" || a.dueDate == "None" ? "" : a.dueDate}</div>
                                                 </td>
                                                 <td>
-                                                    <div class="row_data" col_name="doneOn">${a.doneOn == "NULL" || a.doneOn == "None" ? "Not done yet" : a.doneOn}</div>
+                                                    <div class="row_data" col_name="doneOn">${a.doneOn == "NULL" || a.doneOn == "None" ? "" : a.doneOn}</div>
                                                 </td>
                                                 <td>
-                                                    <div class="row_data" col_name="grade">${a.grade == "NULL" || a.grade == "None" ? "Not yet graded" : a.grade}</div>
+                                                    <div class="row_data" col_name="grade">${a.grade == "NULL" || a.grade == "None" ? "" : a.grade}</div>
                                                 </td>
                                             </tr>
                                         `);

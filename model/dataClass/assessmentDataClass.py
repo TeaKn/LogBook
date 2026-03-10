@@ -1,6 +1,7 @@
 from dataclasses import dataclass, field
 from datetime import datetime
 
+from dateutil import parser
 from dataclasses_json import dataclass_json
 
 from dataAccess.models.assessmentModel import Assessment
@@ -50,7 +51,7 @@ class AssessmentDataClass(Entity):
                     subject=SubjectDataClass(name=r.get('subject_name')),
                     type=AssessmentTypeDataClass(value=r.get('type')),
                     title=r.get('title'),
-                    dueDate=r.get('dueDate')
+                    dueDate=parser.parse(r.get('dueDate'))
                     )
             )
         print("Result ", result)
