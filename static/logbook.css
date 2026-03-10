@@ -215,6 +215,8 @@ input[type=date], input[type=datetime], input[type=datetime-local] {
     border: 1px solid var(--border-color);
     border-radius: 4px;
     box-sizing: border-box;
+    /* cannot style this element, for new version have to pick a custom date time element */
+    /* todo: also later change logo of date time picker */
 }
 /* ----------------------------------*/
 

@@ -298,7 +298,7 @@
                         <input type="text" id="title" name="title" placeholder="Assessment title/description..">
 
                         <label for="due_date">Due date</label>
-                        <input type="date" id="dueDate" name="dueDate" placeholder="Assessment due..">
+                        <input type="datetime-local" id="dueDate" name="dueDate" placeholder="Assessment due..">
                     </form>
                     <div style="display: flex; justify-content: flex-end; gap: 1rem; margin-top: 1rem;">
                         <button id="saveBtn" class="btn btn-primary">Save</button>
