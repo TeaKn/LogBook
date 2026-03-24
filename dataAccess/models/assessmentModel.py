@@ -106,7 +106,7 @@ class Assessment(Table):
 
 
     @classmethod
-    def list_assessments_due_within(cls, days: int, cur=None) -> list[dict[Any, Any]]:
+    def list_open_assessments_due_within(cls, days: int, cur=None) -> list[dict[Any, Any]]:
         """
         List all assessments that are due within the specified number of days.
         :param days: Number of days until due date.
@@ -120,7 +120,8 @@ class Assessment(Table):
                 FROM assessment 
                 JOIN assessment_type ON assessment.typeId = assessment_type.id
                 JOIN subject ON assessment.subjectId = subject.id
-                WHERE dueDate BETWEEN date('now') AND date('now', '+' || ? || ' days');
+                WHERE dueDate BETWEEN date('now') AND date('now', '+' || ? || ' days') AND doneOn is null
+                ORDER BY dueDate ASC;
             """, (days,))
             rows = cur.fetchall()
             col_names = tuple(d[0] for d in cur.description)
