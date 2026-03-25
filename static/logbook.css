@@ -908,6 +908,9 @@ input[type=date], input[type=datetime], input[type=datetime-local] {
     background: var(--bg-surface);
     color: var(--text-primary);
     border: 1px solid var(--border-color);
+    padding: 0.4rem 0.8rem;
+    margin-top: 0.15rem;
+    margin-bottom: 0.15rem;
 }
 
 .btn-secondary:hover {

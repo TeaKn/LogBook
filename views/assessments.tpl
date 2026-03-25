@@ -169,101 +169,178 @@
                                 <th>Due date</th>
                                 <th>Done on</th>
                                 <th>Grade</th>
+                                <th>Actions</th>
                             </tr>
                         </thead>
                         <tbody id = "table-body">
-                            <!-- Script to insert, edit and add data -->
-                            <script>
-                                const assessments = {{!assessments}};
-                                $(document).ready(function () {
-                                    console.log("assessments: " + assessments.toString());
-                                    for (const a of assessments) {
-                                        console.log("item:", a);
-                                        console.log("assessment field:", a.id);
-                                        $("#table-body").append(`
-                                            <tr row_id="${a.id}">
-                                                <td>
-                                                    <div class="row_data" col_name="id">${a.id}</div>
-                                                </td>
-                                                <td>
-                                                    ${a.subject_name}
-                                                </td>
-                                                <td>
-                                                    ${a.type}
-                                                </td>
-                                                <td>
-                                                    <div class="row_data" edit_type="click" col_name="title">${a.title}</div>
-                                                </td>
-                                                <td>
-                                                    <div class="row_data" col_name="createdOn">${a.createdOn == "NULL" || a.createdOn == "None" ? "" : a.createdOn}</div>
-                                                </td>
-                                                <td>
-                                                    <div class="row_data" col_name="dueDate">${a.dueDate == "NULL" || a.dueDate == "None" ? "" : a.dueDate}</div>
-                                                </td>
-                                                <td>
-                                                    <div class="row_data" col_name="doneOn">${a.doneOn == "NULL" || a.doneOn == "None" ? "" : a.doneOn}</div>
-                                                </td>
-                                                <td>
-                                                    <div class="row_data" col_name="grade">${a.grade == "NULL" || a.grade == "None" ? "" : a.grade}</div>
-                                                </td>
-                                            </tr>
-                                        `);
-                                    }
-                                });
-
-                                //--->make div editable > start
-                                $(document).on('click', '.row_data', function(event)
-                                {
-                                    event.preventDefault();
-
-                                    //make div editable
-                                    $(this).closest('div').attr('contenteditable', 'true');
-                                    //add bg css
-                                    $(this).css('padding','5px'); // maybe add some bg color .addClass('smth')
-
-                                    $(this).focus();
-                                })
-                                //--->make div editable > end
-
-                                //--->save single field data > start
-                                $(document).on('focusout', '.row_data', function(event)
-                                {
-                                    event.preventDefault();
-
-                                    var tbl_row = $(this).closest('tr');
-
-                                    var row_id = $(this).closest('tr').attr('row_id');
-
-                                    var row_div = $(this).css('padding','')
-
-                                    //--->get row data > start
-                                    var arr = {};
-                                    tbl_row.find('.row_data').each(function(index, val)
-                                    {
-                                        var col_name = $(this).attr('col_name');
-                                        var col_val  =  $(this).html();
-                                        arr[col_name] = col_val;
-                                    });
-                                    //--->get row data > end
-
-                                    $.extend(arr, {row_id:row_id});
-
-                                    $.ajax({
-                                    url:"/assessments/" + row_id,
-                                    method:"POST",
-                                    data:JSON.stringify(arr),
-                                    contentType:"application/json"
-                                    }).done(function(data)
-                                    {
-                                        console.log(data);
-                                    });
-
-                                });
-                                //--->save single field data > end
-
-                            </script>
+                            <!-- Table build in script -->
                         </tbody>
                     </table>
+                    <script>
+                        <!-- Script to insert, edit and add data -->
+                        const assessments = {{!assessments}};
+                        $(document).ready(function () {
+                            console.log("assessments: " + assessments.toString());
+                            for (const a of assessments) {
+                                console.log("item:", a);
+                                console.log("assessment field:", a.id);
+                                $("#table-body").append(`
+                                    <tr row_id="${a.id}">
+                                        <td>
+                                            ${a.id}
+                                        </td>
+                                        <td>
+                                            ${a.subject_name}
+                                        </td>
+                                        <td>
+                                            ${a.type}
+                                        </td>
+                                        <td>
+                                            <div class="row_data" col_name="title">${a.title}</div>
+                                        </td>
+                                        <td>
+                                            <div class="row_data" col_name="createdOn">${a.createdOn == "NULL" || a.createdOn == "None" ? "" : a.createdOn}</div>
+                                        </td>
+                                        <td>
+                                            <div class="row_data" col_name="dueDate">${a.dueDate == "NULL" || a.dueDate == "None" ? "" : a.dueDate}</div>
+                                        </td>
+                                        <td>
+                                            <div class="row_data" col_name="doneOn">${a.doneOn == "NULL" || a.doneOn == "None" ? "" : a.doneOn}</div>
+                                        </td>
+                                        <td>
+                                            <div class="row_data" col_name="grade">${a.grade == "NULL" || a.grade == "None" ? "" : a.grade}</div>
+                                        </td>
+                                        <td>
+                                            <button class="edit_row btn btn-secondary">Edit</button>
+                                        </td>
+                                    </tr>
+                                `);
+                            }
+                        });
+
+                        $(document).on("click", ".edit_row", function() {
+                            let row = $(this).closest("tr");
+
+                            row.find(".row_data").each(function() {
+                                let value = $(this).text().trim();
+                                let col = $(this).attr("col_name");
+
+                                $(this).attr("data-original", value);
+
+                                let inputType = "text";
+
+                                if(col === "createdOn" || col === "dueDate" || col === "doneOn"){
+                                    inputType = "datetime-local";
+                                }
+
+                                $(this).html(
+                                    `<input type="${inputType}" class="edit_input" value="${value}">`
+                                );
+                            });
+
+                            $(this).parent().html(`
+                                <button class="save_row btn btn-secondary">Save</button>
+                                <button class="delete_row btn btn-secondary">Delete</button>
+                                <button class="quit_row btn btn-secondary">Quit</button>
+                            `);
+                        });
+
+                        $(document).on("click", ".save_row", function() {
+                            let row = $(this).closest("tr");
+                            let row_id = row.attr("row_id");
+
+                            let data = {};
+
+                            row.find(".row_data").each(function(){
+
+                                let col = $(this).attr("col_name");
+                                let val = $(this).find("input").val();
+
+                                data[col] = val;
+                            });
+
+                            $.ajax({
+                                url: "/assessments/" + row_id,
+                                method: "POST",
+                                data: JSON.stringify(data),
+                                contentType: "application/json"
+                            }).done(function(){
+
+                                row.find(".row_data").each(function(){
+
+                                    let input = $(this).find("input");
+                                    let value = input.val();
+
+                                    $(this).text(value);
+                                });
+
+                                row.find("td:last").html(`<button class="edit_row btn btn-secondary">Edit</button>`);
+                            });
+
+                        });
+
+                        $(document).on("click", ".delete_row", function(){
+                            let row = $(this).closest("tr");
+                            let row_id = row.attr("row_id");
+
+                            $.ajax({
+                                url: "/assessments/" + row_id,
+                                method: "DELETE"
+                            }).done(function(){
+                                row.remove();
+                            });
+                        });
+
+                        $(document).on("click", ".quit_row", function(){
+                            let row = $(this).closest("tr");
+
+                            row.find(".row_data").each(function(){
+                                let original = $(this).attr("data-original");
+
+                                $(this).text(original);
+                            });
+
+                            row.find("td:last").html(`<button class="edit_row btn btn-secondary">Edit</button>`);
+
+                        });
+
+                        //--->save single field data > start
+                        $(document).on('focusout', '.row_data', function(event)
+                        {
+                            event.preventDefault();
+
+                            var tbl_row = $(this).closest('tr');
+
+                            var row_id = $(this).closest('tr').attr('row_id');
+
+                            var row_div = $(this).css('padding','')
+
+                            //--->get row data > start
+                            var arr = {};
+                            tbl_row.find('.row_data').each(function(index, val)
+                            {
+                                var col_name = $(this).attr('col_name');
+                                var col_val  =  $(this).html();
+                                arr[col_name] = col_val;
+                            });
+                            //--->get row data > end
+
+                            $.extend(arr, {row_id:row_id});
+
+                            $.ajax({
+                            url:"/assessments/" + row_id,
+                            method:"POST",
+                            data:JSON.stringify(arr),
+                            contentType:"application/json"
+                            }).done(function(data)
+                            {
+                                console.log(data);
+                            });
+
+                        });
+                        //--->save single field data > end
+
+                    </script>
                 </div>
             </div>
 
