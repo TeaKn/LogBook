@@ -135,7 +135,7 @@
             <div class="stats-grid">
                 <div class="stat-card">
                     <div class="stat-label">Podatkovne baze 1</div>
-                    <div class="stat-value">Project</div>
+                    <div class="stat-value">A feature a week</div>
                     <div class="stat-change positive"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>+18.2% vs last period</div>
                 </div>
                 <div class="stat-card">
@@ -144,8 +144,8 @@
                     <div class="stat-change positive"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>+12.5% vs last period</div>
                 </div>
                 <div class="stat-card">
-                    <div class="stat-label">Gotta study this week:</div>
-                    <div class="stat-value">Računalništvo 1: Vaje</div>
+                    <div class="stat-label">Računalništvo 1</div>
+                    <div class="stat-value">1 vaje in 2h seminarska</div>
                     <div class="stat-change positive"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>+8.7% vs last period</div>
                 </div>
                 <div class="stat-card">

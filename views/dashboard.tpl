@@ -139,8 +139,8 @@
                     </div>
                 </div>
                 <div class="stat-card">
-                    <div class="stat-label">Mehanika</div>
-                    <div class="stat-value">Vrtilna količina</div>
+                    <div class="stat-label">Aktualno</div>
+                    <div class="stat-value">Optimizacija, Numerične in predstavitev</div>
                     <div class="stat-change positive">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                             <polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/>
@@ -161,8 +161,8 @@
                     </div>
                 </div>
                 <div class="stat-card">
-                    <div class="stat-label">Parcialne Dif</div>
-                    <div class="stat-value">1h na dan</div>
+                    <div class="stat-label">Message</div>
+                    <div class="stat-value">Light shines the brightest in the dark.</div>
                     <div class="stat-change positive">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                             <polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/>
