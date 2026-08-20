@@ -86,6 +86,24 @@ class Log(Table):
                 return cur.lastrowid
 
     @classmethod
+    def list_total_time_by_subject(cls, cur=None) -> list[dict[Any, Any]]:
+        print("Listing total time by subject calculated from logs...")
+        with Cursor() as cur:
+            cur.execute("""
+                        SELECT subject.name, 
+                        SUM(strftime('%s', log.trackedTo) - strftime('%s', log.trackedFrom)) / 3600 AS hours
+                        FROM LOG log
+                        JOIN ASSESSMENT assessment ON log.assessmentId = assessment.id
+                        JOIN SUBJECT subject ON assessment.subjectId = subject.id
+                        WHERE log.typeId = 1
+                        GROUP BY subject.name;
+            """)
+            rows = cur.fetchall()
+            col_names = tuple(d[0] for d in cur.description)
+            return [cls.from_row(row, col_names) for row in rows] # todo: daj v readme da sem tukaj uporabila strftime kokr na izpitu
+
+
+    @classmethod
     def from_row(cls, row: tuple, col_names: tuple) -> dict[Any, Any]:
         """
         Map a DB row (sequence) + column names to dictionary.

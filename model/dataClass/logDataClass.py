@@ -1,7 +1,6 @@
 from dataclasses import dataclass, field
 from datetime import datetime
 
-from dateutil import parser
 from dataclasses_json import dataclass_json
 
 from dataAccess.models.logModel import Log
@@ -38,7 +37,7 @@ class LogDataClass(Entity):
 
     @classmethod
     def get_all_logs(cls) -> list[dict]:
-        rows = Log.list_all()
+        rows = Log.list_all() # todo: implement list all
         print("Rows retrieved from Log.list_all():", rows)
         # have to convert the data to be able to use in javascript (None null problem)
         result = [{key: str(val) for key, val in r.items()} for r in rows]
@@ -53,6 +52,10 @@ class LogDataClass(Entity):
         """
         data['log_id'] = log_id
         return Log.update_row(**data)
+
+    @classmethod
+    def get_total_study_time_by_subject(cls) -> list[dict]:
+        return Log.list_total_time_by_subject()
 
 
     @classmethod
