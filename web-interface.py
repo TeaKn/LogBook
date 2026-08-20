@@ -89,6 +89,14 @@ def get_study_times_by_subject():
     data = LogDataClass.get_total_study_time_by_subject()
     return {'subjects': data}
 
+@bottle.get('/statistics/study-time-by-day')
+def get_study_times_by_subject():
+    """
+    List all total study time by day.
+    """
+    data = LogDataClass.get_total_study_time_by_day()
+    return {'days': data}
+
 app = app()
 app.install(cors_plugin('*'))
 

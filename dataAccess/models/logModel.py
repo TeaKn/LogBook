@@ -102,6 +102,21 @@ class Log(Table):
             col_names = tuple(d[0] for d in cur.description)
             return [cls.from_row(row, col_names) for row in rows] # todo: daj v readme da sem tukaj uporabila strftime kokr na izpitu
 
+    @classmethod
+    def list_total_time_by_day(cls, cur=None) -> list[dict[Any, Any]]:
+        print("Listing total time by subject calculated from logs...")
+        with Cursor() as cur:
+            cur.execute("""
+                        SELECT DATE(log.trackedFrom) as date,
+                               SUM(strftime('%s', log.trackedTo) - strftime('%s', log.trackedFrom)) / 3600 AS hours
+                        FROM LOG log
+                        WHERE log.typeId = 1
+                        GROUP BY DATE(log.trackedFrom);
+                        """)
+            rows = cur.fetchall()
+            col_names = tuple(d[0] for d in cur.description)
+            return [cls.from_row(row, col_names) for row in
+                    rows]  # todo: daj v readme da sem tukaj uporabila strftime kokr na izpitu
 
     @classmethod
     def from_row(cls, row: tuple, col_names: tuple) -> dict[Any, Any]:

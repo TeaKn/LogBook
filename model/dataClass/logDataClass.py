@@ -57,6 +57,10 @@ class LogDataClass(Entity):
     def get_total_study_time_by_subject(cls) -> list[dict]:
         return Log.list_total_time_by_subject()
 
+    @classmethod
+    def get_total_study_time_by_day(cls) -> list[dict]:
+        return Log.list_total_time_by_day()
+
 
     @classmethod
     def create_log(cls, data: dict):
