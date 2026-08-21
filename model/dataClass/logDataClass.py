@@ -36,8 +36,8 @@ class LogDataClass(Entity):
                 setattr(self, k, None)
 
     @classmethod
-    def get_all_logs(cls) -> list[dict]:
-        rows = Log.list_all() # todo: implement list all
+    def get_logs(cls, limit: int) -> list[dict]:
+        rows = Log.list_logs(limit)
         print("Rows retrieved from Log.list_all():", rows)
         # have to convert the data to be able to use in javascript (None null problem)
         result = [{key: str(val) for key, val in r.items()} for r in rows]

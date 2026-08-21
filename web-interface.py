@@ -80,6 +80,15 @@ def create_log():
     data = bottle.request.json
     LogDataClass.create_log(data)
 
+@bottle.get('/logs')
+def list_logs():
+    limit = bottle.request.query.get('limit', type=int)
+    print("Limit:", limit)
+
+    print("Called list logs.")
+    data = LogDataClass.get_logs(limit)
+    return {'logs': data}
+
 
 @bottle.get('/statistics/study-time-by-subject')
 def get_study_times_by_subject():

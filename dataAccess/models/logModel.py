@@ -86,6 +86,27 @@ class Log(Table):
                 return cur.lastrowid
 
     @classmethod
+    def list_logs(cls, limit: int) -> list[dict[Any, Any]]:
+        print(f"Listing last {limit} logs...")
+        with Cursor() as cur:
+            cur.execute("""
+            SELECT 
+                log.typeId,
+                subject.name AS 'subjectName',
+                log.createdOn,
+                log.title,
+                log.description
+                FROM LOG log
+                JOIN ASSESSMENT assessment ON log.assessmentId = assessment.id
+                JOIN SUBJECT subject ON assessment.subjectId = subject.id
+            ORDER BY log.createdOn DESC
+            LIMIT :n;
+            """, {"n": limit})
+            rows = cur.fetchall()
+            col_names = tuple(d[0] for d in cur.description)
+            return [cls.from_row(row, col_names) for row in rows]
+
+    @classmethod
     def list_total_time_by_subject(cls, cur=None) -> list[dict[Any, Any]]:
         print("Listing total time by subject calculated from logs...")
         with Cursor() as cur:
