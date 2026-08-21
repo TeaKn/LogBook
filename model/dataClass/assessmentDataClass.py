@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from datetime import datetime
+from typing import Any
 
 from dateutil import parser
 from dataclasses_json import dataclass_json
@@ -62,6 +63,13 @@ class AssessmentDataClass(Entity):
         rows = Assessment.list_all()
         print("Rows retrieved from Assessment.list_all():", rows)
         # have to convert the data to be able to use in javascript (None null problem)
+        result = [{key: str(val) for key, val in r.items()} for r in rows]
+        return result
+
+    @classmethod
+    def get_assessment_count_for_subject_by_type(cls) -> list[dict[Any, Any]]:
+        rows = Assessment.list_assessments_count_for_subject_by_type()
+        print("Rows retrieved from Assessment.list_assessments_count_for_subject_by_type(): ", rows)
         result = [{key: str(val) for key, val in r.items()} for r in rows]
         return result
 

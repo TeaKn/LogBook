@@ -97,6 +97,14 @@ def get_study_times_by_subject():
     data = LogDataClass.get_total_study_time_by_day()
     return {'days': data}
 
+@bottle.get('/statistics/assessment-by-type')
+def get_assessments_by_type():
+    """
+    Aggregate assessment by type for subject.
+    """
+    data = AssessmentDataClass.get_assessment_count_for_subject_by_type()
+    return {'assessments': data}
+
 app = app()
 app.install(cors_plugin('*'))
 

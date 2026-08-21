@@ -128,6 +128,32 @@ class Assessment(Table):
             return [cls.from_row(row, col_names) for row in rows]
 
     @classmethod
+    def list_assessments_count_for_subject_by_type(cls) -> list[dict[Any, Any]]:
+        """
+        List sum of assessments by type for subject.
+        """
+        print(f"Listing assessment aggregate by type...")
+        with Cursor() as cur:
+            cur.execute("""
+                SELECT 
+                    s.name AS 'subject_name',
+                    SUM(CASE WHEN a.typeId = 1 THEN 1 ELSE 0 END) AS 'final_exam',
+                    SUM(CASE WHEN a.typeId = 2 THEN 1 ELSE 0 END) AS 'oral_exam',
+                    SUM(CASE WHEN a.typeId = 3 THEN 1 ELSE 0 END) AS 'midterm_exam',
+                    SUM(CASE WHEN a.typeId = 4 THEN 1 ELSE 0 END) AS 'course_paper',
+                    SUM(CASE WHEN a.typeId = 5 THEN 1 ELSE 0 END) AS 'homework',
+                    SUM(CASE WHEN a.typeId = 6 THEN 1 ELSE 0 END) AS 'project',
+                    SUM(CASE WHEN a.typeId = 7 THEN 1 ELSE 0 END) AS 'quiz',
+                    COUNT(a.id) AS 'total'
+                FROM subject s
+                    LEFT JOIN assessment a ON a.subjectId = s.id
+                    GROUP BY s.id
+            """)
+            rows = cur.fetchall()
+            col_names = tuple(d[0] for d in cur.description)
+            return [cls.from_row(row, col_names) for row in rows]
+
+    @classmethod
     def from_row(cls, row: tuple, col_names: tuple) -> dict[Any, Any]:
         """
         Map a DB row (sequence) + column names to dictionary.
