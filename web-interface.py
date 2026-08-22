@@ -89,6 +89,11 @@ def list_logs():
     data = LogDataClass.get_logs(limit)
     return {'logs': data}
 
+@bottle.get('/logs/current')
+def get_current_log():
+    data = LogDataClass.get_last_current_log()
+    print("Called current log: ", data)
+    return data
 
 @bottle.get('/statistics/study-time-by-subject')
 def get_study_times_by_subject():

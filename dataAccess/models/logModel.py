@@ -140,6 +140,24 @@ class Log(Table):
                     rows]  # todo: daj v readme da sem tukaj uporabila strftime kokr na izpitu
 
     @classmethod
+    def get_last_current_log(cls) -> dict[Any, Any]:
+        print("Get last current log")
+        with Cursor() as cur:
+            cur.execute("""
+            SELECT 
+                *,  
+                concat(subject.name, ' : ', assessment.title) AS 'logSubject'
+            FROM LOG log
+                JOIN assessment ON log.assessmentId = assessment.id
+                JOIN subject ON assessment.subjectId = subject.id
+            ORDER BY log.trackedTo 
+                DESC LIMIT 1
+            """)
+            row = cur.fetchone()
+            col_names = tuple(d[0] for d in cur.description)
+            return cls.from_row(row, col_names)
+
+    @classmethod
     def from_row(cls, row: tuple, col_names: tuple) -> dict[Any, Any]:
         """
         Map a DB row (sequence) + column names to dictionary.
