@@ -1,0 +1,4 @@
+dataclasses-json~=0.6.7
+python-dateutil~=2.9.0.post0
+bottle~=0.13.4
+tabulate
