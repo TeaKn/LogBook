@@ -22,33 +22,33 @@ Run cli.py file
 
 ## Funkcionalnosti
 ### Tekstovni vmesnik:
-- [ ] Ustvari nov predmet
-- [ ] Prikaži seznam vseh predmetov
-- [ ] Prikaži seznam vseh obveznosti za predmet
-- [ ] Tabelarični prikaz agregiranih obveznostih po tipu za predmet
+- [x] Ustvari nov predmet
+- [x] Prikaži seznam vseh predmetov
+- [x] Prikaži seznam vseh obveznosti za predmet
+- [x] Tabelarični prikaz agregiranih obveznostih po tipu za predmet
 
 ### Spletni vmesnik:
 #### Dashboard: 
-- [ ] Odštevalnik dnevov do obveznosti
-- [ ] Feed - seznam zadnjih 5 dodanih Logov
-- [ ] Study trend - graf, ki prikazuje skupno število ur dela za faks po dnevih
-- [ ] Subject study ratio - tortni diagram, ki prikazuje razmerja skupnih ur učenja po predmetih
-- [ ] Subject - stolpični diagram, ki prikazuje vsoto ur učenja po predmetih
-- [ ] Assessments - Tabela obveznosti za predmet agregiranih po tipu obveznosti
-- [ ] Gumb za kreiranje novega loga
-- [ ] Stat card 1 (Currently working on) - Izpiše predmet in naslov obveznosti na kateri sem nazadnje delala
+- [x] Odštevalnik dnevov do obveznosti
+- [x] Feed - seznam zadnjih 5 dodanih Logov
+- [x] Study trend - graf, ki prikazuje skupno število ur dela za faks po dnevih
+- [x] Subject study ratio - tortni diagram, ki prikazuje razmerja skupnih ur učenja po predmetih
+- [x] Subject - stolpični diagram, ki prikazuje vsoto ur učenja po predmetih
+- [x] Assessments - Tabela obveznosti za predmet agregiranih po tipu obveznosti
+- [x] Gumb za kreiranje novega loga
+- [x] Stat card 1 (Currently working on) - Izpiše predmet in naslov obveznosti na kateri sem nazadnje delala
   - Informacijo pridobi iz zadnjega loga, ki ima tip Track in najkasnejši trackedFrom
-- [ ] Stat card 2 (Completed Assessments Counter) - Izpiše število zaključenih obveznosti / število vseh obveznosti (razmerje v procentih)
-- [ ] Stat card 3 (Study hours Counter) - Izpiše vsoto vseh ur učenja
-- [ ] Stat card 4 (Coming up) - Izpiše predmet in naslov obveznosti, katera je najbližje
+- [x] Stat card 2 (Completed Assessments Counter) - Izpiše število zaključenih obveznosti / število vseh obveznosti (razmerje v procentih)
+- [x] Stat card 3 (Study hours Counter) - Izpiše vsoto vseh ur učenja
+- [x] Stat card 4 (Coming up) - Izpiše predmet in naslov obveznosti, katera je najbližje
 
 #### Assessments: 
-- [ ] Tabela obveznosti
-- [ ] Gumb za kreiranje nove obveznosti
+- [x] Tabela obveznosti
+- [x] Gumb za kreiranje nove obveznosti
 
 #### General:
-- [ ] gumb za nastavitev teme (temna ali svetla)
-- [ ] Logo gumb, ki vodi do Dashboarda
+- [x] gumb za nastavitev teme (temna ali svetla)
+- [x] Logo gumb, ki vodi do Dashboarda
 
 ## Entity Relationship diagram
 <img width="730" height="511" alt="image" src="https://github.com/user-attachments/assets/7822dc3f-5676-41cb-a311-23b2759dafaa" />
