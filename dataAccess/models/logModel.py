@@ -11,6 +11,7 @@ class Log(Table):
     Log data class.
     """
     CSV_NAME = "log.csv"
+    import_order = 5
 
     @classmethod
     def create_table(cls, cur=None):

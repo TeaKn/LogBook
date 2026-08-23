@@ -7,7 +7,7 @@ def main() -> None:
     # Run once at startup
     # TODO: Flags for wipeout and data_import should be set to True only when needed, not every time the app starts.
     # therefore have to move them into some sort of variables that live outside of main()
-    initialize_db(wipeout=False, data_import=False)
+    initialize_db(wipeout=True, data_import=True)
     # change the order of which the data gets imported because of the foreign key constraints.
     # AssessmentType must be imported before Assessment.
 

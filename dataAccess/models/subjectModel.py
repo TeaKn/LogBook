@@ -10,6 +10,7 @@ class Subject(Table):
     Subject data class.
     """
     CSV_NAME = "subject.csv"
+    import_order = 1
 
     @classmethod
     def create_table(cls, cur=None):

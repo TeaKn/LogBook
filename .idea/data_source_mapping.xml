@@ -1,9 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="DataSourcePerFileMappings">
-    <file url="file://$APPLICATION_CONFIG_DIR$/consoles/db/2243527f-3871-48ec-a8f9-bf66010ca424/console.sql" value="2243527f-3871-48ec-a8f9-bf66010ca424" />
-    <file url="file://$PROJECT_DIR$/dataAccess/models/assessmentModel.py" value="2243527f-3871-48ec-a8f9-bf66010ca424" />
-    <file url="file://$PROJECT_DIR$/dataAccess/models/assessmentTypeModel.py" value="2243527f-3871-48ec-a8f9-bf66010ca424" />
-    <file url="file://$PROJECT_DIR$/dataAccess/models/logTypeModel.py" value="2243527f-3871-48ec-a8f9-bf66010ca424" />
+    <file url="file://$PROJECT_DIR$/dataAccess/models/assessmentModel.py" value="19ccf8f4-766a-4811-a521-7ceb5074f101" />
   </component>
 </project>

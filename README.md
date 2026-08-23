@@ -13,6 +13,10 @@ python3 pip install -r requirements.txt
 ```
 
 # Zagon
+Ob prvem zagonu je potrebno inicializirati bazo in uvoziti podatke. Zaženite main.py. 
+Ko uporabljate aplikacijo in ob ponovnem zagonu želite obdržati novo stanje baze zaženite main.py tako,
+da parametre nastavite na initialize_db(wipeout=False, data_import=False).
+
 ## CLI
 Run cli.py file
 

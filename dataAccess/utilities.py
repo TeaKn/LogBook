@@ -4,6 +4,7 @@ class Table:
     Subclasses should define the CSV_SOURCE class attribute for the CSV file name.
     """
     TABLES = []
+    import_order = 0
 
     def __init_subclass__(cls, /, **kwargs):
         super().__init_subclass__(**kwargs)
@@ -36,7 +37,10 @@ class Table:
             rd = csv.reader(f)
             columns = next(rd)
             for row in rd:
-                yield dict(zip(columns, row))
+                yield {
+                    column: value if value != '' else None
+                    for column, value in zip(columns, row)
+                }
 
 
 

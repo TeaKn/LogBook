@@ -11,6 +11,7 @@ class Assessment(Table):
     Assessment data class.
     """
     CSV_NAME = "assessment.csv"
+    import_order = 3
 
     @classmethod
     def create_table(cls, cur=None):

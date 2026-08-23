@@ -11,6 +11,7 @@ class AssessmentType(Table):
     Assessment Type fake Enum data class.
     """
     CSV_NAME = "assessment_type.csv"
+    import_order = 2
 
     @classmethod
     def create_table(cls, cur=None):

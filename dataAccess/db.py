@@ -60,21 +60,31 @@ For csv files
 """
 
 def create_tables(cur=None):
+    tables = sorted(Table.TABLES, key=lambda t: t.import_order)
+
     with Cursor(cur) as cur:
-        print("List of tables to create: ", Table.TABLES)
-        for t in Table.TABLES:
+        print("List of tables to create: ", tables)
+        for t in tables:
             t.create_table(cur=cur)
 
 
 def delete_tables(cur=None):
+    tables = sorted(
+        Table.TABLES,
+        key=lambda t: t.import_order,
+        reverse=True
+    )
+
     with Cursor(cur) as cur:
-        for t in reversed(Table.TABLES):
+        for t in tables:
             t.delete_table(cur=cur)
 
 
 def import_data(cur=None):
+    tables = sorted(Table.TABLES, key=lambda t: t.import_order)
+
     with Cursor(cur) as cur:
-        for t in Table.TABLES:
+        for t in tables:
             t.import_data(cur=cur)
 
 

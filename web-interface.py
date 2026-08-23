@@ -21,9 +21,6 @@ def assessments():
 
 @bottle.get('/assessments/current')
 def current_assessments():
-
-    month_days = 30
-
     assessments_serve = []
     assessments = AssessmentDataClass.get_current_assessments()
     for assessment in assessments:
@@ -31,7 +28,7 @@ def current_assessments():
         days_until = (assessment.dueDate.date() - datetime.today().date()).days + 1
         value['assessment'] = assessment.title + ' ' + assessment.subject.name
         value['days_until'] = days_until
-        value['progress'] = (1 - days_until / month_days) * 100
+        value['progress'] = (1 - days_until / DAYS) * 100
         assessments_serve.append(value)
     return {'assessments': assessments_serve}
 

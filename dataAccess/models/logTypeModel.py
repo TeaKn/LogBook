@@ -11,6 +11,7 @@ class LogType(Table):
     Log Type fake Enum data class.
     """
     CSV_NAME = "log_type.csv"
+    import_order = 4
 
     @classmethod
     def create_table(cls, cur=None):
