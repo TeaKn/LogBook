@@ -38,10 +38,8 @@ class LogDataClass(Entity):
     @classmethod
     def get_logs(cls, limit: int) -> list[dict]:
         rows = Log.list_logs(limit)
-        print("Rows retrieved from Log.list_all():", rows)
-        # have to convert the data to be able to use in javascript (None null problem)
-        result = [{key: str(val) for key, val in r.items()} for r in rows]
-        return result
+        print("Rows retrieved from Log.get_logs():", rows)
+        return rows
 
     @classmethod
     def update_log(cls, log_id: int,  data: dict):

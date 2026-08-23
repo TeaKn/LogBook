@@ -61,17 +61,18 @@ class AssessmentDataClass(Entity):
     @classmethod
     def get_all_assessments(cls) -> list[dict]:
         rows = Assessment.list_all()
-        print("Rows retrieved from Assessment.list_all():", rows)
-        # have to convert the data to be able to use in javascript (None null problem)
-        result = [{key: str(val) for key, val in r.items()} for r in rows]
-        return result
+        #print("Rows retrieved from Assessment.list_all():", rows)
+        return rows
 
     @classmethod
     def get_assessment_count_for_subject_by_type(cls) -> list[dict[Any, Any]]:
         rows = Assessment.list_assessments_count_for_subject_by_type()
-        print("Rows retrieved from Assessment.list_assessments_count_for_subject_by_type(): ", rows)
-        result = [{key: str(val) for key, val in r.items()} for r in rows]
-        return result
+        return rows
+
+    @classmethod
+    def get_assessments_for_subject(cls, subject_name) -> list[dict[Any, Any]]:
+        rows = Assessment.list_all_for_subject(subject_name)
+        return rows
 
     @classmethod
     def update_assessment(cls, assessment_id: int,  data: dict):

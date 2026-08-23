@@ -25,23 +25,13 @@ class SubjectDataClass(Entity):
                 setattr(self, k, None)
 
     @classmethod
-    def get_all_subjects(cls) -> list['SubjectDataClass']:
+    def get_all_subjects(cls) -> list[dict]:
         """
         Call the model's class-level list method and convert each row/object
         into a SubjectDataClass instance.
         """
         rows = Subject.list_all()  # use class method, not Subject()
-        print("Rows retrieved from Subject.list_all():", rows)
-        result = []
-        for r in rows:
-            if isinstance(r, dict):
-                print('Subject is dict:', r)
-                result.append(cls(id=r.get('id'), name=r.get('name')))
-            else:
-                print('Subject is object:', r)
-                result.append(cls(id=getattr(r, 'id', None), name=getattr(r, 'name', None)))
-        print("Result ", result)
-        return result
+        return rows
 
     @classmethod
     def create_subject(cls, name: str) -> int:
