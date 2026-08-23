@@ -55,7 +55,7 @@ class AssessmentDataClass(Entity):
                     dueDate=parser.parse(r.get('dueDate'))
                     )
             )
-        print("Result ", result)
+        #print("Result ", result)
         return result
 
     @classmethod
