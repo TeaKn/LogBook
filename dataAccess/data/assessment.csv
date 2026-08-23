@@ -1,0 +1,9 @@
+id,subjectId,typeId,title,createdOn,dueDate,doneOn,grade
+1,4,1,2 pisni izpit,2025-10-01,2026-06-10,NULL,NULL
+2,3,1,1 pisni izpit,2025-10-01,2026-02-13,2026-02-13,NULL
+3,1,2,ustni izpit,2026-02-05,2026-02-11,2026-02-11,9
+4,2,2,ustni izpit,2026-02-10,2026-02-18,NULL,NULL
+5,4,5,Vaje verižni seznam,NULL,2026-02-27,NULL,NULL
+6,4,5,Vaje iz verig vozlov in verižnih seznamov,NULL,2026-02-27,NULL,NULL
+7,4,5,Vaje dvojiška drevesa in rekonstrukcija iz pregledov,NULL,2026-02-27,NULL,NULL
+8,3,6,Presentation,NULL,2026-02-19,NULL,NULL

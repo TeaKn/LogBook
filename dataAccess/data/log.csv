@@ -1,0 +1,17 @@
+id,typeId,assessmentId,title,description,notes,createdOn,trackedFrom,trackedTo
+1,1,28,studied for 1st quiz,studied Remesov postopek,currently I do not understand what is set E,2026-03-24 11:00:00.000,2026-03-24 07:00:00.000,2026-03-24 11:00:00.000
+2,1,28,studied for 1st quiz,studied Remesov postopek,matrix P in the hw 2 is not the same as matrix P in notes,2026-03-24 17:00:00.000,2026-03-24 16:00:00.000,2026-03-24 17:00:00.000
+3,2,31,morm it na vaje ki so v ponedeljek, delal bomo razvoz in to bo na kolokviju ki je v sredo,,2026-03-25 09:59:00.000,,
+4,2,31,domače naloge met sabo,rabim domače naloge od optimizacije zato da mam vse na enem mestu ko se učim v knjižnici,2026-03-25 10:16:00.000,,
+5,3,31,grem zdj prvo delat vaje od 23.03 - matrične igre,,mislm da bi mi to bilo bolj zanimivo in da obdelam eno celo poglavje,2026-03-25 10:21:00.000,,
+6,1,31,studied for 1.st middterm,"delala sem vaje iz vaj matrične igre, prišla sem do cca polovice vseh nalog",traja dolgo ampak se moram fokusiraat na toda se ne primerjam z nekim idealom,2026-03-25 17:54:00.000,2026-03-25 10:21:00.000,2026-03-25 17:54:00.000
+7,1,31,studied for 1.st middterm,"delala sem vaje iz vaj matrične igre, zdj znam kako reducirat matrično igro",sprejela sem tudi reševanje z dualom v splošni obliki,2026-03-28 19:21:00.000,2026-03-28 11:00:00.000,2026-03-28 19:21:00.000
+8,1,28,studied for 1st quiz,delala sem 3 kviz,celotna naloga rešena s pomočjo chatgpt,2026-03-29 14:45:00.000,2026-03-29 13:00:00.000,2026-03-29 14:45:00.000
+8,1,28,studied for 1st quiz,delala sem 4 kviz,celotna naloga rešena s pomočjo chatgpt,2026-03-29 15:30:00.000,2026-03-29 14:45:00.000,2026-03-29 15:30:00.000
+06.05 sem delala za domačo nalogo #1 RAČ1, spisala sem kodo, algoritem in predstavitev za prvi algoritem
+Za 07.05 imam cilj narediti to tudi za drugi algoritem, in oddati #1 domačo nalogo RAč1
+20.05.2026 sem od 11.30 do 14.00 delala za numerične metode drugi kviz, učila sem se berzierjeve krivulje
+08.08.2026 sem od 9:00 do 14:00 porabila za izdelavo projekta za podatkovne baze, fixala sem probleme z version control. imela sem na napačnemu gitu. Dobr bi blo da se bolje naučim uporabljat git..
+13.08.2026 sem od 8 do 17.20 učila za ustni Rač1, šla sem na kosilo od 13-14, delala sem kopice, algoritmi za iskanje in urejanje
+13.08.2026 od 18.25 do 19.00 delala za projekt PB1, nadaljujem feature ki sem ga delala 8.8.2026
+14.08.2026 11:53 info nisem najbolj sigurna v časovno zahtevnost insertion sorta
