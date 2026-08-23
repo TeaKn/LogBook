@@ -1,17 +1,428 @@
 id,typeId,assessmentId,title,description,notes,createdOn,trackedFrom,trackedTo
-1,1,28,studied for 1st quiz,studied Remesov postopek,currently I do not understand what is set E,2026-03-24 11:00:00.000,2026-03-24 07:00:00.000,2026-03-24 11:00:00.000
-2,1,28,studied for 1st quiz,studied Remesov postopek,matrix P in the hw 2 is not the same as matrix P in notes,2026-03-24 17:00:00.000,2026-03-24 16:00:00.000,2026-03-24 17:00:00.000
-3,2,31,morm it na vaje ki so v ponedeljek, delal bomo razvoz in to bo na kolokviju ki je v sredo,,2026-03-25 09:59:00.000,,
-4,2,31,domače naloge met sabo,rabim domače naloge od optimizacije zato da mam vse na enem mestu ko se učim v knjižnici,2026-03-25 10:16:00.000,,
-5,3,31,grem zdj prvo delat vaje od 23.03 - matrične igre,,mislm da bi mi to bilo bolj zanimivo in da obdelam eno celo poglavje,2026-03-25 10:21:00.000,,
-6,1,31,studied for 1.st middterm,"delala sem vaje iz vaj matrične igre, prišla sem do cca polovice vseh nalog",traja dolgo ampak se moram fokusiraat na toda se ne primerjam z nekim idealom,2026-03-25 17:54:00.000,2026-03-25 10:21:00.000,2026-03-25 17:54:00.000
-7,1,31,studied for 1.st middterm,"delala sem vaje iz vaj matrične igre, zdj znam kako reducirat matrično igro",sprejela sem tudi reševanje z dualom v splošni obliki,2026-03-28 19:21:00.000,2026-03-28 11:00:00.000,2026-03-28 19:21:00.000
-8,1,28,studied for 1st quiz,delala sem 3 kviz,celotna naloga rešena s pomočjo chatgpt,2026-03-29 14:45:00.000,2026-03-29 13:00:00.000,2026-03-29 14:45:00.000
-8,1,28,studied for 1st quiz,delala sem 4 kviz,celotna naloga rešena s pomočjo chatgpt,2026-03-29 15:30:00.000,2026-03-29 14:45:00.000,2026-03-29 15:30:00.000
-06.05 sem delala za domačo nalogo #1 RAČ1, spisala sem kodo, algoritem in predstavitev za prvi algoritem
-Za 07.05 imam cilj narediti to tudi za drugi algoritem, in oddati #1 domačo nalogo RAč1
-20.05.2026 sem od 11.30 do 14.00 delala za numerične metode drugi kviz, učila sem se berzierjeve krivulje
-08.08.2026 sem od 9:00 do 14:00 porabila za izdelavo projekta za podatkovne baze, fixala sem probleme z version control. imela sem na napačnemu gitu. Dobr bi blo da se bolje naučim uporabljat git..
-13.08.2026 sem od 8 do 17.20 učila za ustni Rač1, šla sem na kosilo od 13-14, delala sem kopice, algoritmi za iskanje in urejanje
-13.08.2026 od 18.25 do 19.00 delala za projekt PB1, nadaljujem feature ki sem ga delala 8.8.2026
-14.08.2026 11:53 info nisem najbolj sigurna v časovno zahtevnost insertion sorta
+855,3,27,test 1,,,2026-08-15 00:00:00.000,,
+856,1,38,Implemented feature create log,Implemented feature on client and server side,,2026-08-15 00:00:00.000,2026-08-14 10:16:00.000,2026-08-14 14:10:00.000
+857,2,38,Implement list logs in dashboard,,,2026-08-15 00:00:00.000,,
+858,2,38,Dodaj v db initialize skritpo logTypes,,,2026-08-15 00:00:00.000,,
+859,1,39,"Učila sem se algoritmi za urejanje in iskanje, časovna zahtevnost","Quicksort, Mergesort, Insertion sort, Bubble sort",,2026-08-15 00:00:00.000,,
+860,3,41,Danes morm pogledat Floyd Warshallow algoritem,,,2026-08-16 00:00:00.000,,
+861,2,39,Ponovit to kar sem že obdelala in končat zapiske za te teme,,,2026-08-16 00:00:00.000,,
+862,1,39,Ponavljanje veriga,Delala sem prve štiri naloge iz seznama nalog,Šlo mi je dobro,2026-08-16 00:00:00.000,2026-08-16 10:30:00.000,2026-08-16 12:21:00.000
+863,1,39,Reševanje nalog veriga vozlov,Delala sem prvi 4 naloge iz seznama nalog,Šlo mi je dobro,2026-08-16 00:00:00.000,2026-08-16 13:31:00.000,2026-08-16 14:31:00.000
+864,1,39,Verižni seznam prosojnice,"Predelovanje prosojnic, zapis nalog in izdelava zapiskov",Nisem še predelala kako implementiramo sklad in vrsto z verižnim seznamom,2026-08-16 00:00:00.000,2026-08-16 14:41:00.000,2026-08-16 15:39:41.000
+865,1,39,Učenje kopice,Učila sem se iz prosojnic in youtube Abdul Bari,,2026-08-17 00:00:00.000,2026-08-17 09:00:00.000,2026-08-17 14:00:00.000
+866,1,39,Ponavljanje,,,2026-08-19 00:00:00.000,2026-08-19 09:30:00.000,2026-08-19 11:30:00.000
+867,1,38,Worked on features,"Did aggregate by type, added time column to assessmets table, unified grading, fixed activtiy cards, added list logs",,2026-08-21 00:00:00.000,2026-08-21 09:00:00.000,2026-08-21 15:00:00.000
+868,3,40,Testing,,,2026-08-21 11:42:32.000,,
+869,1,39,Podatkovna struktura kopica,Prosojnice in izdelava zapiskov,,2026-08-22 11:43:02.000,2026-08-13 08:30:00.000,2026-08-13 16:05:00.000
+870,1,40,SQL poizvedbe - JOIN,Reševanje nalog s spajanjem tabel v SQL-u.,,2025-10-17 21:35:00.000,2025-10-17 20:05:00.000,2025-10-17 21:35:00.000
+871,1,6,Priprava na pisni izpit,Ponavljanje snovi iz celotnega semestra pred pisnim izpitom.,Zelo koristna razlaga na predavanjih.,2025-10-19 22:45:00.000,2025-10-19 20:45:00.000,2025-10-19 22:45:00.000
+872,1,24,Kopica in prednostna vrsta,"Implementacija binarne kopice, operaciji insert in extract-min.",,2025-10-20 15:00:00.000,2025-10-20 11:30:00.000,2025-10-20 15:00:00.000
+873,1,30,Simpleksna metoda,Domača naloga 2 - reševanje LP problemov s simpleksno metodo.,,2025-10-23 15:10:00.000,2025-10-23 11:40:00.000,2025-10-23 15:10:00.000
+874,2,37,Rezerviraj temo za seminarsko,Ne pozabi rezervirati teme za seminarsko nalogo.,,2025-10-27 15:20:00.000,,
+875,1,3,Newtonovi zakoni - vaje,Reševanje nalog o silah in pospeških.,,2025-10-27 21:15:00.000,2025-10-27 18:15:00.000,2025-10-27 21:15:00.000
+876,2,2,Dokončaj projekt do roka,Ne pozabi oddati projektne naloge pred rokom.,,2025-10-28 09:50:00.000,,
+877,1,26,Dvojiška drevesa - implementacija,Implementacija vstavljanja in iskanja v dvojiškem iskalnem drevesu.,"Nisem še predelala vsega, nadaljujem naslednjič.",2025-10-28 12:30:00.000,2025-10-28 09:30:00.000,2025-10-28 12:30:00.000
+878,1,7,Sortirni algoritmi,"Ponavljanje Quicksort, Mergesort in Insertion sort.",,2025-10-28 22:10:00.000,2025-10-28 20:40:00.000,2025-10-28 22:10:00.000
+879,1,8,Transakcije in ACID,Ponavljanje lastnosti transakcij in nivojev izolacije.,,2025-10-29 11:50:00.000,2025-10-29 09:20:00.000,2025-10-29 11:50:00.000
+880,1,25,Dvosmerno povezan seznam,Predelovanje prosojnic o dvosmerno povezanih seznamih.,Rabim še ponoviti to temo.,2025-10-29 17:10:00.000,2025-10-29 14:40:00.000,2025-10-29 17:10:00.000
+881,1,26,Minimalno vpeto drevo - Kruskal,Ponavljanje Kruskalovega algoritma za MVD.,"Malo sem se izgubila v podrobnostih, jutri nadaljujem.",2025-10-30 10:45:00.000,2025-10-30 08:45:00.000,2025-10-30 10:45:00.000
+882,1,25,Minimalno vpeto drevo - Prim,Reševanje nalog s Primovim algoritmom.,,2025-10-31 13:50:00.000,2025-10-31 11:20:00.000,2025-10-31 13:50:00.000
+883,1,24,Pisanje poročila,Pisanje poročila o rešenih nalogah in ugotovitvah.,,2025-11-01 16:30:00.000,2025-11-01 15:00:00.000,2025-11-01 16:30:00.000
+884,1,26,Vaje - verige vozlov,"Reševanje nalog iz seznama, testiranje robnih primerov.",Rabim še ponoviti to temo.,2025-11-02 12:00:00.000,2025-11-02 09:30:00.000,2025-11-02 12:00:00.000
+885,1,25,Priprava na pisni izpit,Ponavljanje snovi iz celotnega semestra pred pisnim izpitom.,,2025-11-02 21:15:00.000,2025-11-02 17:15:00.000,2025-11-02 21:15:00.000
+886,1,1,Vaje - verige vozlov,"Reševanje nalog iz seznama, testiranje robnih primerov.",,2025-11-03 15:15:00.000,2025-11-03 13:45:00.000,2025-11-03 15:15:00.000
+887,1,8,Priprava na pisni izpit,Reševanje starih izpitnih nalog iz podatkovnih baz.,Rabim še ponoviti to temo.,2025-11-03 21:45:00.000,2025-11-03 19:15:00.000,2025-11-03 21:45:00.000
+888,1,11,Rekonstrukcija drevesa iz pregledov,Vadba rekonstrukcije dvojiškega drevesa iz preorder in inorder izpisa.,,2025-11-04 22:00:00.000,2025-11-04 20:30:00.000,2025-11-04 22:00:00.000
+889,1,8,Priprava predstavitve projekta,Urejanje diapozitivov in priprava demonstracije projekta.,,2025-11-04 22:15:00.000,2025-11-04 20:15:00.000,2025-11-04 22:15:00.000
+890,1,22,Preprost perceptron,Reševanje naloge 2 - implementacija perceptrona.,Rabim še ponoviti to temo.,2025-11-05 18:15:00.000,2025-11-05 15:15:00.000,2025-11-05 18:15:00.000
+891,1,20,Naloga 4 - agent v labirintu,"Implementacija agenta, ki išče pot v labirintu.",Šlo mi je dobro.,2025-11-05 19:45:00.000,2025-11-05 15:45:00.000,2025-11-05 19:45:00.000
+892,1,37,B-drevesa,Branje prosojnic o B-drevesih in njihovi uporabi v podatkovnih bazah.,,2025-11-05 21:00:00.000,2025-11-05 18:30:00.000,2025-11-05 21:00:00.000
+893,1,4,Robni in začetni pogoji,Vaje iz postavljanja robnih pogojev pri PDE.,Rabim še ponoviti to temo.,2025-11-06 09:52:00.000,2025-11-06 07:10:00.000,2025-11-06 09:52:00.000
+894,1,19,Numerično reševanje sistemov enačb,Branje o LU razcepu in iterativnih metodah.,,2025-11-06 21:30:00.000,2025-11-06 17:30:00.000,2025-11-06 21:30:00.000
+895,1,2,Indeksi in optimizacija poizvedb,Branje o indeksih in njihovem vplivu na hitrost poizvedb.,"Malo sem se izgubila v podrobnostih, jutri nadaljujem.",2025-11-07 13:15:00.000,2025-11-07 11:45:00.000,2025-11-07 13:15:00.000
+896,1,3,Newtonovi zakoni - vaje,Reševanje nalog o silah in pospeških.,,2025-11-07 20:50:00.000,2025-11-07 17:20:00.000,2025-11-07 20:50:00.000
+897,1,32,Dualnost v LP,Učenje dualnega problema linearnega programiranja.,,2025-11-07 22:50:00.000,2025-11-07 20:20:00.000,2025-11-07 22:50:00.000
+898,1,6,Sortirni algoritmi,"Ponavljanje Quicksort, Mergesort in Insertion sort.",,2025-11-07 23:20:00.000,2025-11-07 21:50:00.000,2025-11-07 23:20:00.000
+899,1,41,B-drevesa,Branje prosojnic o B-drevesih in njihovi uporabi v podatkovnih bazah.,Zelo koristna razlaga na predavanjih.,2025-11-08 11:45:00.000,2025-11-08 08:45:00.000,2025-11-08 11:45:00.000
+900,1,27,Uravnotežena drevesa - AVL,Učenje rotacij pri AVL drevesih za ohranjanje uravnoteženosti.,Šlo mi je dobro.,2025-11-08 23:30:00.000,2025-11-08 19:30:00.000,2025-11-08 23:30:00.000
+901,1,7,Priprava na pisni izpit,Ponavljanje snovi iz celotnega semestra pred pisnim izpitom.,"Malo sem se izgubila v podrobnostih, jutri nadaljujem.",2025-11-09 17:50:00.000,2025-11-09 17:20:00.000,2025-11-09 17:50:00.000
+902,1,35,Izdelava predstavitve - Fenwick Tree,Urejanje diapozitivov za predstavitev seminarske naloge.,,2025-11-10 17:15:00.000,2025-11-10 16:15:00.000,2025-11-10 17:15:00.000
+903,1,37,Zgoščene tabele - reševanje kolizij,Primerjava metode verig in odprtega naslavljanja.,,2025-11-10 19:10:00.000,2025-11-10 16:10:00.000,2025-11-10 19:10:00.000
+904,1,4,Difuzijska enačba,Učenje reševanja difuzijske (toplotne) enačbe.,Šlo mi je dobro.,2025-11-11 19:35:00.000,2025-11-11 17:05:00.000,2025-11-11 19:35:00.000
+905,1,21,Naloga 4 - agent v labirintu,"Implementacija agenta, ki išče pot v labirintu.",,2025-11-12 12:20:00.000,2025-11-12 07:20:00.000,2025-11-12 12:20:00.000
+906,1,3,Dinamika sistemov delcev,Predelovanje prosojnic o gibalni količini in vrtilni količini.,,2025-11-12 15:00:00.000,2025-11-12 11:00:00.000,2025-11-12 15:00:00.000
+907,1,23,B-drevesa,Branje prosojnic o B-drevesih in njihovi uporabi v podatkovnih bazah.,,2025-11-12 23:50:00.000,2025-11-12 19:50:00.000,2025-11-12 23:50:00.000
+908,1,4,Valovna enačba,Reševanje valovne enačbe z metodo ločitve spremenljivk.,Zelo koristna razlaga na predavanjih.,2025-11-14 12:00:00.000,2025-11-14 11:00:00.000,2025-11-14 12:00:00.000
+909,1,34,Lagrangeovi multiplikatorji,Domača naloga 4 - optimizacija z omejitvami.,,2025-11-14 20:15:00.000,2025-11-14 17:45:00.000,2025-11-14 20:15:00.000
+910,1,20,Preprost perceptron,Reševanje naloge 2 - implementacija perceptrona.,,2025-11-15 18:30:00.000,2025-11-15 15:30:00.000,2025-11-15 18:30:00.000
+911,1,4,Laplaceova enačba,Ponavljanje harmoničnih funkcij in Laplaceove enačbe.,Rabim še ponoviti to temo.,2025-11-15 21:30:00.000,2025-11-15 18:00:00.000,2025-11-15 21:30:00.000
+912,2,16,Pripravi se na kolokvij,Preveri termin kolokvija in ponovi snov.,,2025-11-16 16:50:00.000,,
+913,1,11,Reševanje starih izpitnih nalog,Reševanje nalog s prejšnjih pisnih izpitov.,,2025-11-16 17:00:00.000,2025-11-16 15:30:00.000,2025-11-16 17:00:00.000
+914,1,11,Minimalno vpeto drevo - Prim,Reševanje nalog s Primovim algoritmom.,"Malo sem se izgubila v podrobnostih, jutri nadaljujem.",2025-11-16 18:00:00.000,2025-11-16 14:30:00.000,2025-11-16 18:00:00.000
+915,1,25,Dinamično programiranje - problem kovancev,Reševanje problema minimalnega števila kovancev z DP.,"Malo sem se izgubila v podrobnostih, jutri nadaljujem.",2025-11-17 12:50:00.000,2025-11-17 09:50:00.000,2025-11-17 12:50:00.000
+916,1,33,Numerično reševanje sistemov enačb,Branje o LU razcepu in iterativnih metodah.,Šlo mi je dobro.,2025-11-18 15:35:00.000,2025-11-18 13:05:00.000,2025-11-18 15:35:00.000
+917,1,22,Preprost perceptron,Reševanje naloge 2 - implementacija perceptrona.,,2025-11-18 16:50:00.000,2025-11-18 15:20:00.000,2025-11-18 16:50:00.000
+918,1,20,Preiskovanje s prioriteto - A*,Učenje algoritma A* in hevrističnih funkcij.,Šlo mi je dobro.,2025-11-21 16:15:00.000,2025-11-21 13:45:00.000,2025-11-21 16:15:00.000
+919,1,41,Problem P/NP,Branje o kompleksnostnih razredih P in NP ter NP-polnosti.,Rabim še ponoviti to temo.,2025-11-21 19:10:00.000,2025-11-21 17:10:00.000,2025-11-21 19:10:00.000
+920,1,26,Priprava na pisni izpit,Ponavljanje snovi iz celotnega semestra pred pisnim izpitom.,"Malo sem se izgubila v podrobnostih, jutri nadaljujem.",2025-11-22 11:45:00.000,2025-11-22 09:15:00.000,2025-11-22 11:45:00.000
+921,1,36,Linearno programiranje,Domača naloga 1 - postavitev in reševanje LP problemov.,"Malo sem se izgubila v podrobnostih, jutri nadaljujem.",2025-11-22 21:00:00.000,2025-11-22 20:00:00.000,2025-11-22 21:00:00.000
+922,1,35,Problem P/NP,Branje o kompleksnostnih razredih P in NP ter NP-polnosti.,Šlo mi je dobro.,2025-11-23 19:20:00.000,2025-11-23 16:50:00.000,2025-11-23 19:20:00.000
+923,1,29,Osnove strojnega učenja,Branje o nadzorovanem in nenadzorovanem učenju.,"Nisem še predelala vsega, nadaljujem naslednjič.",2025-11-23 21:05:00.000,2025-11-23 17:05:00.000,2025-11-23 21:05:00.000
+924,1,18,Priprava na 1. kviz,Ponavljanje snovi za kratek kviz iz numeričnih metod.,"Nisem še predelala vsega, nadaljujem naslednjič.",2025-11-24 08:15:00.000,2025-11-24 07:15:00.000,2025-11-24 08:15:00.000
+925,1,27,Pisanje poročila,Pisanje poročila o rešenih nalogah in ugotovitvah.,Rabim še ponoviti to temo.,2025-11-24 14:45:00.000,2025-11-24 13:45:00.000,2025-11-24 14:45:00.000
+926,1,11,Priprava na pisni izpit,Ponavljanje snovi iz celotnega semestra pred pisnim izpitom.,,2025-11-24 19:40:00.000,2025-11-24 17:40:00.000,2025-11-24 19:40:00.000
+927,1,34,Domača naloga - celoštevilsko programiranje,Reševanje naloge s celoštevilskimi omejitvami.,Šlo mi je dobro.,2025-11-26 19:10:00.000,2025-11-26 15:40:00.000,2025-11-26 19:10:00.000
+928,1,25,Sortirni algoritmi,"Ponavljanje Quicksort, Mergesort in Insertion sort.",Šlo mi je dobro.,2025-11-27 10:35:00.000,2025-11-27 09:05:00.000,2025-11-27 10:35:00.000
+929,1,22,Naloga 4 - agent v labirintu,"Implementacija agenta, ki išče pot v labirintu.",,2025-11-27 15:10:00.000,2025-11-27 13:40:00.000,2025-11-27 15:10:00.000
+930,1,7,Rekurzija in sklad,Vaje iz rekurzivnih funkcij in implementacije sklada.,,2025-11-27 16:10:00.000,2025-11-27 11:40:00.000,2025-11-27 16:10:00.000
+931,1,11,Minimalno vpeto drevo - Kruskal,Ponavljanje Kruskalovega algoritma za MVD.,"Nisem še predelala vsega, nadaljujem naslednjič.",2025-11-28 01:35:00.000,2025-11-27 21:05:00.000,2025-11-28 01:35:00.000
+932,1,9,Zgoščene tabele - reševanje kolizij,Primerjava metode verig in odprtega naslavljanja.,"Malo sem se izgubila v podrobnostih, jutri nadaljujem.",2025-11-29 21:15:00.000,2025-11-29 17:15:00.000,2025-11-29 21:15:00.000
+933,1,26,Priprava na pisni izpit,Ponavljanje snovi iz celotnega semestra pred pisnim izpitom.,,2025-11-30 20:05:00.000,2025-11-30 15:05:00.000,2025-11-30 20:05:00.000
+934,1,3,Nihanje in valovanje,Učenje enačb nihanja nihala in harmoničnega gibanja.,,2025-11-30 21:05:00.000,2025-11-30 18:05:00.000,2025-11-30 21:05:00.000
+935,1,41,Iskalna drevesa,Ponavljanje operacij nad binarnimi iskalnimi drevesi.,,2025-11-30 23:20:00.000,2025-11-30 20:50:00.000,2025-11-30 23:20:00.000
+936,1,22,Minimax algoritem,Reševanje naloge 1 - implementacija minimax algoritma za igro.,"Nisem še predelala vsega, nadaljujem naslednjič.",2025-12-02 18:10:00.000,2025-12-02 16:40:00.000,2025-12-02 18:10:00.000
+937,1,16,Simpleksna metoda,Domača naloga 2 - reševanje LP problemov s simpleksno metodo.,"Nisem še predelala vsega, nadaljujem naslednjič.",2025-12-02 23:00:00.000,2025-12-02 20:00:00.000,2025-12-02 23:00:00.000
+938,1,35,Zgoščene tabele - reševanje kolizij,Primerjava metode verig in odprtega naslavljanja.,,2025-12-03 16:00:00.000,2025-12-03 14:30:00.000,2025-12-03 16:00:00.000
+939,1,18,Interpolacija,Naloga 2 - polinomska interpolacija in Lagrangeov polinom.,,2025-12-04 22:00:00.000,2025-12-04 19:30:00.000,2025-12-04 22:00:00.000
+940,1,7,Sortirni algoritmi,"Ponavljanje Quicksort, Mergesort in Insertion sort.",Rabim še ponoviti to temo.,2025-12-07 22:00:00.000,2025-12-07 19:30:00.000,2025-12-07 22:00:00.000
+941,1,4,Valovna enačba,Reševanje valovne enačbe z metodo ločitve spremenljivk.,,2025-12-07 22:10:00.000,2025-12-07 20:10:00.000,2025-12-07 22:10:00.000
+942,3,18,Vprašanje glede Newtonove metode,,,2025-12-08 07:20:00.000,,
+943,1,4,Robni in začetni pogoji,Vaje iz postavljanja robnih pogojev pri PDE.,"Malo sem se izgubila v podrobnostih, jutri nadaljujem.",2025-12-09 14:45:00.000,2025-12-09 11:15:00.000,2025-12-09 14:45:00.000
+944,1,35,Problem P/NP,Branje o kompleksnostnih razredih P in NP ter NP-polnosti.,Šlo mi je dobro.,2025-12-09 16:20:00.000,2025-12-09 15:20:00.000,2025-12-09 16:20:00.000
+945,3,24,Dogovor za termin predstavitve,,,2025-12-09 17:10:00.000,,
+946,1,35,Problem P/NP,Branje o kompleksnostnih razredih P in NP ter NP-polnosti.,,2025-12-10 11:45:00.000,2025-12-10 10:45:00.000,2025-12-10 11:45:00.000
+947,1,19,Numerično reševanje diferencialnih enačb,Naloga 1 - Eulerjeva in Runge-Kutta metoda.,,2025-12-10 21:15:00.000,2025-12-10 18:15:00.000,2025-12-10 21:15:00.000
+948,1,25,Dvosmerno povezan seznam,Predelovanje prosojnic o dvosmerno povezanih seznamih.,Rabim še ponoviti to temo.,2025-12-12 17:05:00.000,2025-12-12 15:05:00.000,2025-12-12 17:05:00.000
+949,1,7,Sortirni algoritmi,"Ponavljanje Quicksort, Mergesort in Insertion sort.",,2025-12-12 17:45:00.000,2025-12-12 16:15:00.000,2025-12-12 17:45:00.000
+950,1,25,Dvojiška drevesa - implementacija,Implementacija vstavljanja in iskanja v dvojiškem iskalnem drevesu.,"Malo sem se izgubila v podrobnostih, jutri nadaljujem.",2025-12-12 23:20:00.000,2025-12-12 19:50:00.000,2025-12-12 23:20:00.000
+951,2,35,Rezerviraj temo za seminarsko,Ne pozabi rezervirati teme za seminarsko nalogo.,,2025-12-13 19:10:00.000,,
+952,1,24,Pisanje poročila,Pisanje poročila o rešenih nalogah in ugotovitvah.,"Nisem še predelala vsega, nadaljujem naslednjič.",2025-12-14 20:45:00.000,2025-12-14 18:45:00.000,2025-12-14 20:45:00.000
+953,1,10,Metoda razveji in omeji - TSP,Reševanje problema trgovskega potnika z metodo razveji in omeji.,,2025-12-20 23:50:00.000,2025-12-20 18:50:00.000,2025-12-20 23:50:00.000
+954,1,17,Numerična integracija,Naloga 3 - trapezno in Simpsonovo pravilo.,,2025-12-23 11:45:00.000,2025-12-23 08:45:00.000,2025-12-23 11:45:00.000
+955,1,25,Sortirni algoritmi,"Ponavljanje Quicksort, Mergesort in Insertion sort.",Zelo koristna razlaga na predavanjih.,2025-12-23 18:30:00.000,2025-12-23 14:30:00.000,2025-12-23 18:30:00.000
+956,1,1,Dvosmerno povezan seznam,Predelovanje prosojnic o dvosmerno povezanih seznamih.,,2025-12-27 18:40:00.000,2025-12-27 16:40:00.000,2025-12-27 18:40:00.000
+957,1,37,Problem P/NP,Branje o kompleksnostnih razredih P in NP ter NP-polnosti.,Zelo koristna razlaga na predavanjih.,2025-12-27 23:00:00.000,2025-12-27 19:00:00.000,2025-12-27 23:00:00.000
+958,1,21,Naloga 4 - agent v labirintu,"Implementacija agenta, ki išče pot v labirintu.",,2025-12-28 13:10:00.000,2025-12-28 11:10:00.000,2025-12-28 13:10:00.000
+959,1,6,Dvosmerno povezan seznam,Predelovanje prosojnic o dvosmerno povezanih seznamih.,,2025-12-28 23:50:00.000,2025-12-28 21:50:00.000,2025-12-28 23:50:00.000
+960,1,1,Enostavno povezani seznam,Implementacija vstavljanja in brisanja vozlišč v verižnem seznamu.,,2025-12-30 22:10:00.000,2025-12-30 20:10:00.000,2025-12-30 22:10:00.000
+961,2,20,Oddaj naslednjo nalogo,Preveri rok za oddajo naslednje domače naloge.,,2026-01-01 18:40:00.000,,
+962,1,3,Kinematika togega telesa,Ponavljanje enačb gibanja in vrtenja togega telesa.,"Malo sem se izgubila v podrobnostih, jutri nadaljujem.",2026-01-02 13:00:00.000,2026-01-02 10:30:00.000,2026-01-02 13:00:00.000
+963,1,4,Robni in začetni pogoji,Vaje iz postavljanja robnih pogojev pri PDE.,,2026-01-02 15:45:00.000,2026-01-02 12:15:00.000,2026-01-02 15:45:00.000
+964,1,26,Minimalno vpeto drevo - Prim,Reševanje nalog s Primovim algoritmom.,"Nisem še predelala vsega, nadaljujem naslednjič.",2026-01-02 22:35:00.000,2026-01-02 20:05:00.000,2026-01-02 22:35:00.000
+965,1,11,Minimalno vpeto drevo - Kruskal,Ponavljanje Kruskalovega algoritma za MVD.,,2026-01-04 16:30:00.000,2026-01-04 13:00:00.000,2026-01-04 16:30:00.000
+966,1,27,Pisanje poročila,Pisanje poročila o rešenih nalogah in ugotovitvah.,,2026-01-04 17:20:00.000,2026-01-04 14:50:00.000,2026-01-04 17:20:00.000
+967,1,41,Priprava seminarske naloge - Fenwick Tree,Raziskovanje strukture Fenwick tree (BIT) za seminarsko nalogo.,,2026-01-04 17:50:00.000,2026-01-04 15:50:00.000,2026-01-04 17:50:00.000
+968,1,28,Numerična integracija,Naloga 3 - trapezno in Simpsonovo pravilo.,,2026-01-07 20:00:00.000,2026-01-07 18:00:00.000,2026-01-07 20:00:00.000
+969,1,26,Dvosmerno povezan seznam,Predelovanje prosojnic o dvosmerno povezanih seznamih.,,2026-01-08 20:35:00.000,2026-01-08 17:05:00.000,2026-01-08 20:35:00.000
+970,1,25,Minimalno vpeto drevo - Kruskal,Ponavljanje Kruskalovega algoritma za MVD.,Zelo koristna razlaga na predavanjih.,2026-01-12 13:40:00.000,2026-01-12 11:10:00.000,2026-01-12 13:40:00.000
+971,1,6,Dvosmerno povezan seznam,Predelovanje prosojnic o dvosmerno povezanih seznamih.,"Nisem še predelala vsega, nadaljujem naslednjič.",2026-01-12 18:45:00.000,2026-01-12 15:45:00.000,2026-01-12 18:45:00.000
+972,1,41,Kopica in prednostna vrsta,"Implementacija binarne kopice, operaciji insert in extract-min.",Šlo mi je dobro.,2026-01-12 22:10:00.000,2026-01-12 17:40:00.000,2026-01-12 22:10:00.000
+973,3,6,Vprašanje o rekurziji,,,2026-01-13 21:30:00.000,,
+974,1,8,Priprava predstavitve projekta,Urejanje diapozitivov in priprava demonstracije projekta.,Šlo mi je dobro.,2026-01-14 00:00:00.000,2026-01-13 19:00:00.000,2026-01-14 00:00:00.000
+975,1,37,Priprava seminarske naloge - Fenwick Tree,Raziskovanje strukture Fenwick tree (BIT) za seminarsko nalogo.,,2026-01-14 00:00:00.000,2026-01-13 20:00:00.000,2026-01-14 00:00:00.000
+976,1,26,Rekonstrukcija drevesa iz pregledov,Vadba rekonstrukcije dvojiškega drevesa iz preorder in inorder izpisa.,Šlo mi je dobro.,2026-01-16 19:30:00.000,2026-01-16 15:30:00.000,2026-01-16 19:30:00.000
+977,1,24,Iskalna drevesa,Ponavljanje operacij nad binarnimi iskalnimi drevesi.,,2026-01-17 20:45:00.000,2026-01-17 18:45:00.000,2026-01-17 20:45:00.000
+978,1,35,Iskalna drevesa,Ponavljanje operacij nad binarnimi iskalnimi drevesi.,,2026-01-18 00:45:00.000,2026-01-17 21:45:00.000,2026-01-18 00:45:00.000
+979,1,27,Floyd-Warshallov algoritem,Ponavljanje algoritma za najkrajše poti med vsemi pari vozlišč.,,2026-01-18 10:30:00.000,2026-01-18 07:30:00.000,2026-01-18 10:30:00.000
+980,2,40,Dokončaj projekt do roka,Ne pozabi oddati projektne naloge pred rokom.,,2026-01-18 15:50:00.000,,
+981,2,3,Ponovi snov za ustni izpit,Preveri termin ustnega izpita in pripravi vprašanja.,,2026-01-18 17:40:00.000,,
+982,1,4,Difuzijska enačba,Učenje reševanja difuzijske (toplotne) enačbe.,"Malo sem se izgubila v podrobnostih, jutri nadaljujem.",2026-01-20 13:10:00.000,2026-01-20 09:40:00.000,2026-01-20 13:10:00.000
+983,1,26,Sortirni algoritmi,"Ponavljanje Quicksort, Mergesort in Insertion sort.",,2026-01-21 15:50:00.000,2026-01-21 13:50:00.000,2026-01-21 15:50:00.000
+984,1,23,Pisanje poročila,Pisanje poročila o rešenih nalogah in ugotovitvah.,Rabim še ponoviti to temo.,2026-01-21 22:00:00.000,2026-01-21 19:30:00.000,2026-01-21 22:00:00.000
+985,1,22,Alfa-beta obrezovanje,Naloga 3 - dopolnitev minimax algoritma z alfa-beta obrezovanjem.,,2026-01-22 23:30:00.000,2026-01-22 20:30:00.000,2026-01-22 23:30:00.000
+986,1,41,Kopica in prednostna vrsta,"Implementacija binarne kopice, operaciji insert in extract-min.",Šlo mi je dobro.,2026-01-25 20:15:00.000,2026-01-25 18:15:00.000,2026-01-25 20:15:00.000
+987,1,35,B-drevesa,Branje prosojnic o B-drevesih in njihovi uporabi v podatkovnih bazah.,,2026-01-25 20:50:00.000,2026-01-25 18:20:00.000,2026-01-25 20:50:00.000
+988,1,19,Priprava na 1. kviz,Ponavljanje snovi za kratek kviz iz numeričnih metod.,"Malo sem se izgubila v podrobnostih, jutri nadaljujem.",2026-01-25 21:30:00.000,2026-01-25 20:30:00.000,2026-01-25 21:30:00.000
+989,1,19,Numerično reševanje diferencialnih enačb,Naloga 1 - Eulerjeva in Runge-Kutta metoda.,Rabim še ponoviti to temo.,2026-01-25 23:40:00.000,2026-01-25 19:10:00.000,2026-01-25 23:40:00.000
+990,1,9,Pisanje poročila,Pisanje poročila o rešenih nalogah in ugotovitvah.,,2026-01-27 17:15:00.000,2026-01-27 14:45:00.000,2026-01-27 17:15:00.000
+991,1,27,Kopica in prednostna vrsta,"Implementacija binarne kopice, operaciji insert in extract-min.",,2026-01-29 21:30:00.000,2026-01-29 19:30:00.000,2026-01-29 21:30:00.000
+992,1,25,Vaje - verige vozlov,"Reševanje nalog iz seznama, testiranje robnih primerov.",,2026-01-29 21:50:00.000,2026-01-29 17:20:00.000,2026-01-29 21:50:00.000
+993,1,26,Minimalno vpeto drevo - Kruskal,Ponavljanje Kruskalovega algoritma za MVD.,,2026-01-31 18:00:00.000,2026-01-31 15:30:00.000,2026-01-31 18:00:00.000
+994,1,21,BFS in DFS na grafih,Vaje iz preiskovanja grafov v širino in globino.,,2026-02-01 14:27:00.000,2026-02-01 13:45:00.000,2026-02-01 14:27:00.000
+995,1,2,ER diagram za projekt,Izdelava entitetno-relacijskega diagrama za projektno nalogo.,Zelo koristna razlaga na predavanjih.,2026-02-01 18:40:00.000,2026-02-01 16:10:00.000,2026-02-01 18:40:00.000
+996,1,4,Difuzijska enačba,Učenje reševanja difuzijske (toplotne) enačbe.,,2026-02-01 21:30:00.000,2026-02-01 19:00:00.000,2026-02-01 21:30:00.000
+997,1,20,Preprost perceptron,Reševanje naloge 2 - implementacija perceptrona.,,2026-02-05 16:40:00.000,2026-02-05 13:10:00.000,2026-02-05 16:40:00.000
+998,1,25,Priprava na pisni izpit,Ponavljanje snovi iz celotnega semestra pred pisnim izpitom.,Zelo koristna razlaga na predavanjih.,2026-02-05 22:30:00.000,2026-02-05 20:00:00.000,2026-02-05 22:30:00.000
+999,1,17,Newtonova metoda za ničle funkcij,Naloga 4 - implementacija Newtonove metode.,,2026-02-06 00:00:00.000,2026-02-05 19:30:00.000,2026-02-06 00:00:00.000
+1000,1,34,Domača naloga - celoštevilsko programiranje,Reševanje naloge s celoštevilskimi omejitvami.,,2026-02-07 15:05:00.000,2026-02-07 12:05:00.000,2026-02-07 15:05:00.000
+1001,1,27,Uravnotežena drevesa - AVL,Učenje rotacij pri AVL drevesih za ohranjanje uravnoteženosti.,,2026-02-07 15:50:00.000,2026-02-07 13:50:00.000,2026-02-07 15:50:00.000
+1002,1,7,Minimalno vpeto drevo - Prim,Reševanje nalog s Primovim algoritmom.,,2026-02-07 21:40:00.000,2026-02-07 18:40:00.000,2026-02-07 21:40:00.000
+1003,1,40,ER diagram za projekt,Izdelava entitetno-relacijskega diagrama za projektno nalogo.,,2026-02-08 13:45:00.000,2026-02-08 11:15:00.000,2026-02-08 13:45:00.000
+1004,1,7,Minimalno vpeto drevo - Kruskal,Ponavljanje Kruskalovega algoritma za MVD.,,2026-02-08 17:15:00.000,2026-02-08 14:45:00.000,2026-02-08 17:15:00.000
+1005,1,15,Simpleksna metoda,Domača naloga 2 - reševanje LP problemov s simpleksno metodo.,Zelo koristna razlaga na predavanjih.,2026-02-10 09:40:00.000,2026-02-10 08:10:00.000,2026-02-10 09:40:00.000
+1006,3,23,Dogovor za termin predstavitve,,,2026-02-10 18:10:00.000,,
+1007,1,26,Reševanje starih izpitnih nalog,Reševanje nalog s prejšnjih pisnih izpitov.,,2026-02-11 16:40:00.000,2026-02-11 13:10:00.000,2026-02-11 16:40:00.000
+1008,1,6,Reševanje starih izpitnih nalog,Reševanje nalog s prejšnjih pisnih izpitov.,,2026-02-11 17:20:00.000,2026-02-11 15:50:00.000,2026-02-11 17:20:00.000
+1009,1,23,Izdelava predstavitve - Fenwick Tree,Urejanje diapozitivov za predstavitev seminarske naloge.,,2026-02-11 18:30:00.000,2026-02-11 16:00:00.000,2026-02-11 18:30:00.000
+1010,1,4,Laplaceova enačba,Ponavljanje harmoničnih funkcij in Laplaceove enačbe.,,2026-02-12 17:15:00.000,2026-02-12 14:15:00.000,2026-02-12 17:15:00.000
+1011,1,35,B-drevesa,Branje prosojnic o B-drevesih in njihovi uporabi v podatkovnih bazah.,"Nisem še predelala vsega, nadaljujem naslednjič.",2026-02-12 17:20:00.000,2026-02-12 15:20:00.000,2026-02-12 17:20:00.000
+1012,1,26,Minimalno vpeto drevo - Kruskal,Ponavljanje Kruskalovega algoritma za MVD.,,2026-02-14 20:15:00.000,2026-02-14 16:15:00.000,2026-02-14 20:15:00.000
+1013,1,17,Priprava na 1. kviz,Ponavljanje snovi za kratek kviz iz numeričnih metod.,Šlo mi je dobro.,2026-02-15 19:10:00.000,2026-02-15 16:10:00.000,2026-02-15 19:10:00.000
+1014,1,26,Priprava na pisni izpit,Ponavljanje snovi iz celotnega semestra pred pisnim izpitom.,"Nisem še predelala vsega, nadaljujem naslednjič.",2026-02-16 10:50:00.000,2026-02-16 09:20:00.000,2026-02-16 10:50:00.000
+1015,1,7,Rekurzija in sklad,Vaje iz rekurzivnih funkcij in implementacije sklada.,Zelo koristna razlaga na predavanjih.,2026-02-16 16:00:00.000,2026-02-16 13:30:00.000,2026-02-16 16:00:00.000
+1016,1,20,Osnove strojnega učenja,Branje o nadzorovanem in nenadzorovanem učenju.,,2026-02-16 19:40:00.000,2026-02-16 15:40:00.000,2026-02-16 19:40:00.000
+1017,1,6,Enostavno povezani seznam,Implementacija vstavljanja in brisanja vozlišč v verižnem seznamu.,Rabim še ponoviti to temo.,2026-02-16 22:40:00.000,2026-02-16 18:40:00.000,2026-02-16 22:40:00.000
+1018,1,11,Dvosmerno povezan seznam,Predelovanje prosojnic o dvosmerno povezanih seznamih.,,2026-02-18 13:30:00.000,2026-02-18 10:00:00.000,2026-02-18 13:30:00.000
+1019,1,24,B-drevesa,Branje prosojnic o B-drevesih in njihovi uporabi v podatkovnih bazah.,,2026-02-18 14:20:00.000,2026-02-18 12:20:00.000,2026-02-18 14:20:00.000
+1020,3,3,Vprašanje za asistenta o nihanju,,,2026-02-18 18:05:00.000,,
+1021,2,11,Ponovi verižne sezname pred vajami,Preglej rešene naloge pred naslednjimi vajami.,,2026-02-18 18:45:00.000,,
+1022,1,27,Iskalna drevesa,Ponavljanje operacij nad binarnimi iskalnimi drevesi.,,2026-02-18 19:10:00.000,2026-02-18 15:10:00.000,2026-02-18 19:10:00.000
+1023,1,26,Rekurzija in sklad,Vaje iz rekurzivnih funkcij in implementacije sklada.,Rabim še ponoviti to temo.,2026-02-18 21:50:00.000,2026-02-18 19:20:00.000,2026-02-18 21:50:00.000
+1024,2,18,Pripravi se na kviz,Ponovi snov pred kratkim kvizom.,,2026-02-19 17:30:00.000,,
+1025,1,23,Priprava seminarske naloge - Fenwick Tree,Raziskovanje strukture Fenwick tree (BIT) za seminarsko nalogo.,Zelo koristna razlaga na predavanjih.,2026-02-20 00:00:00.000,2026-02-19 21:00:00.000,2026-02-20 00:00:00.000
+1026,1,25,Vaje - verige vozlov,"Reševanje nalog iz seznama, testiranje robnih primerov.",,2026-02-20 20:10:00.000,2026-02-20 17:10:00.000,2026-02-20 20:10:00.000
+1027,1,4,Priprava na ustni izpit,Ponavljanje snovi iz celotnega semestra.,"Malo sem se izgubila v podrobnostih, jutri nadaljujem.",2026-02-20 23:00:00.000,2026-02-20 20:00:00.000,2026-02-20 23:00:00.000
+1028,1,3,Nihanje in valovanje,Učenje enačb nihanja nihala in harmoničnega gibanja.,,2026-02-27 01:40:00.000,2026-02-26 21:10:00.000,2026-02-27 01:40:00.000
+1029,1,25,Vaje - verige vozlov,"Reševanje nalog iz seznama, testiranje robnih primerov.",Šlo mi je dobro.,2026-02-27 15:10:00.000,2026-02-27 13:40:00.000,2026-02-27 15:10:00.000
+1030,1,7,Vaje - verige vozlov,"Reševanje nalog iz seznama, testiranje robnih primerov.",Zelo koristna razlaga na predavanjih.,2026-02-27 21:45:00.000,2026-02-27 18:15:00.000,2026-02-27 21:45:00.000
+1031,1,4,Difuzijska enačba,Učenje reševanja difuzijske (toplotne) enačbe.,Zelo koristna razlaga na predavanjih.,2026-02-28 01:45:00.000,2026-02-27 20:45:00.000,2026-02-28 01:45:00.000
+1032,1,10,Kopica in prednostna vrsta,"Implementacija binarne kopice, operaciji insert in extract-min.",,2026-02-28 17:40:00.000,2026-02-28 15:10:00.000,2026-02-28 17:40:00.000
+1033,1,3,Priprava na ustni izpit,"Ponavljanje celotne snovi iz mehanike, izdelava zapiskov.",,2026-02-28 20:05:00.000,2026-02-28 18:05:00.000,2026-02-28 20:05:00.000
+1034,1,30,Lagrangeovi multiplikatorji,Domača naloga 4 - optimizacija z omejitvami.,Rabim še ponoviti to temo.,2026-02-28 21:35:00.000,2026-02-28 18:05:00.000,2026-02-28 21:35:00.000
+1035,1,6,Dinamično programiranje - problem kovancev,Reševanje problema minimalnega števila kovancev z DP.,,2026-03-03 19:20:00.000,2026-03-03 18:20:00.000,2026-03-03 19:20:00.000
+1036,1,18,Newtonova metoda za ničle funkcij,Naloga 4 - implementacija Newtonove metode.,,2026-03-03 19:20:00.000,2026-03-03 15:50:00.000,2026-03-03 19:20:00.000
+1037,1,5,Rekonstrukcija drevesa iz pregledov,Vadba rekonstrukcije dvojiškega drevesa iz preorder in inorder izpisa.,Šlo mi je dobro.,2026-03-04 18:20:00.000,2026-03-04 15:20:00.000,2026-03-04 18:20:00.000
+1038,1,26,Minimalno vpeto drevo - Prim,Reševanje nalog s Primovim algoritmom.,,2026-03-05 11:35:00.000,2026-03-05 10:05:00.000,2026-03-05 11:35:00.000
+1039,1,6,Rekurzija in sklad,Vaje iz rekurzivnih funkcij in implementacije sklada.,,2026-03-05 22:40:00.000,2026-03-05 18:40:00.000,2026-03-05 22:40:00.000
+1040,1,40,Priprava predstavitve projekta,Urejanje diapozitivov in priprava demonstracije projekta.,Zelo koristna razlaga na predavanjih.,2026-03-06 18:50:00.000,2026-03-06 14:50:00.000,2026-03-06 18:50:00.000
+1041,1,5,Minimalno vpeto drevo - Prim,Reševanje nalog s Primovim algoritmom.,Rabim še ponoviti to temo.,2026-03-07 10:00:00.000,2026-03-07 07:30:00.000,2026-03-07 10:00:00.000
+1042,1,26,Dvosmerno povezan seznam,Predelovanje prosojnic o dvosmerno povezanih seznamih.,Rabim še ponoviti to temo.,2026-03-08 22:45:00.000,2026-03-08 18:45:00.000,2026-03-08 22:45:00.000
+1043,1,36,Simpleksna metoda,Domača naloga 2 - reševanje LP problemov s simpleksno metodo.,,2026-03-10 10:40:00.000,2026-03-10 07:40:00.000,2026-03-10 10:40:00.000
+1044,1,11,Dinamično programiranje - problem kovancev,Reševanje problema minimalnega števila kovancev z DP.,,2026-03-10 22:15:00.000,2026-03-10 18:15:00.000,2026-03-10 22:15:00.000
+1045,1,1,Enostavno povezani seznam,Implementacija vstavljanja in brisanja vozlišč v verižnem seznamu.,"Nisem še predelala vsega, nadaljujem naslednjič.",2026-03-11 17:15:00.000,2026-03-11 15:45:00.000,2026-03-11 17:15:00.000
+1046,1,29,Alfa-beta obrezovanje,Naloga 3 - dopolnitev minimax algoritma z alfa-beta obrezovanjem.,"Malo sem se izgubila v podrobnostih, jutri nadaljujem.",2026-03-12 16:30:00.000,2026-03-12 13:00:00.000,2026-03-12 16:30:00.000
+1047,1,23,Metoda razveji in omeji - TSP,Reševanje problema trgovskega potnika z metodo razveji in omeji.,Zelo koristna razlaga na predavanjih.,2026-03-12 23:10:00.000,2026-03-12 20:10:00.000,2026-03-12 23:10:00.000
+1048,1,27,Floyd-Warshallov algoritem,Ponavljanje algoritma za najkrajše poti med vsemi pari vozlišč.,"Nisem še predelala vsega, nadaljujem naslednjič.",2026-03-12 23:30:00.000,2026-03-12 19:00:00.000,2026-03-12 23:30:00.000
+1049,1,7,Minimalno vpeto drevo - Prim,Reševanje nalog s Primovim algoritmom.,Rabim še ponoviti to temo.,2026-03-13 20:50:00.000,2026-03-13 16:20:00.000,2026-03-13 20:50:00.000
+1050,1,6,Enostavno povezani seznam,Implementacija vstavljanja in brisanja vozlišč v verižnem seznamu.,Zelo koristna razlaga na predavanjih.,2026-03-15 15:10:00.000,2026-03-15 11:10:00.000,2026-03-15 15:10:00.000
+1051,1,23,Pisanje poročila,Pisanje poročila o rešenih nalogah in ugotovitvah.,Rabim še ponoviti to temo.,2026-03-15 15:10:00.000,2026-03-15 13:40:00.000,2026-03-15 15:10:00.000
+1052,1,24,Zgoščene tabele - reševanje kolizij,Primerjava metode verig in odprtega naslavljanja.,Rabim še ponoviti to temo.,2026-03-15 17:15:00.000,2026-03-15 14:15:00.000,2026-03-15 17:15:00.000
+1053,1,33,Priprava na 1. kviz,Ponavljanje snovi za kratek kviz iz numeričnih metod.,Zelo koristna razlaga na predavanjih.,2026-03-15 20:35:00.000,2026-03-15 19:05:00.000,2026-03-15 20:35:00.000
+1054,2,9,Rezerviraj temo za seminarsko,Ne pozabi rezervirati teme za seminarsko nalogo.,,2026-03-17 08:05:00.000,,
+1055,1,32,Domača naloga - celoštevilsko programiranje,Reševanje naloge s celoštevilskimi omejitvami.,"Malo sem se izgubila v podrobnostih, jutri nadaljujem.",2026-03-17 14:45:00.000,2026-03-17 10:15:00.000,2026-03-17 14:45:00.000
+1056,1,6,Enostavno povezani seznam,Implementacija vstavljanja in brisanja vozlišč v verižnem seznamu.,,2026-03-17 22:30:00.000,2026-03-17 20:00:00.000,2026-03-17 22:30:00.000
+1057,1,26,Minimalno vpeto drevo - Prim,Reševanje nalog s Primovim algoritmom.,,2026-03-18 13:10:00.000,2026-03-18 10:40:00.000,2026-03-18 13:10:00.000
+1058,1,38,Indeksi in optimizacija poizvedb,Branje o indeksih in njihovem vplivu na hitrost poizvedb.,Rabim še ponoviti to temo.,2026-03-19 16:40:00.000,2026-03-19 12:40:00.000,2026-03-19 16:40:00.000
+1059,1,3,Kinematika togega telesa,Ponavljanje enačb gibanja in vrtenja togega telesa.,Rabim še ponoviti to temo.,2026-03-21 11:57:00.000,2026-03-21 11:15:00.000,2026-03-21 11:57:00.000
+1060,1,5,Priprava na pisni izpit,Ponavljanje snovi iz celotnega semestra pred pisnim izpitom.,Rabim še ponoviti to temo.,2026-03-24 19:30:00.000,2026-03-24 17:30:00.000,2026-03-24 19:30:00.000
+1061,1,32,Simpleksna metoda,Domača naloga 2 - reševanje LP problemov s simpleksno metodo.,"Malo sem se izgubila v podrobnostih, jutri nadaljujem.",2026-03-25 09:15:00.000,2026-03-25 07:15:00.000,2026-03-25 09:15:00.000
+1062,1,41,Priprava na ustni izpit,Ponavljanje celotne snovi za ustni izpit iz Računalništva 2.,Zelo koristna razlaga na predavanjih.,2026-03-26 19:15:00.000,2026-03-26 17:45:00.000,2026-03-26 19:15:00.000
+1063,1,26,Rekurzija in sklad,Vaje iz rekurzivnih funkcij in implementacije sklada.,,2026-03-29 11:40:00.000,2026-03-29 09:40:00.000,2026-03-29 11:40:00.000
+1064,3,30,Vprašanje glede simpleksne metode,,,2026-03-30 10:05:00.000,,
+1065,1,22,Preiskovanje s prioriteto - A*,Učenje algoritma A* in hevrističnih funkcij.,"Malo sem se izgubila v podrobnostih, jutri nadaljujem.",2026-03-30 11:45:00.000,2026-03-30 10:45:00.000,2026-03-30 11:45:00.000
+1066,1,1,Dvosmerno povezan seznam,Predelovanje prosojnic o dvosmerno povezanih seznamih.,,2026-03-30 20:35:00.000,2026-03-30 18:05:00.000,2026-03-30 20:35:00.000
+1067,1,8,SQL poizvedbe - JOIN,Reševanje nalog s spajanjem tabel v SQL-u.,"Malo sem se izgubila v podrobnostih, jutri nadaljujem.",2026-03-31 17:20:00.000,2026-03-31 14:20:00.000,2026-03-31 17:20:00.000
+1068,1,10,Priprava na ustni izpit,Ponavljanje celotne snovi za ustni izpit iz Računalništva 2.,,2026-03-31 21:15:00.000,2026-03-31 19:45:00.000,2026-03-31 21:15:00.000
+1069,1,5,Dvosmerno povezan seznam,Predelovanje prosojnic o dvosmerno povezanih seznamih.,Zelo koristna razlaga na predavanjih.,2026-03-31 22:10:00.000,2026-03-31 18:10:00.000,2026-03-31 22:10:00.000
+1070,1,38,Transakcije in ACID,Ponavljanje lastnosti transakcij in nivojev izolacije.,,2026-04-02 21:35:00.000,2026-04-02 17:05:00.000,2026-04-02 21:35:00.000
+1071,1,22,Minimax algoritem,Reševanje naloge 1 - implementacija minimax algoritma za igro.,"Malo sem se izgubila v podrobnostih, jutri nadaljujem.",2026-04-03 12:10:00.000,2026-04-03 08:10:00.000,2026-04-03 12:10:00.000
+1072,2,26,Ponovi verižne sezname pred vajami,Preglej rešene naloge pred naslednjimi vajami.,,2026-04-03 19:40:00.000,,
+1073,1,38,SQL poizvedbe - JOIN,Reševanje nalog s spajanjem tabel v SQL-u.,,2026-04-04 12:15:00.000,2026-04-04 09:15:00.000,2026-04-04 12:15:00.000
+1074,1,41,Zgoščene tabele - reševanje kolizij,Primerjava metode verig in odprtega naslavljanja.,Zelo koristna razlaga na predavanjih.,2026-04-04 14:20:00.000,2026-04-04 12:50:00.000,2026-04-04 14:20:00.000
+1075,1,33,Newtonova metoda za ničle funkcij,Naloga 4 - implementacija Newtonove metode.,,2026-04-05 20:10:00.000,2026-04-05 19:10:00.000,2026-04-05 20:10:00.000
+1076,1,4,Laplaceova enačba,Ponavljanje harmoničnih funkcij in Laplaceove enačbe.,,2026-04-06 09:50:00.000,2026-04-06 07:50:00.000,2026-04-06 09:50:00.000
+1077,1,26,Minimalno vpeto drevo - Prim,Reševanje nalog s Primovim algoritmom.,,2026-04-07 09:10:00.000,2026-04-07 07:40:00.000,2026-04-07 09:10:00.000
+1078,1,6,Minimalno vpeto drevo - Prim,Reševanje nalog s Primovim algoritmom.,,2026-04-07 12:30:00.000,2026-04-07 10:00:00.000,2026-04-07 12:30:00.000
+1079,1,3,Dinamika sistemov delcev,Predelovanje prosojnic o gibalni količini in vrtilni količini.,,2026-04-07 13:10:00.000,2026-04-07 09:40:00.000,2026-04-07 13:10:00.000
+1080,1,35,Pisanje poročila,Pisanje poročila o rešenih nalogah in ugotovitvah.,Šlo mi je dobro.,2026-04-07 20:00:00.000,2026-04-07 17:30:00.000,2026-04-07 20:00:00.000
+1081,2,41,Rezerviraj temo za seminarsko,Ne pozabi rezervirati teme za seminarsko nalogo.,,2026-04-08 15:15:00.000,,
+1082,1,7,Minimalno vpeto drevo - Prim,Reševanje nalog s Primovim algoritmom.,Šlo mi je dobro.,2026-04-09 16:50:00.000,2026-04-09 13:50:00.000,2026-04-09 16:50:00.000
+1083,1,3,Priprava na ustni izpit,"Ponavljanje celotne snovi iz mehanike, izdelava zapiskov.",,2026-04-09 18:30:00.000,2026-04-09 17:00:00.000,2026-04-09 18:30:00.000
+1084,1,9,Uravnotežena drevesa - AVL,Učenje rotacij pri AVL drevesih za ohranjanje uravnoteženosti.,Rabim še ponoviti to temo.,2026-04-09 19:50:00.000,2026-04-09 18:50:00.000,2026-04-09 19:50:00.000
+1085,1,16,Domača naloga - celoštevilsko programiranje,Reševanje naloge s celoštevilskimi omejitvami.,,2026-04-10 11:40:00.000,2026-04-10 08:40:00.000,2026-04-10 11:40:00.000
+1086,1,4,Fourierova metoda,Predelovanje Fourierovih vrst za reševanje PDE.,,2026-04-11 20:45:00.000,2026-04-11 19:15:00.000,2026-04-11 20:45:00.000
+1087,1,26,Priprava na pisni izpit,Ponavljanje snovi iz celotnega semestra pred pisnim izpitom.,,2026-04-12 12:05:00.000,2026-04-12 11:05:00.000,2026-04-12 12:05:00.000
+1088,1,1,Rekonstrukcija drevesa iz pregledov,Vadba rekonstrukcije dvojiškega drevesa iz preorder in inorder izpisa.,"Nisem še predelala vsega, nadaljujem naslednjič.",2026-04-12 23:30:00.000,2026-04-12 19:30:00.000,2026-04-12 23:30:00.000
+1089,1,26,Minimalno vpeto drevo - Kruskal,Ponavljanje Kruskalovega algoritma za MVD.,Zelo koristna razlaga na predavanjih.,2026-04-13 15:10:00.000,2026-04-13 12:40:00.000,2026-04-13 15:10:00.000
+1090,1,28,Numerično reševanje sistemov enačb,Branje o LU razcepu in iterativnih metodah.,Rabim še ponoviti to temo.,2026-04-13 17:40:00.000,2026-04-13 16:10:00.000,2026-04-13 17:40:00.000
+1091,2,4,Dokončaj zapiske o PDE,"Ponovi to, kar sem že obdelala, in dopolni zapiske za naslednjo temo.",,2026-04-17 09:00:00.000,,
+1092,3,4,Vprašanje glede robnih pogojev,,,2026-04-17 18:05:00.000,,
+1093,3,20,Vprašanje o alfa-beta obrezovanju,,,2026-04-17 18:50:00.000,,
+1094,1,11,Priprava na pisni izpit,Ponavljanje snovi iz celotnega semestra pred pisnim izpitom.,Šlo mi je dobro.,2026-04-18 14:00:00.000,2026-04-18 09:30:00.000,2026-04-18 14:00:00.000
+1095,1,25,Dvosmerno povezan seznam,Predelovanje prosojnic o dvosmerno povezanih seznamih.,"Malo sem se izgubila v podrobnostih, jutri nadaljujem.",2026-04-18 20:15:00.000,2026-04-18 17:45:00.000,2026-04-18 20:15:00.000
+1096,1,26,Dvosmerno povezan seznam,Predelovanje prosojnic o dvosmerno povezanih seznamih.,,2026-04-20 20:20:00.000,2026-04-20 16:20:00.000,2026-04-20 20:20:00.000
+1097,1,11,Minimalno vpeto drevo - Kruskal,Ponavljanje Kruskalovega algoritma za MVD.,Šlo mi je dobro.,2026-04-21 18:50:00.000,2026-04-21 17:20:00.000,2026-04-21 18:50:00.000
+1098,1,23,Floyd-Warshallov algoritem,Ponavljanje algoritma za najkrajše poti med vsemi pari vozlišč.,,2026-04-21 18:50:00.000,2026-04-21 15:50:00.000,2026-04-21 18:50:00.000
+1099,1,27,Uravnotežena drevesa - AVL,Učenje rotacij pri AVL drevesih za ohranjanje uravnoteženosti.,"Malo sem se izgubila v podrobnostih, jutri nadaljujem.",2026-04-22 00:20:00.000,2026-04-21 20:50:00.000,2026-04-22 00:20:00.000
+1100,1,9,B-drevesa,Branje prosojnic o B-drevesih in njihovi uporabi v podatkovnih bazah.,"Malo sem se izgubila v podrobnostih, jutri nadaljujem.",2026-04-22 13:45:00.000,2026-04-22 09:15:00.000,2026-04-22 13:45:00.000
+1101,1,32,Domača naloga - celoštevilsko programiranje,Reševanje naloge s celoštevilskimi omejitvami.,,2026-04-22 17:00:00.000,2026-04-22 13:00:00.000,2026-04-22 17:00:00.000
+1102,1,40,SQL poizvedbe - JOIN,Reševanje nalog s spajanjem tabel v SQL-u.,,2026-04-22 19:10:00.000,2026-04-22 16:10:00.000,2026-04-22 19:10:00.000
+1103,1,19,Interpolacija,Naloga 2 - polinomska interpolacija in Lagrangeov polinom.,,2026-04-24 13:35:00.000,2026-04-24 11:05:00.000,2026-04-24 13:35:00.000
+1104,1,4,Valovna enačba,Reševanje valovne enačbe z metodo ločitve spremenljivk.,,2026-04-24 18:20:00.000,2026-04-24 15:50:00.000,2026-04-24 18:20:00.000
+1105,1,3,Priprava na ustni izpit,"Ponavljanje celotne snovi iz mehanike, izdelava zapiskov.",,2026-04-26 12:50:00.000,2026-04-26 08:20:00.000,2026-04-26 12:50:00.000
+1106,1,23,Priprava na ustni izpit,Ponavljanje celotne snovi za ustni izpit iz Računalništva 2.,Šlo mi je dobro.,2026-04-26 17:20:00.000,2026-04-26 14:50:00.000,2026-04-26 17:20:00.000
+1107,2,6,Ponovi verižne sezname pred vajami,Preglej rešene naloge pred naslednjimi vajami.,,2026-04-27 10:20:00.000,,
+1108,1,3,Nihanje in valovanje,Učenje enačb nihanja nihala in harmoničnega gibanja.,Šlo mi je dobro.,2026-04-27 14:50:00.000,2026-04-27 12:50:00.000,2026-04-27 14:50:00.000
+1109,1,15,Priprava na kolokvij,Ponavljanje snovi pred prvim kolokvijem.,,2026-04-27 16:15:00.000,2026-04-27 14:45:00.000,2026-04-27 16:15:00.000
+1110,2,4,Dokončaj zapiske o PDE,"Ponovi to, kar sem že obdelala, in dopolni zapiske za naslednjo temo.",,2026-04-27 18:10:00.000,,
+1111,1,22,Preiskovanje s prioriteto - A*,Učenje algoritma A* in hevrističnih funkcij.,"Malo sem se izgubila v podrobnostih, jutri nadaljujem.",2026-04-27 18:15:00.000,2026-04-27 16:15:00.000,2026-04-27 18:15:00.000
+1112,1,31,Dualnost v LP,Učenje dualnega problema linearnega programiranja.,Šlo mi je dobro.,2026-04-27 18:45:00.000,2026-04-27 16:15:00.000,2026-04-27 18:45:00.000
+1113,1,38,Indeksi in optimizacija poizvedb,Branje o indeksih in njihovem vplivu na hitrost poizvedb.,Zelo koristna razlaga na predavanjih.,2026-04-27 20:10:00.000,2026-04-27 17:10:00.000,2026-04-27 20:10:00.000
+1114,1,37,Problem P/NP,Branje o kompleksnostnih razredih P in NP ter NP-polnosti.,,2026-04-28 23:00:00.000,2026-04-28 18:30:00.000,2026-04-28 23:00:00.000
+1115,3,40,Dogovor za termin predstavitve projekta,,,2026-04-30 07:40:00.000,,
+1116,1,35,Priprava na ustni izpit,Ponavljanje celotne snovi za ustni izpit iz Računalništva 2.,,2026-05-01 14:15:00.000,2026-05-01 11:15:00.000,2026-05-01 14:15:00.000
+1117,1,20,Naloga 4 - agent v labirintu,"Implementacija agenta, ki išče pot v labirintu.",Šlo mi je dobro.,2026-05-01 18:30:00.000,2026-05-01 14:30:00.000,2026-05-01 18:30:00.000
+1118,2,16,Pripravi se na kolokvij,Preveri termin kolokvija in ponovi snov.,,2026-05-02 07:15:00.000,,
+1119,3,11,Vprašanje o rekurziji,,,2026-05-04 14:15:00.000,,
+1120,1,35,Izdelava predstavitve - Fenwick Tree,Urejanje diapozitivov za predstavitev seminarske naloge.,Zelo koristna razlaga na predavanjih.,2026-05-04 23:50:00.000,2026-05-04 21:20:00.000,2026-05-04 23:50:00.000
+1121,3,41,Dogovor za termin predstavitve,,,2026-05-05 07:15:00.000,,
+1122,1,4,Fourierova metoda,Predelovanje Fourierovih vrst za reševanje PDE.,,2026-05-05 11:20:00.000,2026-05-05 09:20:00.000,2026-05-05 11:20:00.000
+1123,1,24,Floyd-Warshallov algoritem,Ponavljanje algoritma za najkrajše poti med vsemi pari vozlišč.,,2026-05-05 14:30:00.000,2026-05-05 11:00:00.000,2026-05-05 14:30:00.000
+1124,1,11,Sortirni algoritmi,"Ponavljanje Quicksort, Mergesort in Insertion sort.",Rabim še ponoviti to temo.,2026-05-05 17:00:00.000,2026-05-05 12:00:00.000,2026-05-05 17:00:00.000
+1125,1,37,Problem P/NP,Branje o kompleksnostnih razredih P in NP ter NP-polnosti.,"Nisem še predelala vsega, nadaljujem naslednjič.",2026-05-06 23:15:00.000,2026-05-06 21:45:00.000,2026-05-06 23:15:00.000
+1126,1,30,Domača naloga - celoštevilsko programiranje,Reševanje naloge s celoštevilskimi omejitvami.,,2026-05-07 00:20:00.000,2026-05-06 20:50:00.000,2026-05-07 00:20:00.000
+1127,1,35,Zgoščene tabele - reševanje kolizij,Primerjava metode verig in odprtega naslavljanja.,Rabim še ponoviti to temo.,2026-05-07 21:10:00.000,2026-05-07 18:40:00.000,2026-05-07 21:10:00.000
+1128,1,5,Dvosmerno povezan seznam,Predelovanje prosojnic o dvosmerno povezanih seznamih.,"Nisem še predelala vsega, nadaljujem naslednjič.",2026-05-08 19:00:00.000,2026-05-08 15:00:00.000,2026-05-08 19:00:00.000
+1129,1,9,Zgoščene tabele - reševanje kolizij,Primerjava metode verig in odprtega naslavljanja.,Šlo mi je dobro.,2026-05-08 19:00:00.000,2026-05-08 16:00:00.000,2026-05-08 19:00:00.000
+1130,1,1,Minimalno vpeto drevo - Prim,Reševanje nalog s Primovim algoritmom.,,2026-05-08 21:50:00.000,2026-05-08 19:50:00.000,2026-05-08 21:50:00.000
+1131,1,11,Minimalno vpeto drevo - Prim,Reševanje nalog s Primovim algoritmom.,Rabim še ponoviti to temo.,2026-05-10 00:20:00.000,2026-05-09 20:50:00.000,2026-05-10 00:20:00.000
+1132,1,9,Zgoščene tabele - reševanje kolizij,Primerjava metode verig in odprtega naslavljanja.,"Nisem še predelala vsega, nadaljujem naslednjič.",2026-05-10 15:40:00.000,2026-05-10 14:10:00.000,2026-05-10 15:40:00.000
+1133,1,35,Uravnotežena drevesa - AVL,Učenje rotacij pri AVL drevesih za ohranjanje uravnoteženosti.,"Malo sem se izgubila v podrobnostih, jutri nadaljujem.",2026-05-10 21:50:00.000,2026-05-10 19:50:00.000,2026-05-10 21:50:00.000
+1134,1,37,Metoda razveji in omeji - TSP,Reševanje problema trgovskega potnika z metodo razveji in omeji.,"Malo sem se izgubila v podrobnostih, jutri nadaljujem.",2026-05-12 11:10:00.000,2026-05-12 10:10:00.000,2026-05-12 11:10:00.000
+1135,1,38,SQL poizvedbe - JOIN,Reševanje nalog s spajanjem tabel v SQL-u.,,2026-05-13 22:45:00.000,2026-05-13 19:15:00.000,2026-05-13 22:45:00.000
+1136,1,10,Priprava na ustni izpit,Ponavljanje celotne snovi za ustni izpit iz Računalništva 2.,,2026-05-14 14:45:00.000,2026-05-14 13:45:00.000,2026-05-14 14:45:00.000
+1137,1,41,Priprava na ustni izpit,Ponavljanje celotne snovi za ustni izpit iz Računalništva 2.,,2026-05-15 16:30:00.000,2026-05-15 15:00:00.000,2026-05-15 16:30:00.000
+1138,1,35,Floyd-Warshallov algoritem,Ponavljanje algoritma za najkrajše poti med vsemi pari vozlišč.,Šlo mi je dobro.,2026-05-17 15:40:00.000,2026-05-17 11:10:00.000,2026-05-17 15:40:00.000
+1139,1,24,Iskalna drevesa,Ponavljanje operacij nad binarnimi iskalnimi drevesi.,,2026-05-17 18:00:00.000,2026-05-17 17:00:00.000,2026-05-17 18:00:00.000
+1140,2,6,Ponovi verižne sezname pred vajami,Preglej rešene naloge pred naslednjimi vajami.,,2026-05-18 12:05:00.000,,
+1141,1,7,Enostavno povezani seznam,Implementacija vstavljanja in brisanja vozlišč v verižnem seznamu.,Zelo koristna razlaga na predavanjih.,2026-05-18 14:35:00.000,2026-05-18 11:05:00.000,2026-05-18 14:35:00.000
+1142,1,26,Reševanje starih izpitnih nalog,Reševanje nalog s prejšnjih pisnih izpitov.,"Malo sem se izgubila v podrobnostih, jutri nadaljujem.",2026-05-18 15:30:00.000,2026-05-18 14:00:00.000,2026-05-18 15:30:00.000
+1143,1,3,Priprava na ustni izpit,"Ponavljanje celotne snovi iz mehanike, izdelava zapiskov.",Rabim še ponoviti to temo.,2026-05-19 20:10:00.000,2026-05-19 16:40:00.000,2026-05-19 20:10:00.000
+1144,1,6,Reševanje starih izpitnih nalog,Reševanje nalog s prejšnjih pisnih izpitov.,,2026-05-19 21:30:00.000,2026-05-19 19:00:00.000,2026-05-19 21:30:00.000
+1145,1,2,Priprava predstavitve projekta,Urejanje diapozitivov in priprava demonstracije projekta.,,2026-05-21 19:05:00.000,2026-05-21 16:05:00.000,2026-05-21 19:05:00.000
+1146,1,5,Enostavno povezani seznam,Implementacija vstavljanja in brisanja vozlišč v verižnem seznamu.,,2026-05-22 11:15:00.000,2026-05-22 09:45:00.000,2026-05-22 11:15:00.000
+1147,1,11,Sortirni algoritmi,"Ponavljanje Quicksort, Mergesort in Insertion sort.",,2026-05-22 17:00:00.000,2026-05-22 13:00:00.000,2026-05-22 17:00:00.000
+1148,1,1,Reševanje starih izpitnih nalog,Reševanje nalog s prejšnjih pisnih izpitov.,,2026-05-22 21:50:00.000,2026-05-22 19:50:00.000,2026-05-22 21:50:00.000
+1149,1,7,Reševanje starih izpitnih nalog,Reševanje nalog s prejšnjih pisnih izpitov.,,2026-05-23 12:20:00.000,2026-05-23 09:50:00.000,2026-05-23 12:20:00.000
+1150,1,24,Priprava na ustni izpit,Ponavljanje celotne snovi za ustni izpit iz Računalništva 2.,Šlo mi je dobro.,2026-05-27 11:05:00.000,2026-05-27 08:05:00.000,2026-05-27 11:05:00.000
+1151,3,26,Vprašanje o rekurziji,,,2026-05-27 18:05:00.000,,
+1152,1,21,Minimax algoritem,Reševanje naloge 1 - implementacija minimax algoritma za igro.,Šlo mi je dobro.,2026-05-27 22:50:00.000,2026-05-27 21:50:00.000,2026-05-27 22:50:00.000
+1153,1,25,Dvosmerno povezan seznam,Predelovanje prosojnic o dvosmerno povezanih seznamih.,,2026-05-28 10:30:00.000,2026-05-28 08:30:00.000,2026-05-28 10:30:00.000
+1154,2,6,Ponovi verižne sezname pred vajami,Preglej rešene naloge pred naslednjimi vajami.,,2026-05-28 13:10:00.000,,
+1155,1,20,Minimax algoritem,Reševanje naloge 1 - implementacija minimax algoritma za igro.,"Malo sem se izgubila v podrobnostih, jutri nadaljujem.",2026-05-29 16:45:00.000,2026-05-29 14:15:00.000,2026-05-29 16:45:00.000
+1156,1,25,Minimalno vpeto drevo - Kruskal,Ponavljanje Kruskalovega algoritma za MVD.,,2026-05-29 22:20:00.000,2026-05-29 20:20:00.000,2026-05-29 22:20:00.000
+1157,1,35,Pisanje poročila,Pisanje poročila o rešenih nalogah in ugotovitvah.,,2026-05-31 01:30:00.000,2026-05-30 21:30:00.000,2026-05-31 01:30:00.000
+1158,2,23,Rezerviraj temo za seminarsko,Ne pozabi rezervirati teme za seminarsko nalogo.,,2026-05-31 14:45:00.000,,
+1159,1,3,Nihanje in valovanje,Učenje enačb nihanja nihala in harmoničnega gibanja.,"Malo sem se izgubila v podrobnostih, jutri nadaljujem.",2026-06-01 18:30:00.000,2026-06-01 16:00:00.000,2026-06-01 18:30:00.000
+1160,2,3,Ponovi snov za ustni izpit,Preveri termin ustnega izpita in pripravi vprašanja.,,2026-06-02 15:30:00.000,,
+1161,1,3,Statika - ravnotežje sil,Vaje iz ravnotežja sil in navorov na togem telesu.,Šlo mi je dobro.,2026-06-04 20:00:00.000,2026-06-04 17:30:00.000,2026-06-04 20:00:00.000
+1162,1,7,Priprava na pisni izpit,Ponavljanje snovi iz celotnega semestra pred pisnim izpitom.,,2026-06-05 08:40:00.000,2026-06-05 07:10:00.000,2026-06-05 08:40:00.000
+1163,2,1,Ponovi verižne sezname pred vajami,Preglej rešene naloge pred naslednjimi vajami.,,2026-06-06 09:20:00.000,,
+1164,1,33,Priprava na 1. kviz,Ponavljanje snovi za kratek kviz iz numeričnih metod.,,2026-06-06 10:45:00.000,2026-06-06 08:45:00.000,2026-06-06 10:45:00.000
+1165,1,3,Nihanje in valovanje,Učenje enačb nihanja nihala in harmoničnega gibanja.,Zelo koristna razlaga na predavanjih.,2026-06-06 11:40:00.000,2026-06-06 09:10:00.000,2026-06-06 11:40:00.000
+1166,1,4,Laplaceova enačba,Ponavljanje harmoničnih funkcij in Laplaceove enačbe.,,2026-06-08 13:05:00.000,2026-06-08 11:05:00.000,2026-06-08 13:05:00.000
+1167,1,33,Priprava na 1. kviz,Ponavljanje snovi za kratek kviz iz numeričnih metod.,"Malo sem se izgubila v podrobnostih, jutri nadaljujem.",2026-06-08 23:40:00.000,2026-06-08 18:40:00.000,2026-06-08 23:40:00.000
+1168,1,11,Dinamično programiranje - problem kovancev,Reševanje problema minimalnega števila kovancev z DP.,Rabim še ponoviti to temo.,2026-06-09 20:20:00.000,2026-06-09 17:50:00.000,2026-06-09 20:20:00.000
+1169,1,37,Izdelava predstavitve - Fenwick Tree,Urejanje diapozitivov za predstavitev seminarske naloge.,"Malo sem se izgubila v podrobnostih, jutri nadaljujem.",2026-06-09 22:50:00.000,2026-06-09 17:50:00.000,2026-06-09 22:50:00.000
+1170,1,25,Minimalno vpeto drevo - Kruskal,Ponavljanje Kruskalovega algoritma za MVD.,,2026-06-09 23:20:00.000,2026-06-09 20:20:00.000,2026-06-09 23:20:00.000
+1171,1,36,Domača naloga - celoštevilsko programiranje,Reševanje naloge s celoštevilskimi omejitvami.,Šlo mi je dobro.,2026-06-10 13:45:00.000,2026-06-10 09:45:00.000,2026-06-10 13:45:00.000
+1172,1,19,Numerično reševanje sistemov enačb,Branje o LU razcepu in iterativnih metodah.,"Nisem še predelala vsega, nadaljujem naslednjič.",2026-06-12 22:15:00.000,2026-06-12 20:15:00.000,2026-06-12 22:15:00.000
+1173,1,28,Newtonova metoda za ničle funkcij,Naloga 4 - implementacija Newtonove metode.,"Nisem še predelala vsega, nadaljujem naslednjič.",2026-06-13 19:10:00.000,2026-06-13 17:10:00.000,2026-06-13 19:10:00.000
+1174,1,7,Priprava na pisni izpit,Ponavljanje snovi iz celotnega semestra pred pisnim izpitom.,,2026-06-14 21:10:00.000,2026-06-14 18:40:00.000,2026-06-14 21:10:00.000
+1175,2,35,Rezerviraj temo za seminarsko,Ne pozabi rezervirati teme za seminarsko nalogo.,,2026-06-15 09:45:00.000,,
+1176,1,25,Dinamično programiranje - problem kovancev,Reševanje problema minimalnega števila kovancev z DP.,,2026-06-19 01:20:00.000,2026-06-18 21:20:00.000,2026-06-19 01:20:00.000
+1177,1,11,Rekonstrukcija drevesa iz pregledov,Vadba rekonstrukcije dvojiškega drevesa iz preorder in inorder izpisa.,,2026-06-19 14:50:00.000,2026-06-19 12:50:00.000,2026-06-19 14:50:00.000
+1178,1,4,Robni in začetni pogoji,Vaje iz postavljanja robnih pogojev pri PDE.,Rabim še ponoviti to temo.,2026-06-20 12:10:00.000,2026-06-20 10:10:00.000,2026-06-20 12:10:00.000
+1179,1,4,Valovna enačba,Reševanje valovne enačbe z metodo ločitve spremenljivk.,"Nisem še predelala vsega, nadaljujem naslednjič.",2026-06-21 13:20:00.000,2026-06-21 10:20:00.000,2026-06-21 13:20:00.000
+1180,1,41,Kopica in prednostna vrsta,"Implementacija binarne kopice, operaciji insert in extract-min.",Rabim še ponoviti to temo.,2026-06-22 13:20:00.000,2026-06-22 09:50:00.000,2026-06-22 13:20:00.000
+1181,1,27,B-drevesa,Branje prosojnic o B-drevesih in njihovi uporabi v podatkovnih bazah.,,2026-06-22 17:00:00.000,2026-06-22 13:30:00.000,2026-06-22 17:00:00.000
+1182,1,31,Simpleksna metoda,Domača naloga 2 - reševanje LP problemov s simpleksno metodo.,Šlo mi je dobro.,2026-06-22 23:45:00.000,2026-06-22 21:45:00.000,2026-06-22 23:45:00.000
+1183,1,11,Rekonstrukcija drevesa iz pregledov,Vadba rekonstrukcije dvojiškega drevesa iz preorder in inorder izpisa.,Rabim še ponoviti to temo.,2026-06-23 12:00:00.000,2026-06-23 09:00:00.000,2026-06-23 12:00:00.000
+1184,1,10,Priprava seminarske naloge - Fenwick Tree,Raziskovanje strukture Fenwick tree (BIT) za seminarsko nalogo.,,2026-06-23 12:10:00.000,2026-06-23 10:10:00.000,2026-06-23 12:10:00.000
+1185,1,1,Rekonstrukcija drevesa iz pregledov,Vadba rekonstrukcije dvojiškega drevesa iz preorder in inorder izpisa.,,2026-06-23 18:30:00.000,2026-06-23 15:00:00.000,2026-06-23 18:30:00.000
+1186,1,1,Vaje - verige vozlov,"Reševanje nalog iz seznama, testiranje robnih primerov.",Šlo mi je dobro.,2026-06-23 22:15:00.000,2026-06-23 18:45:00.000,2026-06-23 22:15:00.000
+1187,1,6,Minimalno vpeto drevo - Kruskal,Ponavljanje Kruskalovega algoritma za MVD.,Šlo mi je dobro.,2026-06-24 00:15:00.000,2026-06-23 21:45:00.000,2026-06-24 00:15:00.000
+1188,2,7,Ponovi verižne sezname pred vajami,Preglej rešene naloge pred naslednjimi vajami.,,2026-06-24 09:10:00.000,,
+1189,1,22,Naloga 4 - agent v labirintu,"Implementacija agenta, ki išče pot v labirintu.",Šlo mi je dobro.,2026-06-24 17:45:00.000,2026-06-24 15:45:00.000,2026-06-24 17:45:00.000
+1190,3,5,Vprašanje o rekurziji,,,2026-06-27 09:20:00.000,,
+1191,1,5,Rekonstrukcija drevesa iz pregledov,Vadba rekonstrukcije dvojiškega drevesa iz preorder in inorder izpisa.,Zelo koristna razlaga na predavanjih.,2026-06-27 20:00:00.000,2026-06-27 17:00:00.000,2026-06-27 20:00:00.000
+1192,1,27,Floyd-Warshallov algoritem,Ponavljanje algoritma za najkrajše poti med vsemi pari vozlišč.,"Nisem še predelala vsega, nadaljujem naslednjič.",2026-06-30 17:20:00.000,2026-06-30 15:50:00.000,2026-06-30 17:20:00.000
+1193,1,7,Dvosmerno povezan seznam,Predelovanje prosojnic o dvosmerno povezanih seznamih.,Rabim še ponoviti to temo.,2026-06-30 18:50:00.000,2026-06-30 15:50:00.000,2026-06-30 18:50:00.000
+1194,1,3,Nihanje in valovanje,Učenje enačb nihanja nihala in harmoničnega gibanja.,Zelo koristna razlaga na predavanjih.,2026-06-30 19:50:00.000,2026-06-30 17:50:00.000,2026-06-30 19:50:00.000
+1195,1,3,Newtonovi zakoni - vaje,Reševanje nalog o silah in pospeških.,Zelo koristna razlaga na predavanjih.,2026-07-01 21:10:00.000,2026-07-01 17:10:00.000,2026-07-01 21:10:00.000
+1196,1,8,Priprava na pisni izpit,Reševanje starih izpitnih nalog iz podatkovnih baz.,,2026-07-07 18:02:00.000,2026-07-07 15:50:00.000,2026-07-07 18:02:00.000
+1197,1,23,Metoda razveji in omeji - TSP,Reševanje problema trgovskega potnika z metodo razveji in omeji.,"Nisem še predelala vsega, nadaljujem naslednjič.",2026-07-07 19:20:00.000,2026-07-07 15:50:00.000,2026-07-07 19:20:00.000
+1198,1,27,Kopica in prednostna vrsta,"Implementacija binarne kopice, operaciji insert in extract-min.",Zelo koristna razlaga na predavanjih.,2026-07-08 16:20:00.000,2026-07-08 11:20:00.000,2026-07-08 16:20:00.000
+1199,1,11,Rekurzija in sklad,Vaje iz rekurzivnih funkcij in implementacije sklada.,Rabim še ponoviti to temo.,2026-07-09 23:20:00.000,2026-07-09 21:20:00.000,2026-07-09 23:20:00.000
+1200,1,32,Dualnost v LP,Učenje dualnega problema linearnega programiranja.,,2026-07-10 13:15:00.000,2026-07-10 09:15:00.000,2026-07-10 13:15:00.000
+1201,1,22,Preiskovanje s prioriteto - A*,Učenje algoritma A* in hevrističnih funkcij.,Šlo mi je dobro.,2026-07-11 12:40:00.000,2026-07-11 09:40:00.000,2026-07-11 12:40:00.000
+1202,1,33,Numerično reševanje diferencialnih enačb,Naloga 1 - Eulerjeva in Runge-Kutta metoda.,"Malo sem se izgubila v podrobnostih, jutri nadaljujem.",2026-07-11 18:20:00.000,2026-07-11 16:50:00.000,2026-07-11 18:20:00.000
+1203,1,7,Dinamično programiranje - problem kovancev,Reševanje problema minimalnega števila kovancev z DP.,,2026-07-13 12:10:00.000,2026-07-13 10:40:00.000,2026-07-13 12:10:00.000
+1204,1,4,Robni in začetni pogoji,Vaje iz postavljanja robnih pogojev pri PDE.,,2026-07-13 13:50:00.000,2026-07-13 10:50:00.000,2026-07-13 13:50:00.000
+1205,1,11,Minimalno vpeto drevo - Kruskal,Ponavljanje Kruskalovega algoritma za MVD.,,2026-07-13 17:50:00.000,2026-07-13 12:50:00.000,2026-07-13 17:50:00.000
+1206,1,3,Kinematika togega telesa,Ponavljanje enačb gibanja in vrtenja togega telesa.,,2026-07-14 01:00:00.000,2026-07-13 20:30:00.000,2026-07-14 01:00:00.000
+1207,1,27,Floyd-Warshallov algoritem,Ponavljanje algoritma za najkrajše poti med vsemi pari vozlišč.,Rabim še ponoviti to temo.,2026-07-14 16:00:00.000,2026-07-14 13:30:00.000,2026-07-14 16:00:00.000
+1208,1,4,Laplaceova enačba,Ponavljanje harmoničnih funkcij in Laplaceove enačbe.,,2026-07-14 22:10:00.000,2026-07-14 18:10:00.000,2026-07-14 22:10:00.000
+1209,1,11,Reševanje starih izpitnih nalog,Reševanje nalog s prejšnjih pisnih izpitov.,,2026-07-15 11:40:00.000,2026-07-15 07:40:00.000,2026-07-15 11:40:00.000
+1210,1,25,Sortirni algoritmi,"Ponavljanje Quicksort, Mergesort in Insertion sort.",Rabim še ponoviti to temo.,2026-07-15 18:30:00.000,2026-07-15 14:30:00.000,2026-07-15 18:30:00.000
+1211,1,30,Konveksna optimizacija,Branje o konveksnih množicah in funkcijah.,Zelo koristna razlaga na predavanjih.,2026-07-15 19:50:00.000,2026-07-15 17:20:00.000,2026-07-15 19:50:00.000
+1212,1,27,Zgoščene tabele - reševanje kolizij,Primerjava metode verig in odprtega naslavljanja.,,2026-07-17 14:50:00.000,2026-07-17 12:50:00.000,2026-07-17 14:50:00.000
+1213,1,24,Kopica in prednostna vrsta,"Implementacija binarne kopice, operaciji insert in extract-min.",,2026-07-17 15:40:00.000,2026-07-17 14:10:00.000,2026-07-17 15:40:00.000
+1214,1,38,Indeksi in optimizacija poizvedb,Branje o indeksih in njihovem vplivu na hitrost poizvedb.,,2026-07-17 21:45:00.000,2026-07-17 17:15:00.000,2026-07-17 21:45:00.000
+1215,1,5,Minimalno vpeto drevo - Kruskal,Ponavljanje Kruskalovega algoritma za MVD.,,2026-07-18 10:40:00.000,2026-07-18 08:10:00.000,2026-07-18 10:40:00.000
+1216,1,36,Priprava na kolokvij,Ponavljanje snovi pred prvim kolokvijem.,,2026-07-18 16:10:00.000,2026-07-18 13:10:00.000,2026-07-18 16:10:00.000
+1217,1,4,Robni in začetni pogoji,Vaje iz postavljanja robnih pogojev pri PDE.,"Malo sem se izgubila v podrobnostih, jutri nadaljujem.",2026-07-18 20:05:00.000,2026-07-18 19:05:00.000,2026-07-18 20:05:00.000
+1218,1,5,Rekurzija in sklad,Vaje iz rekurzivnih funkcij in implementacije sklada.,Šlo mi je dobro.,2026-07-19 18:00:00.000,2026-07-19 15:00:00.000,2026-07-19 18:00:00.000
+1219,1,18,Numerična integracija,Naloga 3 - trapezno in Simpsonovo pravilo.,Šlo mi je dobro.,2026-07-20 16:42:00.000,2026-07-20 15:00:00.000,2026-07-20 16:42:00.000
+1220,1,35,Zgoščene tabele - reševanje kolizij,Primerjava metode verig in odprtega naslavljanja.,,2026-07-20 17:40:00.000,2026-07-20 14:40:00.000,2026-07-20 17:40:00.000
+1221,1,4,Priprava na ustni izpit,Ponavljanje snovi iz celotnega semestra.,Zelo koristna razlaga na predavanjih.,2026-07-20 21:20:00.000,2026-07-20 18:50:00.000,2026-07-20 21:20:00.000
+1222,1,3,Kinematika togega telesa,Ponavljanje enačb gibanja in vrtenja togega telesa.,,2026-07-21 12:40:00.000,2026-07-21 09:40:00.000,2026-07-21 12:40:00.000
+1223,1,41,Iskalna drevesa,Ponavljanje operacij nad binarnimi iskalnimi drevesi.,"Malo sem se izgubila v podrobnostih, jutri nadaljujem.",2026-07-21 14:50:00.000,2026-07-21 12:20:00.000,2026-07-21 14:50:00.000
+1224,1,34,Linearno programiranje,Domača naloga 1 - postavitev in reševanje LP problemov.,Zelo koristna razlaga na predavanjih.,2026-07-21 17:50:00.000,2026-07-21 15:50:00.000,2026-07-21 17:50:00.000
+1225,1,7,Dvojiška drevesa - implementacija,Implementacija vstavljanja in iskanja v dvojiškem iskalnem drevesu.,,2026-07-21 21:45:00.000,2026-07-21 18:15:00.000,2026-07-21 21:45:00.000
+1226,3,25,Vprašanje o rekurziji,,,2026-07-23 07:45:00.000,,
+1227,1,6,Rekonstrukcija drevesa iz pregledov,Vadba rekonstrukcije dvojiškega drevesa iz preorder in inorder izpisa.,,2026-07-23 16:15:00.000,2026-07-23 13:45:00.000,2026-07-23 16:15:00.000
+1228,1,37,Priprava na ustni izpit,Ponavljanje celotne snovi za ustni izpit iz Računalništva 2.,Rabim še ponoviti to temo.,2026-07-23 22:10:00.000,2026-07-23 21:10:00.000,2026-07-23 22:10:00.000
+1229,1,7,Minimalno vpeto drevo - Prim,Reševanje nalog s Primovim algoritmom.,"Nisem še predelala vsega, nadaljujem naslednjič.",2026-07-24 10:00:00.000,2026-07-24 08:00:00.000,2026-07-24 10:00:00.000
+1230,3,37,Dogovor za termin predstavitve,,,2026-07-24 10:50:00.000,,
+1231,1,11,Rekurzija in sklad,Vaje iz rekurzivnih funkcij in implementacije sklada.,,2026-07-24 11:15:00.000,2026-07-24 09:15:00.000,2026-07-24 11:15:00.000
+1232,1,10,Izdelava predstavitve - Fenwick Tree,Urejanje diapozitivov za predstavitev seminarske naloge.,,2026-07-24 14:20:00.000,2026-07-24 12:20:00.000,2026-07-24 14:20:00.000
+1233,1,32,Priprava na kolokvij,Ponavljanje snovi pred prvim kolokvijem.,,2026-07-24 15:00:00.000,2026-07-24 14:00:00.000,2026-07-24 15:00:00.000
+1234,1,23,Problem P/NP,Branje o kompleksnostnih razredih P in NP ter NP-polnosti.,Zelo koristna razlaga na predavanjih.,2026-07-24 19:40:00.000,2026-07-24 17:10:00.000,2026-07-24 19:40:00.000
+1235,1,3,Nihanje in valovanje,Učenje enačb nihanja nihala in harmoničnega gibanja.,Zelo koristna razlaga na predavanjih.,2026-07-25 22:00:00.000,2026-07-25 19:00:00.000,2026-07-25 22:00:00.000
+1236,1,17,Numerična integracija,Naloga 3 - trapezno in Simpsonovo pravilo.,,2026-07-26 00:50:00.000,2026-07-25 20:50:00.000,2026-07-26 00:50:00.000
+1237,1,11,Dinamično programiranje - problem kovancev,Reševanje problema minimalnega števila kovancev z DP.,,2026-07-26 12:20:00.000,2026-07-26 08:50:00.000,2026-07-26 12:20:00.000
+1238,1,1,Rekonstrukcija drevesa iz pregledov,Vadba rekonstrukcije dvojiškega drevesa iz preorder in inorder izpisa.,Zelo koristna razlaga na predavanjih.,2026-07-27 19:10:00.000,2026-07-27 14:40:00.000,2026-07-27 19:10:00.000
+1239,2,11,Ponovi verižne sezname pred vajami,Preglej rešene naloge pred naslednjimi vajami.,,2026-07-28 20:15:00.000,,
+1240,1,8,SQL poizvedbe - JOIN,Reševanje nalog s spajanjem tabel v SQL-u.,,2026-07-28 23:10:00.000,2026-07-28 20:40:00.000,2026-07-28 23:10:00.000
+1241,1,41,Iskalna drevesa,Ponavljanje operacij nad binarnimi iskalnimi drevesi.,"Nisem še predelala vsega, nadaljujem naslednjič.",2026-07-29 11:50:00.000,2026-07-29 09:20:00.000,2026-07-29 11:50:00.000
+1242,1,37,Metoda razveji in omeji - TSP,Reševanje problema trgovskega potnika z metodo razveji in omeji.,,2026-07-29 16:45:00.000,2026-07-29 13:45:00.000,2026-07-29 16:45:00.000
+1243,1,24,Floyd-Warshallov algoritem,Ponavljanje algoritma za najkrajše poti med vsemi pari vozlišč.,Zelo koristna razlaga na predavanjih.,2026-07-30 11:20:00.000,2026-07-30 09:50:00.000,2026-07-30 11:20:00.000
+1244,1,35,Metoda razveji in omeji - TSP,Reševanje problema trgovskega potnika z metodo razveji in omeji.,,2026-07-30 15:00:00.000,2026-07-30 12:00:00.000,2026-07-30 15:00:00.000
+1245,2,19,Pripravi se na kviz,Ponovi snov pred kratkim kvizom.,,2026-07-30 21:40:00.000,,
+1246,1,4,Laplaceova enačba,Ponavljanje harmoničnih funkcij in Laplaceove enačbe.,,2026-07-30 22:05:00.000,2026-07-30 21:05:00.000,2026-07-30 22:05:00.000
+1247,1,5,Reševanje starih izpitnih nalog,Reševanje nalog s prejšnjih pisnih izpitov.,,2026-07-31 15:50:00.000,2026-07-31 10:50:00.000,2026-07-31 15:50:00.000
+1248,1,11,Minimalno vpeto drevo - Kruskal,Ponavljanje Kruskalovega algoritma za MVD.,Šlo mi je dobro.,2026-07-31 22:00:00.000,2026-07-31 18:30:00.000,2026-07-31 22:00:00.000
+1249,1,41,Metoda razveji in omeji - TSP,Reševanje problema trgovskega potnika z metodo razveji in omeji.,Šlo mi je dobro.,2026-08-01 09:40:00.000,2026-08-01 07:10:00.000,2026-08-01 09:40:00.000
+1250,1,3,Nihanje in valovanje,Učenje enačb nihanja nihala in harmoničnega gibanja.,Rabim še ponoviti to temo.,2026-08-01 21:00:00.000,2026-08-01 19:30:00.000,2026-08-01 21:00:00.000
+1251,1,25,Rekonstrukcija drevesa iz pregledov,Vadba rekonstrukcije dvojiškega drevesa iz preorder in inorder izpisa.,,2026-08-03 16:20:00.000,2026-08-03 14:20:00.000,2026-08-03 16:20:00.000
+1252,1,22,Preiskovanje s prioriteto - A*,Učenje algoritma A* in hevrističnih funkcij.,"Malo sem se izgubila v podrobnostih, jutri nadaljujem.",2026-08-04 17:40:00.000,2026-08-04 14:40:00.000,2026-08-04 17:40:00.000
+1253,1,19,Newtonova metoda za ničle funkcij,Naloga 4 - implementacija Newtonove metode.,,2026-08-05 14:10:00.000,2026-08-05 11:10:00.000,2026-08-05 14:10:00.000
+1254,1,40,Indeksi in optimizacija poizvedb,Branje o indeksih in njihovem vplivu na hitrost poizvedb.,,2026-08-05 14:40:00.000,2026-08-05 10:40:00.000,2026-08-05 14:40:00.000
+1255,1,24,B-drevesa,Branje prosojnic o B-drevesih in njihovi uporabi v podatkovnih bazah.,,2026-08-05 15:30:00.000,2026-08-05 13:30:00.000,2026-08-05 15:30:00.000
+1256,1,26,Priprava na pisni izpit,Ponavljanje snovi iz celotnega semestra pred pisnim izpitom.,,2026-08-05 17:30:00.000,2026-08-05 16:00:00.000,2026-08-05 17:30:00.000
+1257,3,7,Vprašanje o rekurziji,,,2026-08-05 18:30:00.000,,
+1258,1,40,Normalizacija podatkovnih baz,Vaje iz normalizacije do 3NF.,Zelo koristna razlaga na predavanjih.,2026-08-06 11:30:00.000,2026-08-06 10:00:00.000,2026-08-06 11:30:00.000
+1259,1,37,Floyd-Warshallov algoritem,Ponavljanje algoritma za najkrajše poti med vsemi pari vozlišč.,,2026-08-06 12:15:00.000,2026-08-06 11:15:00.000,2026-08-06 12:15:00.000
+1260,1,25,Minimalno vpeto drevo - Prim,Reševanje nalog s Primovim algoritmom.,,2026-08-06 18:40:00.000,2026-08-06 16:10:00.000,2026-08-06 18:40:00.000
+1261,1,9,Kopica in prednostna vrsta,"Implementacija binarne kopice, operaciji insert in extract-min.",,2026-08-08 13:30:00.000,2026-08-08 10:30:00.000,2026-08-08 13:30:00.000
+1262,1,25,Rekonstrukcija drevesa iz pregledov,Vadba rekonstrukcije dvojiškega drevesa iz preorder in inorder izpisa.,Rabim še ponoviti to temo.,2026-08-09 12:15:00.000,2026-08-09 09:45:00.000,2026-08-09 12:15:00.000
+1263,1,41,B-drevesa,Branje prosojnic o B-drevesih in njihovi uporabi v podatkovnih bazah.,"Nisem še predelala vsega, nadaljujem naslednjič.",2026-08-09 18:00:00.000,2026-08-09 13:00:00.000,2026-08-09 18:00:00.000
+1264,1,4,Robni in začetni pogoji,Vaje iz postavljanja robnih pogojev pri PDE.,Šlo mi je dobro.,2026-08-09 19:00:00.000,2026-08-09 16:30:00.000,2026-08-09 19:00:00.000
+1265,1,3,Newtonovi zakoni - vaje,Reševanje nalog o silah in pospeških.,,2026-08-10 18:40:00.000,2026-08-10 15:40:00.000,2026-08-10 18:40:00.000
+1266,1,24,Priprava na ustni izpit,Ponavljanje celotne snovi za ustni izpit iz Računalništva 2.,,2026-08-11 14:00:00.000,2026-08-11 11:00:00.000,2026-08-11 14:00:00.000
+1267,1,26,Vaje - verige vozlov,"Reševanje nalog iz seznama, testiranje robnih primerov.",,2026-08-14 14:45:00.000,2026-08-14 12:15:00.000,2026-08-14 14:45:00.000
+1268,1,20,BFS in DFS na grafih,Vaje iz preiskovanja grafov v širino in globino.,"Malo sem se izgubila v podrobnostih, jutri nadaljujem.",2026-08-14 16:50:00.000,2026-08-14 15:20:00.000,2026-08-14 16:50:00.000
+1269,1,15,Priprava na kolokvij,Ponavljanje snovi pred prvim kolokvijem.,,2026-08-15 14:42:00.000,2026-08-15 14:30:00.000,2026-08-15 14:42:00.000
+1270,1,7,Vaje - verige vozlov,"Reševanje nalog iz seznama, testiranje robnih primerov.",Rabim še ponoviti to temo.,2026-08-15 21:50:00.000,2026-08-15 18:20:00.000,2026-08-15 21:50:00.000
+1271,1,40,Transakcije in ACID,Ponavljanje lastnosti transakcij in nivojev izolacije.,Zelo koristna razlaga na predavanjih.,2026-08-16 16:30:00.000,2026-08-16 15:30:00.000,2026-08-16 16:30:00.000
+1272,1,11,Enostavno povezani seznam,Implementacija vstavljanja in brisanja vozlišč v verižnem seznamu.,Zelo koristna razlaga na predavanjih.,2026-08-16 20:20:00.000,2026-08-16 18:20:00.000,2026-08-16 20:20:00.000
+1273,1,41,Izdelava predstavitve - Fenwick Tree,Urejanje diapozitivov za predstavitev seminarske naloge.,Šlo mi je dobro.,2026-08-16 22:35:00.000,2026-08-16 19:05:00.000,2026-08-16 22:35:00.000
+1274,1,26,Dinamično programiranje - problem kovancev,Reševanje problema minimalnega števila kovancev z DP.,,2026-08-17 00:00:00.000,2026-08-16 21:00:00.000,2026-08-17 00:00:00.000
+1275,2,29,Oddaj naslednjo nalogo,Preveri rok za oddajo naslednje domače naloge.,,2026-08-17 15:40:00.000,,
+1276,1,24,Floyd-Warshallov algoritem,Ponavljanje algoritma za najkrajše poti med vsemi pari vozlišč.,Zelo koristna razlaga na predavanjih.,2026-08-19 11:05:00.000,2026-08-19 08:05:00.000,2026-08-19 11:05:00.000
+1277,2,7,Ponovi verižne sezname pred vajami,Preglej rešene naloge pred naslednjimi vajami.,,2026-08-19 20:15:00.000,,
+1278,1,27,Metoda razveji in omeji - TSP,Reševanje problema trgovskega potnika z metodo razveji in omeji.,,2026-08-19 22:40:00.000,2026-08-19 21:10:00.000,2026-08-19 22:40:00.000
+1279,1,41,Izdelava predstavitve - Fenwick Tree,Urejanje diapozitivov za predstavitev seminarske naloge.,,2026-08-21 16:20:00.000,2026-08-21 14:50:00.000,2026-08-21 16:20:00.000
+1280,1,4,Priprava na ustni izpit,Ponavljanje snovi iz celotnega semestra.,,2026-08-21 17:15:00.000,2026-08-21 15:15:00.000,2026-08-21 17:15:00.000
+1281,1,18,Priprava na 1. kviz,Ponavljanje snovi za kratek kviz iz numeričnih metod.,,2026-08-23 13:15:00.000,2026-08-23 12:45:00.000,2026-08-23 13:15:00.000
