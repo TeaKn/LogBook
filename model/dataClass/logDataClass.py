@@ -38,7 +38,7 @@ class LogDataClass(Entity):
     @classmethod
     def get_logs(cls, limit: int) -> list[dict]:
         rows = Log.list_logs(limit)
-        print("Rows retrieved from Log.get_logs():", rows)
+        #print("Rows retrieved from Log.get_logs():", rows)
         return rows
 
     @classmethod

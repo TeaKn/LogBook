@@ -44,7 +44,7 @@ class AssessmentDataClass(Entity):
         Here the parameter for number of days is passed.
         """
         rows = Assessment.list_open_assessments_due_within(days=30)
-        print("Rows retrieved from Assessment.list_assessments_due_within():", rows)
+        #print("Rows retrieved from Assessment.list_assessments_due_within():", rows)
         result = []
         for r in rows:
             result.append(

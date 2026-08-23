@@ -153,6 +153,21 @@ class Assessment(Table):
             col_names = tuple(d[0] for d in cur.description)
             return [cls.from_row(row, col_names) for row in rows]
 
+
+    @classmethod
+    def list_all_for_subject(cls, subject_name: str) -> list[dict[Any, Any]]:
+        """
+        List all assessments for subject with subject name.
+        """
+        with Cursor() as cur:
+            cur.execute("""
+                SELECT * FROM assessment JOIN subject s ON assessment.subjectId = s.id
+                    WHERE s.name == ?
+            """, (subject_name,))
+            rows = cur.fetchall()
+            col_names = tuple(d[0] for d in cur.description)
+            return [cls.from_row(row, col_names) for row in rows]
+
     @classmethod
     def from_row(cls, row: tuple, col_names: tuple) -> dict[Any, Any]:
         """
