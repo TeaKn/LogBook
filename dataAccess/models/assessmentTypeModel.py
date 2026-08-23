@@ -49,8 +49,8 @@ class AssessmentType(Table):
             for row in cls.read_csv_source():
                 print(f"Inserting row into assessment type: {row}")
                 cur.execute("""
-                            INSERT INTO assessment_type (value)
-                            VALUES (:value);
+                            INSERT INTO assessment_type (id, value)
+                            VALUES (:id, :value);
                             """, row)
 
     @classmethod

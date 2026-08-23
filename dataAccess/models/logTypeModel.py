@@ -49,8 +49,8 @@ class LogType(Table):
             for row in cls.read_csv_source():
                 print(f"Inserting row into log type: {row}")
                 cur.execute("""
-                            INSERT INTO log_type (type)
-                            VALUES (:type);
+                            INSERT INTO log_type (id, type)
+                            VALUES (:id, :type);
                             """, row)
 
     @classmethod

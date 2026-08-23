@@ -31,7 +31,7 @@ class Assessment(Table):
             createdOn DATETIME,
             dueDate DATETIME,
             doneOn DATETIME,
-            grade INTEGER
+            grade TEXT
         );
         """)
 
@@ -55,8 +55,8 @@ class Assessment(Table):
             for row in cls.read_csv_source():
                 print(f"Inserting row into assessment: {row}")
                 cur.execute("""
-                    INSERT INTO assessment (subjectId, typeId, title, createdOn, dueDate, doneOn, grade)
-                    VALUES (:subjectId, :typeId, :title, :createdOn, :dueDate, :doneOn, :grade);
+                    INSERT INTO assessment (id, subjectId, typeId, title, createdOn, dueDate, doneOn, grade)
+                    VALUES (:id, :subjectId, :typeId, :title, :createdOn, :dueDate, :doneOn, :grade);
                 """, row)
 
     @classmethod
@@ -64,7 +64,7 @@ class Assessment(Table):
         print("Adding row to assessment: ", data)
         sql = """
         INSERT INTO assessment (subjectId, typeId, title, createdOn, dueDate, doneOn, grade)
-        VALUES ((SELECT id FROM subject WHERE name = :subject), (SELECT id FROM assessment_type WHERE  value = :type), :title, datetime('now'), :dueDate, null, null);
+        VALUES ((SELECT id FROM subject WHERE name = :subject), (SELECT id FROM assessment_type WHERE  value = :type), :title, datetime('now', 'localtime'), :dueDate, null, null);
         """
         with Cursor() as cur:  # todo: understand ali rabis Cursor(cur) al ne
             with cur.connection:  # todo: understand why this is needed here

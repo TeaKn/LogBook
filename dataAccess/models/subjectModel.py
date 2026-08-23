@@ -48,8 +48,8 @@ class Subject(Table):
             for row in cls.read_csv_source():
                 print(f"Inserting row into subject: {row}")
                 cur.execute("""
-                    INSERT INTO subject (name)
-                    VALUES (:name);
+                    INSERT INTO subject (id, name)
+                    VALUES (:id, :name);
                 """, row)
 
     @classmethod

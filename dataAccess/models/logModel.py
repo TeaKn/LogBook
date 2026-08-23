@@ -56,8 +56,8 @@ class Log(Table):
             for row in cls.read_csv_source():
                 print(f"Inserting row into log: {row}")
                 cur.execute("""
-                    INSERT INTO log (typeId, assessmentId, title, description, notes, createdOn, trackedFrom, trackedTo)
-                    VALUES (:typeId, :assesmentId, :title, :descrition, :notes, :createdOn, :trackedFrom, :trackedTo);
+                    INSERT INTO log (id, typeId, assessmentId, title, description, notes, createdOn, trackedFrom, trackedTo)
+                    VALUES (:id, :typeId, :assessmentId, :title, :description, :notes, :createdOn, :trackedFrom, :trackedTo);
                 """, row)
 
     @classmethod
@@ -65,7 +65,7 @@ class Log(Table):
         print("Adding row to log: ", data)
         sql = """
         INSERT INTO log (typeId, assessmentId, title, description, notes, createdOn, trackedFrom, trackedTo) 
-        VALUES ((SELECT id FROM log_type WHERE type = :type), (SELECT id FROM assessment WHERE  id = :assessmentId), :title, :description, :notes, datetime('now'), :trackedFrom, :trackedTo);
+        VALUES ((SELECT id FROM log_type WHERE type = :type), (SELECT id FROM assessment WHERE  id = :assessmentId), :title, :description, :notes, datetime('now', 'localtime'), :trackedFrom, :trackedTo);
         """ # todo: zakaj nekje pošiljam id tole je čist debilno (SELECT id FROM assessment WHERE  id = :assessmentId)
         with Cursor() as cur:  # todo: understand ali rabis Cursor(cur) al ne
             with cur.connection:  # todo: understand why this is needed here
