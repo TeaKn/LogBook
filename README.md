@@ -55,6 +55,8 @@ Run cli.py file
 - [x] Logo gumb, ki vodi do Dashboarda
 
 ## Entity Relationship diagram
+<img width="1602" height="982" alt="LogBookERDiagram" src="https://github.com/user-attachments/assets/03e04362-d0ad-4964-aefa-b40d37f92233" />
+
 
 ## Tech stack
 - Bottle
