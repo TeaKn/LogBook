@@ -153,8 +153,8 @@ class Assessment(Table):
                     SUM(CASE WHEN a.typeId = 3 THEN 1 ELSE 0 END) AS 'midterm_exam',
                     SUM(CASE WHEN a.typeId = 4 THEN 1 ELSE 0 END) AS 'course_paper',
                     SUM(CASE WHEN a.typeId = 5 THEN 1 ELSE 0 END) AS 'homework',
-                    SUM(CASE WHEN a.typeId = 6 THEN 1 ELSE 0 END) AS 'project',
-                    SUM(CASE WHEN a.typeId = 7 THEN 1 ELSE 0 END) AS 'quiz',
+                    SUM(CASE WHEN a.typeId = 11 THEN 1 ELSE 0 END) AS 'project',
+                    SUM(CASE WHEN a.typeId = 12 THEN 1 ELSE 0 END) AS 'quiz',
                     COUNT(a.id) AS 'total'
                 FROM subject s
                     LEFT JOIN assessment a ON a.subjectId = s.id
