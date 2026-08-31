@@ -44,6 +44,11 @@ def create_assessment():
     data = bottle.request.json
     AssessmentDataClass.create_assessment(data)
 
+@bottle.delete('/assessments/<assessment_id:int>')
+def delete_assessment(assessment_id):
+    print("Called delete assessment with id: ", assessment_id)
+    AssessmentDataClass.delete_assessment(assessment_id)
+
 
 @bottle.post('/logs')
 def create_log():

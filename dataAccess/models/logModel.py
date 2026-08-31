@@ -26,7 +26,7 @@ class Log(Table):
         (
             id INTEGER PRIMARY KEY AUTOINCREMENT,
             typeId INTEGER NOT NULL REFERENCES log_type(id),
-            assessmentId INTEGER NOT NULL REFERENCES assessment(id),
+            assessmentId INTEGER NOT NULL REFERENCES assessment(id) ON DELETE CASCADE,
             title TEXT,
             description TEXT,
             notes TEXT,

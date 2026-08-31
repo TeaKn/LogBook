@@ -93,6 +93,13 @@ class AssessmentDataClass(Entity):
         """
         return Assessment.add_row(**data)
 
+    @classmethod
+    def delete_assessment(cls, assessment_id: int):
+        """
+        Delete assessment with assessment id.
+        """
+        Assessment.delete_row(assessment_id)
+
     def as_dict(self):
         return self.__dict__
 

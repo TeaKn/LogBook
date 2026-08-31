@@ -86,6 +86,16 @@ class Assessment(Table):
                 return cur.lastrowid
 
     @classmethod
+    def delete_row(cls, id: int):
+        print("Deleting row in assessment with id: ", id)
+        with Cursor() as cur:
+            cur.execute("""
+                        DELETE FROM assessment
+                            WHERE id = ?
+                        """, (id,)
+                        )
+
+    @classmethod
     def list_all(cls, cur=None) -> list[dict[Any, Any]]:
         """
         List all assessments.
