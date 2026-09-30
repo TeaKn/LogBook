@@ -49,6 +49,9 @@ Run cli.py file
 #### Assessments: 
 - [x] Tabela obveznosti
 - [x] Gumb za kreiranje nove obveznosti
+- [x] Gumb za spreminjanje obveznosti
+- [x] Gumb za prekinitev spreminjanja obveznosti
+- [x] Gumb za brisanje obveznosti
 
 #### General:
 - [x] gumb za nastavitev teme (temna ali svetla)
